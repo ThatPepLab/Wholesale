@@ -4,7 +4,8 @@
     "china": [
       {
         "strength": "526mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -14,7 +15,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 185
+        "price": 185,
+        "msrp": 70
       }
     ],
     "usa": []
@@ -24,7 +26,8 @@
     "china": [
       {
         "strength": "80mg",
-        "price": 285
+        "price": 285,
+        "msrp": 105
       }
     ],
     "usa": []
@@ -34,7 +37,8 @@
     "china": [
       {
         "strength": "70mg",
-        "price": 240
+        "price": 240,
+        "msrp": 90
       }
     ],
     "usa": []
@@ -44,21 +48,25 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "50mg",
-        "price": 160
+        "price": 160,
+        "msrp": 60
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ]
   },
@@ -67,7 +75,8 @@
     "china": [
       {
         "strength": "1mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -77,11 +86,13 @@
     "china": [
       {
         "strength": "3ml",
-        "price": 45
+        "price": 45,
+        "msrp": 15
       },
       {
         "strength": "10ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       }
     ],
     "usa": []
@@ -91,29 +102,35 @@
     "china": [
       {
         "strength": "3mg",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       },
       {
         "strength": "3ml",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       },
       {
         "strength": "5mg",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       },
       {
         "strength": "10mg",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       },
       {
         "strength": "10ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       }
     ],
     "usa": [
       {
         "strength": "10ml",
-        "price": 55
+        "price": 55,
+        "msrp": 20
       }
     ]
   },
@@ -122,7 +139,8 @@
     "china": [
       {
         "strength": "3ml",
-        "price": 45
+        "price": 45,
+        "msrp": 20
       }
     ],
     "usa": []
@@ -132,11 +150,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 125
+        "price": 125,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -146,11 +166,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 165
+        "price": 165,
+        "msrp": 65
       }
     ],
     "usa": []
@@ -160,11 +182,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 110
+        "price": 110,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 170
+        "price": 170,
+        "msrp": 65
       }
     ],
     "usa": []
@@ -174,11 +198,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 140
+        "price": 140,
+        "msrp": 55
       },
       {
         "strength": "10mg",
-        "price": 235
+        "price": 235,
+        "msrp": 90
       }
     ],
     "usa": []
@@ -188,23 +214,28 @@
     "china": [
       {
         "strength": "2ml",
-        "price": 170
+        "price": 170,
+        "msrp": 65
       },
       {
         "strength": "2mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       },
       {
         "strength": "5mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       },
       {
         "strength": "5ml",
-        "price": 245
+        "price": 245,
+        "msrp": 95
       },
       {
         "strength": "10mg",
-        "price": 240
+        "price": 240,
+        "msrp": 90
       }
     ],
     "usa": []
@@ -214,15 +245,18 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 55
+        "price": 55,
+        "msrp": 20
       },
       {
         "strength": "50mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "100mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -232,11 +266,13 @@
     "china": [
       {
         "strength": "50mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "100mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -246,11 +282,13 @@
     "china": [
       {
         "strength": "50mg",
-        "price": 110
+        "price": 110,
+        "msrp": 45
       },
       {
         "strength": "100mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -260,7 +298,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 165
+        "price": 165,
+        "msrp": 65
       }
     ],
     "usa": []
@@ -270,15 +309,18 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "5mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       },
       {
         "strength": "10mg",
-        "price": 195
+        "price": 195,
+        "msrp": 75
       }
     ],
     "usa": []
@@ -288,29 +330,35 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 110
+        "price": 110,
+        "msrp": 40
       },
       {
         "strength": "16mg",
-        "price": 125
+        "price": 125,
+        "msrp": 45
       },
       {
         "strength": "30mg",
-        "price": 175
+        "price": 175,
+        "msrp": 65
       },
       {
         "strength": "40mg",
-        "price": 210
+        "price": 210,
+        "msrp": 80
       },
       {
         "strength": "50mg",
-        "price": 170
+        "price": 170,
+        "msrp": 65
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ]
   },
@@ -319,15 +367,18 @@
     "china": [
       {
         "strength": "3ml",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       },
       {
         "strength": "5ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       },
       {
         "strength": "10ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       }
     ],
     "usa": []
@@ -337,29 +388,35 @@
     "china": [
       {
         "strength": "3mg",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       },
       {
         "strength": "3ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       },
       {
         "strength": "10mg",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       },
       {
         "strength": "10ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       }
     ],
     "usa": [
       {
         "strength": "3ml",
-        "price": 45
+        "price": 45,
+        "msrp": 20
       },
       {
         "strength": "10ml",
-        "price": 50
+        "price": 50,
+        "msrp": 20
       }
     ]
   },
@@ -368,11 +425,13 @@
     "china": [
       {
         "strength": "3ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       },
       {
         "strength": "10ml",
-        "price": 45
+        "price": 45,
+        "msrp": 20
       }
     ],
     "usa": []
@@ -382,7 +441,8 @@
     "china": [
       {
         "strength": "100iu",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -392,33 +452,40 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 55
+        "price": 55,
+        "msrp": 20
       },
       {
         "strength": "5mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "20mg",
-        "price": 140
+        "price": 140,
+        "msrp": 55
       }
     ],
     "usa": [
       {
         "strength": "5mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "20mg",
-        "price": 200
+        "price": 200,
+        "msrp": 75
       }
     ]
   },
@@ -427,33 +494,40 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 125
+        "price": 125,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       },
       {
         "strength": "15mg",
-        "price": 300
+        "price": 300,
+        "msrp": 110
       },
       {
         "strength": "20mg",
-        "price": 210
+        "price": 210,
+        "msrp": 80
       },
       {
         "strength": "30mg",
-        "price": 285
+        "price": 285,
+        "msrp": 110
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       },
       {
         "strength": "20mg",
-        "price": 210
+        "price": 210,
+        "msrp": 80
       }
     ]
   },
@@ -462,7 +536,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 150
+        "price": 150,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -472,7 +547,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 175
+        "price": 175,
+        "msrp": 65
       }
     ],
     "usa": []
@@ -482,29 +558,35 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "5mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       },
       {
         "strength": "10mg",
-        "price": 225
+        "price": 225,
+        "msrp": 85
       },
       {
         "strength": "20mg",
-        "price": 375
+        "price": 375,
+        "msrp": 140
       }
     ],
     "usa": [
       {
         "strength": "5mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       },
       {
         "strength": "10mg",
-        "price": 235
+        "price": 235,
+        "msrp": 90
       }
     ]
   },
@@ -513,19 +595,23 @@
     "china": [
       {
         "strength": "2.5mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "5mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       },
       {
         "strength": "10mg",
-        "price": 200
+        "price": 200,
+        "msrp": 75
       },
       {
         "strength": "20mg",
-        "price": 225
+        "price": 225,
+        "msrp": 85
       }
     ],
     "usa": []
@@ -535,7 +621,8 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       }
     ],
     "usa": []
@@ -545,11 +632,13 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "20mg",
-        "price": 150
+        "price": 150,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -559,7 +648,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -569,7 +659,8 @@
     "china": [
       {
         "strength": "60mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -579,7 +670,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -589,15 +681,18 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 70
+        "price": 70,
+        "msrp": 30
       },
       {
         "strength": "5mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 160
+        "price": 160,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -607,25 +702,30 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 125
+        "price": 125,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 150
+        "price": 150,
+        "msrp": 55
       },
       {
         "strength": "20mg",
-        "price": 165
+        "price": 165,
+        "msrp": 65
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 150
+        "price": 150,
+        "msrp": 55
       },
       {
         "strength": "20mg",
-        "price": 230
+        "price": 230,
+        "msrp": 85
       }
     ]
   },
@@ -634,21 +734,25 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "5mg",
-        "price": 175
+        "price": 175,
+        "msrp": 65
       },
       {
         "strength": "10mg",
-        "price": 245
+        "price": 245,
+        "msrp": 90
       }
     ],
     "usa": [
       {
         "strength": "5mg",
-        "price": 265
+        "price": 265,
+        "msrp": 100
       }
     ]
   },
@@ -657,7 +761,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -667,7 +772,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -677,11 +783,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 110
+        "price": 110,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -691,7 +799,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -701,19 +810,23 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 60
+        "price": 60,
+        "msrp": 25
       },
       {
         "strength": "5mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "15mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -723,11 +836,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 190
+        "price": 190,
+        "msrp": 70
       },
       {
         "strength": "10mg",
-        "price": 315
+        "price": 315,
+        "msrp": 115
       }
     ],
     "usa": []
@@ -737,25 +852,30 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "25mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       },
       {
         "strength": "50mg",
-        "price": 185
+        "price": 185,
+        "msrp": 70
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       },
       {
         "strength": "50mg",
-        "price": 215
+        "price": 215,
+        "msrp": 80
       }
     ]
   },
@@ -764,7 +884,8 @@
     "china": [
       {
         "strength": "3000iu",
-        "price": 125
+        "price": 125,
+        "msrp": 45
       }
     ],
     "usa": []
@@ -774,7 +895,8 @@
     "china": [
       {
         "strength": "1mg",
-        "price": 285
+        "price": 285,
+        "msrp": 105
       }
     ],
     "usa": []
@@ -784,19 +906,23 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 275
+        "price": 275,
+        "msrp": 105
       },
       {
         "strength": "5mg",
-        "price": 360
+        "price": 360,
+        "msrp": 135
       },
       {
         "strength": "10mg",
-        "price": 355
+        "price": 355,
+        "msrp": 135
       },
       {
         "strength": "16mg",
-        "price": 150
+        "price": 150,
+        "msrp": 55
       }
     ],
     "usa": []
@@ -806,7 +932,8 @@
     "china": [
       {
         "strength": "1mg",
-        "price": 220
+        "price": 220,
+        "msrp": 85
       }
     ],
     "usa": []
@@ -816,21 +943,25 @@
     "china": [
       {
         "strength": "50mg",
-        "price": 70
+        "price": 70,
+        "msrp": 25
       },
       {
         "strength": "100mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       }
     ],
     "usa": [
       {
         "strength": "50mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "100mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       }
     ]
   },
@@ -839,15 +970,18 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 65
+        "price": 65,
+        "msrp": 25
       },
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "15mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -857,11 +991,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 70
+        "price": 70,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -871,13 +1007,15 @@
     "china": [
       {
         "strength": "70mg",
-        "price": 225
+        "price": 225,
+        "msrp": 85
       }
     ],
     "usa": [
       {
         "strength": "70mg",
-        "price": 250
+        "price": 250,
+        "msrp": 95
       }
     ]
   },
@@ -886,7 +1024,8 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -896,17 +1035,20 @@
     "china": [
       {
         "strength": "600mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "1500mg",
-        "price": 110
+        "price": 110,
+        "msrp": 40
       }
     ],
     "usa": [
       {
         "strength": "600mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       }
     ]
   },
@@ -915,11 +1057,13 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 70
+        "price": 70,
+        "msrp": 30
       },
       {
         "strength": "5mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -929,7 +1073,8 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -939,33 +1084,40 @@
     "china": [
       {
         "strength": "1000iu",
-        "price": 65
+        "price": 65,
+        "msrp": 25
       },
       {
         "strength": "2000iu",
-        "price": 70
+        "price": 70,
+        "msrp": 25
       },
       {
         "strength": "5000iu",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "10000iu",
-        "price": 175
+        "price": 175,
+        "msrp": 65
       }
     ],
     "usa": [
       {
         "strength": "2000iu",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       },
       {
         "strength": "5000iu",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       },
       {
         "strength": "10000iu",
-        "price": 200
+        "price": 200,
+        "msrp": 75
       }
     ]
   },
@@ -974,7 +1126,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -984,7 +1137,8 @@
     "china": [
       {
         "strength": "150.30mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -994,15 +1148,18 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "5mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 150
+        "price": 150,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -1012,41 +1169,50 @@
     "china": [
       {
         "strength": "6iu",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "8iu",
-        "price": 110
+        "price": 110,
+        "msrp": 40
       },
       {
         "strength": "10iu",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "12iu",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "15iu",
-        "price": 110
+        "price": 110,
+        "msrp": 40
       },
       {
         "strength": "24iu",
-        "price": 165
+        "price": 165,
+        "msrp": 60
       },
       {
         "strength": "36iu",
-        "price": 200
+        "price": 200,
+        "msrp": 75
       },
       {
         "strength": "50iu",
-        "price": 240
+        "price": 240,
+        "msrp": 90
       }
     ],
     "usa": [
       {
         "strength": "15iu",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ]
   },
@@ -1055,15 +1221,18 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       },
       {
         "strength": "15mg",
-        "price": 230
+        "price": 230,
+        "msrp": 85
       }
     ],
     "usa": []
@@ -1073,7 +1242,8 @@
     "china": [
       {
         "strength": "75iu",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1083,7 +1253,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 270
+        "price": 270,
+        "msrp": 100
       }
     ],
     "usa": []
@@ -1093,7 +1264,8 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 180
+        "price": 180,
+        "msrp": 70
       }
     ],
     "usa": []
@@ -1103,29 +1275,35 @@
     "china": [
       {
         "strength": "0.1mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "1mg",
-        "price": 225
+        "price": 225,
+        "msrp": 85
       },
       {
         "strength": "100mcg",
-        "price": 65
+        "price": 65,
+        "msrp": 25
       },
       {
         "strength": "1000mcg",
-        "price": 220
+        "price": 220,
+        "msrp": 80
       }
     ],
     "usa": [
       {
         "strength": "0.1mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "1mg",
-        "price": 270
+        "price": 270,
+        "msrp": 100
       }
     ]
   },
@@ -1134,7 +1312,8 @@
     "china": [
       {
         "strength": "0.1mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1144,25 +1323,30 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 50
+        "price": 50,
+        "msrp": 20
       },
       {
         "strength": "5mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       }
     ],
     "usa": [
       {
         "strength": "5mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 120
+        "price": 120,
+        "msrp": 45
       }
     ]
   },
@@ -1171,17 +1355,20 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "10mg",
-        "price": 125
+        "price": 125,
+        "msrp": 45
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ]
   },
@@ -1190,13 +1377,15 @@
     "china": [
       {
         "strength": "80mg",
-        "price": 255
+        "price": 255,
+        "msrp": 95
       }
     ],
     "usa": [
       {
         "strength": "80mg",
-        "price": 235
+        "price": 235,
+        "msrp": 90
       }
     ]
   },
@@ -1205,25 +1394,30 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 70
+        "price": 70,
+        "msrp": 25
       },
       {
         "strength": "10mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       },
       {
         "strength": "30mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       }
     ],
     "usa": [
       {
         "strength": "5mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "10mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ]
   },
@@ -1232,7 +1426,8 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 65
+        "price": 65,
+        "msrp": 25
       }
     ],
     "usa": []
@@ -1242,7 +1437,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -1252,33 +1448,40 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "10ml",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "200mg",
-        "price": 60
+        "price": 60,
+        "msrp": 25
       },
       {
         "strength": "600mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "1200mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "5000mg",
-        "price": 220
+        "price": 220,
+        "msrp": 80
       }
     ],
     "usa": [
       {
         "strength": "500mg",
-        "price": 275
+        "price": 275,
+        "msrp": 105
       }
     ]
   },
@@ -1287,7 +1490,8 @@
     "china": [
       {
         "strength": "216mg",
-        "price": 125
+        "price": 125,
+        "msrp": 45
       }
     ],
     "usa": []
@@ -1297,15 +1501,18 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       },
       {
         "strength": "30ml",
-        "price": 220
+        "price": 220,
+        "msrp": 80
       },
       {
         "strength": "50ml",
-        "price": 305
+        "price": 305,
+        "msrp": 115
       }
     ],
     "usa": []
@@ -1315,11 +1522,13 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "10ml",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       }
     ],
     "usa": []
@@ -1329,11 +1538,13 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "10ml",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       }
     ],
     "usa": []
@@ -1343,11 +1554,13 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1357,7 +1570,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       }
     ],
     "usa": []
@@ -1367,7 +1581,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -1377,7 +1592,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -1387,7 +1603,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1397,7 +1614,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1407,7 +1625,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1417,7 +1636,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1427,7 +1647,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1437,7 +1658,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1447,11 +1669,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 120
+        "price": 120,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 200
+        "price": 200,
+        "msrp": 75
       }
     ],
     "usa": []
@@ -1461,11 +1685,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       },
       {
         "strength": "10mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -1475,11 +1701,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       },
       {
         "strength": "10mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1489,7 +1717,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 70
+        "price": 70,
+        "msrp": 25
       }
     ],
     "usa": []
@@ -1499,19 +1728,23 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       },
       {
         "strength": "10mg",
-        "price": 240
+        "price": 240,
+        "msrp": 90
       },
       {
         "strength": "15mg",
-        "price": 220
+        "price": 220,
+        "msrp": 80
       },
       {
         "strength": "100mg",
-        "price": 210
+        "price": 210,
+        "msrp": 80
       }
     ],
     "usa": []
@@ -1521,7 +1754,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -1531,17 +1765,20 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "10mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       }
     ]
   },
@@ -1550,13 +1787,15 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       }
     ]
   },
@@ -1565,7 +1804,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -1575,7 +1815,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -1585,11 +1826,13 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       },
       {
         "strength": "20mg",
-        "price": 285
+        "price": 285,
+        "msrp": 105
       }
     ],
     "usa": []
@@ -1599,15 +1842,18 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 120
+        "price": 120,
+        "msrp": 45
       },
       {
         "strength": "30ml",
-        "price": 210
+        "price": 210,
+        "msrp": 80
       },
       {
         "strength": "50ml",
-        "price": 280
+        "price": 280,
+        "msrp": 105
       }
     ],
     "usa": []
@@ -1617,7 +1863,8 @@
     "china": [
       {
         "strength": "120mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       }
     ],
     "usa": []
@@ -1627,7 +1874,8 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       }
     ],
     "usa": []
@@ -1637,7 +1885,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -1647,7 +1896,8 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -1657,37 +1907,45 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 65
+        "price": 65,
+        "msrp": 25
       },
       {
         "strength": "10mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "15mg",
-        "price": 120
+        "price": 120,
+        "msrp": 45
       },
       {
         "strength": "20mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       },
       {
         "strength": "30mg",
-        "price": 205
+        "price": 205,
+        "msrp": 80
       },
       {
         "strength": "40mg",
-        "price": 215
+        "price": 215,
+        "msrp": 80
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 110
+        "price": 110,
+        "msrp": 45
       },
       {
         "strength": "40mg",
-        "price": 280
+        "price": 280,
+        "msrp": 105
       }
     ]
   },
@@ -1696,7 +1954,8 @@
     "china": [
       {
         "strength": "30mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -1706,29 +1965,35 @@
     "china": [
       {
         "strength": "100mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "500mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "1000mg",
-        "price": 140
+        "price": 140,
+        "msrp": 55
       }
     ],
     "usa": [
       {
         "strength": "100mg",
-        "price": 70
+        "price": 70,
+        "msrp": 30
       },
       {
         "strength": "500mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "1000mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ]
   },
@@ -1737,15 +2002,18 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 70
+        "price": 70,
+        "msrp": 25
       },
       {
         "strength": "5mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       }
     ],
     "usa": []
@@ -1755,7 +2023,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 110
+        "price": 110,
+        "msrp": 45
       }
     ],
     "usa": []
@@ -1765,11 +2034,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 65
+        "price": 65,
+        "msrp": 25
       },
       {
         "strength": "10mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1779,11 +2050,13 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "2ml",
-        "price": 170
+        "price": 170,
+        "msrp": 65
       }
     ],
     "usa": []
@@ -1793,11 +2066,13 @@
     "china": [
       {
         "strength": "3ml",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       },
       {
         "strength": "10ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       }
     ],
     "usa": []
@@ -1807,15 +2082,18 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "20mg",
-        "price": 140
+        "price": 140,
+        "msrp": 55
       }
     ],
     "usa": []
@@ -1825,11 +2103,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 180
+        "price": 180,
+        "msrp": 70
       }
     ],
     "usa": []
@@ -1839,11 +2119,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 120
+        "price": 120,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 170
+        "price": 170,
+        "msrp": 65
       }
     ],
     "usa": []
@@ -1853,13 +2135,15 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 40
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       }
     ]
   },
@@ -1868,11 +2152,13 @@
     "china": [
       {
         "strength": "3mg",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       },
       {
         "strength": "10mg",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       }
     ],
     "usa": []
@@ -1882,7 +2168,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       }
     ],
     "usa": []
@@ -1892,7 +2179,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -1902,73 +2190,90 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "10mg",
-        "price": 120
+        "price": 120,
+        "msrp": 45
       },
       {
         "strength": "15mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       },
       {
         "strength": "20mg",
-        "price": 170
+        "price": 170,
+        "msrp": 65
       },
       {
         "strength": "30mg",
-        "price": 215
+        "price": 215,
+        "msrp": 80
       },
       {
         "strength": "40mg",
-        "price": 265
+        "price": 265,
+        "msrp": 100
       },
       {
         "strength": "50mg",
-        "price": 315
+        "price": 315,
+        "msrp": 115
       },
       {
         "strength": "60mg",
-        "price": 305
+        "price": 305,
+        "msrp": 115
       },
       {
         "strength": "100mg",
-        "price": 380
+        "price": 380,
+        "msrp": 140
       }
     ],
     "usa": [
       {
         "strength": "5mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       },
       {
         "strength": "10mg",
-        "price": 140
+        "price": 140,
+        "msrp": 55
       },
       {
         "strength": "15mg",
-        "price": 150
+        "price": 150,
+        "msrp": 60
       },
       {
         "strength": "20mg",
-        "price": 200
+        "price": 200,
+        "msrp": 75
       },
       {
         "strength": "30mg",
-        "price": 260
+        "price": 260,
+        "msrp": 95
       },
       {
         "strength": "40mg",
-        "price": 245
+        "price": 245,
+        "msrp": 95
       },
       {
         "strength": "50mg",
-        "price": 390
+        "price": 390,
+        "msrp": 145
       },
       {
         "strength": "60mg",
-        "price": 435
+        "price": 435,
+        "msrp": 165
       }
     ]
   },
@@ -1977,7 +2282,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 140
+        "price": 140,
+        "msrp": 55
       }
     ],
     "usa": []
@@ -1987,7 +2293,8 @@
     "china": [
       {
         "strength": "60mg",
-        "price": 260
+        "price": 260,
+        "msrp": 100
       }
     ],
     "usa": []
@@ -1997,7 +2304,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 220
+        "price": 220,
+        "msrp": 80
       }
     ],
     "usa": []
@@ -2007,7 +2315,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       }
     ],
     "usa": []
@@ -2017,21 +2326,25 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "30mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       }
     ]
   },
@@ -2040,7 +2353,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -2050,37 +2364,45 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "15mg",
-        "price": 100
+        "price": 100,
+        "msrp": 40
       },
       {
         "strength": "20mg",
-        "price": 110
+        "price": 110,
+        "msrp": 40
       },
       {
         "strength": "30mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       },
       {
         "strength": "50mg",
-        "price": 150
+        "price": 150,
+        "msrp": 55
       }
     ],
     "usa": [
       {
         "strength": "20mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "30mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       }
     ]
   },
@@ -2089,25 +2411,30 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "30mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ],
     "usa": [
       {
         "strength": "5mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       }
     ]
   },
@@ -2116,7 +2443,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -2126,19 +2454,23 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 65
+        "price": 65,
+        "msrp": 25
       },
       {
         "strength": "5mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "10mg",
-        "price": 150
+        "price": 150,
+        "msrp": 60
       },
       {
         "strength": "15mg",
-        "price": 205
+        "price": 205,
+        "msrp": 80
       }
     ],
     "usa": []
@@ -2148,7 +2480,8 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -2159,7 +2492,8 @@
     "usa": [
       {
         "strength": "5mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ]
   },
@@ -2168,15 +2502,18 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "20mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "100mg",
-        "price": 275
+        "price": 275,
+        "msrp": 105
       }
     ],
     "usa": []
@@ -2186,17 +2523,20 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "50mg",
-        "price": 310
+        "price": 310,
+        "msrp": 115
       }
     ],
     "usa": [
       {
         "strength": "50mg",
-        "price": 445
+        "price": 445,
+        "msrp": 165
       }
     ]
   },
@@ -2205,15 +2545,18 @@
     "china": [
       {
         "strength": "3ml",
-        "price": 35
+        "price": 35,
+        "msrp": 15
       },
       {
         "strength": "5ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       },
       {
         "strength": "10ml",
-        "price": 40
+        "price": 40,
+        "msrp": 15
       }
     ],
     "usa": []
@@ -2223,7 +2566,8 @@
     "china": [
       {
         "strength": "865mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -2233,7 +2577,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       }
     ],
     "usa": []
@@ -2243,7 +2588,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 290
+        "price": 290,
+        "msrp": 110
       }
     ],
     "usa": []
@@ -2253,25 +2599,30 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 70
+        "price": 70,
+        "msrp": 30
       },
       {
         "strength": "5mg",
-        "price": 120
+        "price": 120,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 185
+        "price": 185,
+        "msrp": 70
       },
       {
         "strength": "20mg",
-        "price": 250
+        "price": 250,
+        "msrp": 95
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 185
+        "price": 185,
+        "msrp": 70
       }
     ]
   },
@@ -2280,11 +2631,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "10mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       }
     ],
     "usa": []
@@ -2294,33 +2647,40 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 85
+        "price": 85,
+        "msrp": 35
       },
       {
         "strength": "5mg",
-        "price": 125
+        "price": 125,
+        "msrp": 50
       },
       {
         "strength": "10mg",
-        "price": 230
+        "price": 230,
+        "msrp": 85
       },
       {
         "strength": "15mg",
-        "price": 275
+        "price": 275,
+        "msrp": 105
       },
       {
         "strength": "20mg",
-        "price": 345
+        "price": 345,
+        "msrp": 130
       }
     ],
     "usa": [
       {
         "strength": "5mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       },
       {
         "strength": "10mg",
-        "price": 220
+        "price": 220,
+        "msrp": 85
       }
     ]
   },
@@ -2329,7 +2689,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 255
+        "price": 255,
+        "msrp": 95
       }
     ],
     "usa": []
@@ -2339,7 +2700,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 140
+        "price": 140,
+        "msrp": 55
       }
     ],
     "usa": []
@@ -2349,13 +2711,15 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       }
     ]
   },
@@ -2364,11 +2728,13 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "20mg",
-        "price": 155
+        "price": 155,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -2378,21 +2744,25 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "5mg",
-        "price": 130
+        "price": 130,
+        "msrp": 50
       },
       {
         "strength": "10mg",
-        "price": 200
+        "price": 200,
+        "msrp": 75
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 245
+        "price": 245,
+        "msrp": 95
       }
     ]
   },
@@ -2401,11 +2771,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "10mg",
-        "price": 150
+        "price": 150,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -2415,89 +2787,110 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "15mg",
-        "price": 105
+        "price": 105,
+        "msrp": 40
       },
       {
         "strength": "20mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "30mg",
-        "price": 140
+        "price": 140,
+        "msrp": 55
       },
       {
         "strength": "40mg",
-        "price": 165
+        "price": 165,
+        "msrp": 65
       },
       {
         "strength": "45mg",
-        "price": 235
+        "price": 235,
+        "msrp": 90
       },
       {
         "strength": "50mg",
-        "price": 195
+        "price": 195,
+        "msrp": 75
       },
       {
         "strength": "60mg",
-        "price": 215
+        "price": 215,
+        "msrp": 80
       },
       {
         "strength": "70mg",
-        "price": 220
+        "price": 220,
+        "msrp": 80
       },
       {
         "strength": "80mg",
-        "price": 225
+        "price": 225,
+        "msrp": 85
       },
       {
         "strength": "90mg",
-        "price": 265
+        "price": 265,
+        "msrp": 100
       },
       {
         "strength": "100mg",
-        "price": 290
+        "price": 290,
+        "msrp": 110
       },
       {
         "strength": "120mg",
-        "price": 330
+        "price": 330,
+        "msrp": 125
       }
     ],
     "usa": [
       {
         "strength": "10mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       },
       {
         "strength": "15mg",
-        "price": 95
+        "price": 95,
+        "msrp": 35
       },
       {
         "strength": "20mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "30mg",
-        "price": 170
+        "price": 170,
+        "msrp": 65
       },
       {
         "strength": "40mg",
-        "price": 220
+        "price": 220,
+        "msrp": 80
       },
       {
         "strength": "50mg",
-        "price": 200
+        "price": 200,
+        "msrp": 75
       },
       {
         "strength": "60mg",
-        "price": 250
+        "price": 250,
+        "msrp": 95
       }
     ]
   },
@@ -2506,7 +2899,8 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 135
+        "price": 135,
+        "msrp": 50
       }
     ],
     "usa": []
@@ -2516,7 +2910,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 190
+        "price": 190,
+        "msrp": 70
       }
     ],
     "usa": []
@@ -2526,11 +2921,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 185
+        "price": 185,
+        "msrp": 70
       }
     ],
     "usa": []
@@ -2540,11 +2937,13 @@
     "china": [
       {
         "strength": "10mg",
-        "price": 90
+        "price": 90,
+        "msrp": 35
       },
       {
         "strength": "20mg",
-        "price": 145
+        "price": 145,
+        "msrp": 55
       }
     ],
     "usa": []
@@ -2554,7 +2953,8 @@
     "china": [
       {
         "strength": "20mg",
-        "price": 160
+        "price": 160,
+        "msrp": 60
       }
     ],
     "usa": []
@@ -2564,11 +2964,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 115
+        "price": 115,
+        "msrp": 45
       },
       {
         "strength": "10mg",
-        "price": 185
+        "price": 185,
+        "msrp": 70
       }
     ],
     "usa": []
@@ -2578,7 +2980,8 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 70
+        "price": 70,
+        "msrp": 30
       }
     ],
     "usa": []
@@ -2588,11 +2991,13 @@
     "china": [
       {
         "strength": "10ml",
-        "price": 80
+        "price": 80,
+        "msrp": 30
       },
       {
         "strength": "10mg",
-        "price": 75
+        "price": 75,
+        "msrp": 30
       }
     ],
     "usa": []
