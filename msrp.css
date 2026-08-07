@@ -1,0 +1,12 @@
+.kit-msrp {
+  margin: 13px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.kit-msrp strong {
+  color: var(--navy-deep);
+  font-size: 16px;
+}
