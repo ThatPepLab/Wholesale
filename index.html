@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search available products, strengths, and three-vial kit prices.">
+  <title>Wholesale Product Catalog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero"><div class="hero-inner"><div class="brand-mark" aria-hidden="true">P</div><div><p class="eyebrow">WHOLESALE PRODUCT CATALOG</p><h1>Available Products</h1><p class="hero-copy">Search a product, choose the strength, and view the three-vial Kit price.</p></div></div></header>
+  <main><section class="catalog-wrap"><div class="finder-card">
+    <label class="search-field" for="search"><span>Search products</span><input id="search" type="search" placeholder="Start typing a product name…" autocomplete="off" aria-controls="suggestions"></label>
+    <div id="suggestions" class="suggestions" hidden></div>
+    <div id="prompt" class="finder-prompt"><strong>Find a product to begin.</strong><span>Search results show product names only.</span></div>
+    <section id="selection" class="selection" hidden><p class="selected-label">Selected product</p><h2 id="selected-name"></h2><label class="strength-field" for="strength"><span>Choose available strength</span><select id="strength"></select></label><div id="prices" class="kit-prices" aria-live="polite"></div></section>
+  </div></section></main>
+  <footer><p>Kit prices are for three vials and include the standard multi-vial discount.</p></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
