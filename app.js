@@ -138,5 +138,5 @@ prices.addEventListener("keydown", (event) => {
     event.target.click();
   }
 });
-fetch("catalog-data.json?v=20260807-5").then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; }).catch(() => { prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
+fetch("catalog-data.json?v=20260807-6").then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; }).catch(() => { prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
 renderCart();
