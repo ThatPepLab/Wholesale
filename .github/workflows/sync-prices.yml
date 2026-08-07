@@ -1,0 +1,64 @@
+name: Sync prices from TPLPrice
+
+on:
+  schedule:
+    - cron: "2-59/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: wholesale-price-sync
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out Wholesale
+        uses: actions/checkout@v6
+
+      - name: Check out TPLPrice
+        uses: actions/checkout@v6
+        with:
+          repository: ThatPepLab/TPLPrice
+          path: _tplprice
+
+      - name: Rebuild public catalog
+        run: node sync-catalog.mjs _tplprice/index.html catalog-data.json
+
+      - name: Save changed prices
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet -- catalog-data.json; then
+            echo "updated=false" >> "$GITHUB_OUTPUT"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add catalog-data.json
+            git commit -m "Sync wholesale prices from TPLPrice"
+            git push
+            echo "updated=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Remove private source checkout
+        run: rm -rf _tplprice
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4
