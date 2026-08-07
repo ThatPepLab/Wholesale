@@ -37,7 +37,7 @@ function chooseProduct(name) {
 }
 function regionPrice(label, item) {
   if (!item) return "";
-  return `<article class="kit-card"><div class="region-label"><span class="source-dot ${label === "U.S." ? "usa" : "china"}" aria-hidden="true"></span>${label}</div><p class="kit-label">3-Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p></article>`;
+  return `<article class="kit-card"><div class="region-label"><span class="source-dot ${label === "U.S." ? "usa" : "china"}" aria-hidden="true"></span>${label}</div><p class="kit-label">10 Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p><p class="kit-msrp">MSRP per single vial: <strong>${money.format(item.msrp)}</strong></p></article>`;
 }
 function renderPrice() {
   if (!state.selectedProduct || !state.selectedStrength) return;
