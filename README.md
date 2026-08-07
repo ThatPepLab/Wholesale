@@ -1,6 +1,6 @@
 # Vendor Product Catalog
 
-A static, GitHub Pages-ready product catalog showing product names, available strengths, and three-vial seller pricing. China and U.S. fulfillment options are calculated and listed separately.
+A static, GitHub Pages-ready product catalog showing product names, available strengths, 10-vial seller Kit pricing, and single-vial MSRP. China and U.S. fulfillment options are calculated and listed separately.
 
 ## Pricing calculation
 
