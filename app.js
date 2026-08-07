@@ -3,7 +3,7 @@ const accessForm = document.querySelector("#access-form");
 const accessPassword = document.querySelector("#access-password");
 const accessError = document.querySelector("#access-error");
 const accessButton = document.querySelector("#access-button");
-const accessHash = "eec4010f884d4b46f954292a8f9f6f136de1be0a72d8c0a4b3ef7e87c55100cd";
+const accessHash = "02876ccb394ad5f47bf360a980a3f76483a2da4b44521cbc10ba4a3f6c8cba61";
 async function accessDigest(value) { const bytes = new TextEncoder().encode(value); const hash = await crypto.subtle.digest("SHA-256", bytes); return [...new Uint8Array(hash)].map((byte) => byte.toString(16).padStart(2, "0")).join(""); }
 function unlockSite() { document.body.classList.remove("site-locked"); accessGate.hidden = true; accessPassword.value = ""; }
 if (sessionStorage.getItem("tplWholesaleAccess") === "granted") unlockSite();
