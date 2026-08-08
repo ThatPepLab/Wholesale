@@ -4787,13 +4787,13 @@
       },
       {
         "strength": "10mg",
-        "price": 305,
-        "msrp": 115,
+        "price": 235,
+        "msrp": 90,
         "retail": {
-          "one": 115,
-          "three": 305,
-          "five": 475,
-          "ten": 895
+          "one": 90,
+          "three": 235,
+          "five": 370,
+          "ten": 700
         }
       },
       {
