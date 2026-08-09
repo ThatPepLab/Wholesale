@@ -125,6 +125,7 @@ function chooseProduct(name) {
   selection.hidden = false;
   prompt.hidden = true;
   renderPrice();
+  selection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 function regionPrice(label, item) {
   if (!item) return "";
