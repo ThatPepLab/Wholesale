@@ -12,6 +12,8 @@ accessForm.addEventListener("submit", async (event) => { event.preventDefault();
 const state = { products: [], selectedProduct: null, selectedStrength: "", carts: { china: [], usa: [] }, inventory: new Map() };
 const search = document.querySelector("#search");
 const suggestions = document.querySelector("#suggestions");
+const categorySelect = document.querySelector("#category");
+const catalogGroups = document.querySelector("#catalog-groups");
 const selection = document.querySelector("#selection");
 const selectedName = document.querySelector("#selected-name");
 const strengthSelect = document.querySelector("#strength");
@@ -97,6 +99,18 @@ function renderSuggestions() {
   suggestions.hidden = matches.length === 0;
   suggestions.innerHTML = matches.map((product) => `<button type="button" data-product="${escapeHtml(product.name)}">${escapeHtml(product.name)}</button>`).join("");
 }
+function renderCatalog() {
+  const selected = categorySelect.value;
+  const groups = new Map();
+  for (const product of state.products) {
+    const category = categoryFor(product.name);
+    if (selected !== "all" && category !== selected) continue;
+    if (!groups.has(category)) groups.set(category, []);
+    groups.get(category).push(product);
+  }
+  const ordered = [...categories.map((item) => item.name), "Other"];
+  catalogGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="catalog-group"><h2>${escapeHtml(name)}</h2><div class="product-buttons">${groups.get(name).sort((a, b) => a.name.localeCompare(b.name)).map((product) => `<button type="button" data-product="${escapeHtml(product.name)}">${escapeHtml(product.name)}</button>`).join("")}</div></section>`).join("");
+}
 function chooseProduct(name) {
   const product = state.products.find((item) => item.name === name);
   if (!product) return;
@@ -159,9 +173,10 @@ function addToCart(region) {
   formStatus.textContent = `${state.selectedProduct.name} ${item.strength} added to the ${region === "usa" ? "U.S." : "China"} cart.`;
 }
 inStockGroups.addEventListener("click", (event) => { const button = event.target.closest("[data-stock-product]"); if (!button) return; chooseProduct(button.dataset.stockProduct); if (state.selectedProduct && productStrengths(state.selectedProduct).includes(button.dataset.stockStrength)) { state.selectedStrength = button.dataset.stockStrength; strengthSelect.value = state.selectedStrength; renderPrice(); selection.scrollIntoView({ behavior: "smooth", block: "start" }); } });
-search.addEventListener("input", () => { state.selectedProduct = null; selection.hidden = true; prompt.hidden = false; renderSuggestions(); });
+search.addEventListener("input", () => { state.selectedProduct = null; selection.hidden = true; renderSuggestions(); });
 search.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); const first = matchingProducts()[0]; if (first) chooseProduct(first.name); } });
-suggestions.addEventListener("click", (event) => { const button = event.target.closest("[data-product]"); if (button) chooseProduct(button.dataset.product); });
+document.addEventListener("click", (event) => { const button = event.target.closest?.("[data-product]"); if (!button) return; event.preventDefault(); chooseProduct(button.dataset.product); });
+categorySelect.addEventListener("change", renderCatalog);
 strengthSelect.addEventListener("change", () => { state.selectedStrength = strengthSelect.value; renderPrice(); });
 prices.addEventListener("click", (event) => {
   const addButton = event.target.closest("[data-add-region]");
@@ -210,7 +225,7 @@ prices.addEventListener("keydown", (event) => {
     event.target.click();
   }
 });
-fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; renderInStockSection(); }).catch(() => { prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
+fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; const names = [...new Set(products.map((product) => categoryFor(product.name)))].sort(); categorySelect.insertAdjacentHTML("beforeend", names.map((name) => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join("")); renderInStockSection(); renderCatalog(); }).catch(() => { prompt.hidden = false; prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
 refreshInventory();
 setInterval(refreshInventory, 300000);
 renderCart();
