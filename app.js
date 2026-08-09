@@ -130,7 +130,7 @@ function chooseProduct(name) {
 function regionPrice(label, item) {
   if (!item) return "";
   const region = label === "U.S." ? "usa" : "china";
-  return `<article class="kit-card" tabindex="0" role="button" aria-expanded="false" aria-label="${label} pricing. Hover, focus, or tap for MSRP tiers."><div class="region-label"><span class="source-dot ${region === "usa" ? "usa" : "china"}" aria-hidden="true"></span>${label}</div><p class="kit-label">10 Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p><p class="kit-msrp">MSRP per single vial: <strong>${money.format(item.msrp)}</strong></p><button class="add-cart-button" type="button" data-add-region="${region}">Add 10 Vial Kit to ${label} Cart</button><p class="tier-hint">Hover or tap for MSRP tiers</p><div class="tier-panel"><p class="tier-title">Customer MSRP</p><div class="tier-row"><span>1 vial</span><strong>${money.format(item.retail.one)}</strong><small>Regular price</small></div><div class="tier-row"><span>3 vials</span><strong>${money.format(item.retail.three)}</strong><small>10% off</small></div><div class="tier-row"><span>5 vials</span><strong>${money.format(item.retail.five)}</strong><small>15% off</small></div><div class="tier-row"><span>10 vials</span><strong>${money.format(item.retail.ten)}</strong><small>20% off</small></div></div></article>`;
+  return `<article class="kit-card"><div class="region-label"><span class="source-dot ${region === "usa" ? "usa" : "china"}" aria-hidden="true"></span>${label}</div><p class="kit-label">10 Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p><button class="add-cart-button" type="button" data-add-region="${region}">Add 10 Vial Kit to ${label} Cart</button></article>`;
 }
 function renderPrice() {
   if (!state.selectedProduct || !state.selectedStrength) return;
@@ -181,13 +181,7 @@ categorySelect.addEventListener("change", renderCatalog);
 strengthSelect.addEventListener("change", () => { state.selectedStrength = strengthSelect.value; renderPrice(); });
 prices.addEventListener("click", (event) => {
   const addButton = event.target.closest("[data-add-region]");
-  if (addButton) { event.stopPropagation(); addToCart(addButton.dataset.addRegion); return; }
-  const card = event.target.closest(".kit-card");
-  if (!card) return;
-  const expanded = !card.classList.contains("expanded");
-  prices.querySelectorAll(".kit-card").forEach((item) => { item.classList.remove("expanded"); item.setAttribute("aria-expanded", "false"); });
-  card.classList.toggle("expanded", expanded);
-  card.setAttribute("aria-expanded", String(expanded));
+  if (addButton) addToCart(addButton.dataset.addRegion);
 });
 document.querySelector(".cart-section").addEventListener("click", (event) => {
   const button = event.target.closest("[data-cart-action]");
@@ -218,12 +212,6 @@ orderForm.addEventListener("submit", async (event) => {
   } finally {
     submitOrder.textContent = "Submit Order Request";
     submitOrder.disabled = !state.carts.china.length && !state.carts.usa.length;
-  }
-});
-prices.addEventListener("keydown", (event) => {
-  if ((event.key === "Enter" || event.key === " ") && event.target.classList.contains("kit-card")) {
-    event.preventDefault();
-    event.target.click();
   }
 });
 fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; const names = [...new Set(products.map((product) => categoryFor(product.name)))].sort(); categorySelect.insertAdjacentHTML("beforeend", names.map((name) => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join("")); renderInStockSection(); renderCatalog(); }).catch(() => { prompt.hidden = false; prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
