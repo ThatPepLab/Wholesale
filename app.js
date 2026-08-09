@@ -70,9 +70,10 @@ function renderInStockSection() {
 
 async function refreshInventory() {
   try {
-    const response = await fetch(`https://raw.githubusercontent.com/ThatPepLab/InStock/main/inventory.json?updated=${Date.now()}`, { cache: "no-store" });
+    const response = await fetch(`https://api.github.com/repos/ThatPepLab/InStock/contents/inventory.json?ref=main&updated=${Date.now()}`, { cache: "no-store", headers: { Accept: "application/vnd.github+json" } });
     if (!response.ok) throw new Error("Inventory unavailable");
-    const entries = await response.json();
+    const payload = await response.json();
+    const entries = JSON.parse(atob(String(payload.content || "").replace(/\s/g, "")));
     const next = new Map();
     for (const entry of Array.isArray(entries) ? entries : []) {
       const quantity = Math.max(0, Math.floor(Number(entry.quantity) || 0));
