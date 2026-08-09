@@ -53,7 +53,7 @@ function renderInStockSection() {
   for (const product of state.products) {
     for (const strength of productStrengths(product)) {
       const quantity = stockQuantity(product.name, strength);
-      if (quantity > 0) items.push({ product, category: categoryFor(product.name), strength, quantity });
+      if (quantity >= 10 && quantity % 10 === 0) items.push({ product, category: categoryFor(product.name), strength, quantity });
     }
   }
   inStockSection.hidden = items.length === 0;
