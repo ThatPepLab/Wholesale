@@ -81,6 +81,7 @@ async function refreshInventory() {
     }
     state.inventory = next;
     renderInStockSection();
+    if (state.selectedProduct) renderPrice();
   } catch (error) {
     console.warn("Inventory check failed", error);
   }
@@ -120,7 +121,8 @@ function renderPrice() {
   if (!state.selectedProduct || !state.selectedStrength) return;
   const china = state.selectedProduct.china.find((item) => item.strength === state.selectedStrength);
   const usa = state.selectedProduct.usa.find((item) => item.strength === state.selectedStrength);
-  prices.innerHTML = `${regionPrice("China", china)}${regionPrice("U.S.", usa)}`;
+  const completeKits = Math.floor(stockQuantity(state.selectedProduct.name, state.selectedStrength) / 10);
+  prices.innerHTML = completeKits > 0 && usa ? regionPrice("U.S.", usa) : `${regionPrice("China", china)}${regionPrice("U.S.", usa)}`;
 }
 function cartSubtotal(region) { return state.carts[region].reduce((sum, item) => sum + (item.price * item.quantity), 0); }
 function regionTotal(region) { return state.carts[region].length ? cartSubtotal(region) + 40 : 0; }
