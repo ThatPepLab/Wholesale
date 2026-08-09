@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Search available products and strengths, build regional carts, and submit a wholesale order request.">
   <title>Wholesale Product Catalog</title>
-  <link rel="stylesheet" href="styles.css?v=20260809-1">
+  <link rel="stylesheet" href="styles.css?v=20260809-2">
   <link rel="stylesheet" href="msrp.css?v=20260807-2">
   <link rel="stylesheet" href="tier-pricing.css?v=20260807-4">
   <link rel="stylesheet" href="cart.css?v=20260807-5">
@@ -23,7 +23,9 @@
   <div class="finder-card">
     <label class="search-field" for="search"><span>Search products</span><input id="search" type="search" placeholder="Start typing a product name…" autocomplete="off" aria-controls="suggestions"></label>
     <div id="suggestions" class="suggestions" hidden></div>
-    <div id="prompt" class="finder-prompt"><strong>Find a product to begin.</strong><span>Search results show product names only.</span></div>
+    <label class="category-field" for="category"><span>Browse by category</span><select id="category"><option value="all">All categories</option></select></label>
+    <div id="catalog-groups" class="catalog-groups" aria-live="polite"></div>
+    <div id="prompt" class="finder-prompt" hidden></div>
     <section id="selection" class="selection" hidden><p class="selected-label">Selected product</p><h2 id="selected-name"></h2><label class="strength-field" for="strength"><span>Choose available strength</span><select id="strength"></select></label><div id="prices" class="kit-prices" aria-live="polite"></div></section>
   </div>
   <section class="cart-section" aria-labelledby="cart-heading">
@@ -40,6 +42,6 @@
     </form>
   </section></section></main>
   <footer><p>Kit prices are for 10 vials. Single-vial MSRP is shown for reference.</p></footer>
-  <script src="app.js?v=20260809-5" defer></script>
+  <script src="app.js?v=20260809-6" defer></script>
 </body>
 </html>
