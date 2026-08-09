@@ -1,73 +1,5 @@
 [
   {
-    "name": "【 】 Lipo-C FAT BLASTER L-CARNITINE 300mg METHIONINE 25mg INOSITOL 50mg CHOLINE 50mg B12 1mg B6 50mg NADH 50mg",
-    "china": [
-      {
-        "strength": "526mg",
-        "price": 155,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 245,
-          "ten": 460
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "+ Cagrilintide 5mg",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 70,
-          "three": 185,
-          "five": 290,
-          "ten": 545
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "+ CU50+TB10+BC10+KPV10",
-    "china": [
-      {
-        "strength": "80mg",
-        "price": 285,
-        "msrp": 105,
-        "retail": {
-          "one": 105,
-          "three": 285,
-          "five": 445,
-          "ten": 840
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "+ Glow BPC-157 10mg",
-    "china": [
-      {
-        "strength": "70mg",
-        "price": 240,
-        "msrp": 90,
-        "retail": {
-          "one": 90,
-          "three": 240,
-          "five": 380,
-          "ten": 710
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "5-Amino-1MQ",
     "china": [
       {
@@ -130,124 +62,6 @@
           "three": 225,
           "five": 350,
           "ten": 655
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Acetic acid water",
-    "china": [
-      {
-        "strength": "3ml",
-        "price": 45,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 45,
-          "five": 65,
-          "ten": 120
-        }
-      },
-      {
-        "strength": "10ml",
-        "price": 45,
-        "msrp": 20,
-        "retail": {
-          "one": 20,
-          "three": 45,
-          "five": 65,
-          "ten": 125
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Acetic Acid Water 0.6%",
-    "china": [
-      {
-        "strength": "3mg",
-        "price": 35,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 35,
-          "five": 55,
-          "ten": 100
-        }
-      },
-      {
-        "strength": "3ml",
-        "price": 40,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 40,
-          "five": 60,
-          "ten": 110
-        }
-      },
-      {
-        "strength": "5mg",
-        "price": 40,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 40,
-          "five": 65,
-          "ten": 115
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 45,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 45,
-          "five": 65,
-          "ten": 120
-        }
-      },
-      {
-        "strength": "10ml",
-        "price": 40,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 40,
-          "five": 60,
-          "ten": 110
-        }
-      }
-    ],
-    "usa": [
-      {
-        "strength": "10ml",
-        "price": 55,
-        "msrp": 20,
-        "retail": {
-          "one": 20,
-          "three": 55,
-          "five": 80,
-          "ten": 150
-        }
-      }
-    ]
-  },
-  {
-    "name": "AceticAcidWater (Contains0.6% aceticacid)",
-    "china": [
-      {
-        "strength": "3ml",
-        "price": 45,
-        "msrp": 20,
-        "retail": {
-          "one": 20,
-          "three": 45,
-          "five": 65,
-          "ten": 125
         }
       }
     ],
@@ -466,34 +280,6 @@
     "usa": []
   },
   {
-    "name": "Aicar",
-    "china": [
-      {
-        "strength": "50mg",
-        "price": 95,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 95,
-          "five": 145,
-          "ten": 270
-        }
-      },
-      {
-        "strength": "100mg",
-        "price": 150,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 150,
-          "five": 240,
-          "ten": 445
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "AICAR",
     "china": [
       {
@@ -509,13 +295,13 @@
       },
       {
         "strength": "100mg",
-        "price": 130,
-        "msrp": 50,
+        "price": 150,
+        "msrp": 60,
         "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 205,
-          "ten": 385
+          "one": 60,
+          "three": 150,
+          "five": 240,
+          "ten": 445
         }
       }
     ],
@@ -649,146 +435,6 @@
         }
       }
     ]
-  },
-  {
-    "name": "BAC Water Benzyl Acoh 0.9%",
-    "china": [
-      {
-        "strength": "3ml",
-        "price": 35,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 35,
-          "five": 55,
-          "ten": 105
-        }
-      },
-      {
-        "strength": "5ml",
-        "price": 40,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 40,
-          "five": 60,
-          "ten": 110
-        }
-      },
-      {
-        "strength": "10ml",
-        "price": 40,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 40,
-          "five": 60,
-          "ten": 110
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Bacteriostatic Water",
-    "china": [
-      {
-        "strength": "3mg",
-        "price": 35,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 35,
-          "five": 55,
-          "ten": 100
-        }
-      },
-      {
-        "strength": "3ml",
-        "price": 45,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 45,
-          "five": 65,
-          "ten": 120
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 35,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 35,
-          "five": 55,
-          "ten": 100
-        }
-      },
-      {
-        "strength": "10ml",
-        "price": 45,
-        "msrp": 20,
-        "retail": {
-          "one": 20,
-          "three": 45,
-          "five": 65,
-          "ten": 125
-        }
-      }
-    ],
-    "usa": [
-      {
-        "strength": "3ml",
-        "price": 50,
-        "msrp": 20,
-        "retail": {
-          "one": 20,
-          "three": 50,
-          "five": 75,
-          "ten": 140
-        }
-      },
-      {
-        "strength": "10ml",
-        "price": 55,
-        "msrp": 20,
-        "retail": {
-          "one": 20,
-          "three": 55,
-          "five": 80,
-          "ten": 150
-        }
-      }
-    ]
-  },
-  {
-    "name": "BACwater purewater 100%deionizedwater.",
-    "china": [
-      {
-        "strength": "3ml",
-        "price": 40,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 40,
-          "five": 60,
-          "ten": 110
-        }
-      },
-      {
-        "strength": "10ml",
-        "price": 45,
-        "msrp": 20,
-        "retail": {
-          "one": 20,
-          "three": 45,
-          "five": 65,
-          "ten": 125
-        }
-      }
-    ],
-    "usa": []
   },
   {
     "name": "Botulinum toxin",
@@ -993,23 +639,6 @@
     "usa": []
   },
   {
-    "name": "cagilintide 5mg+Semaglutide5mg",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 175,
-        "msrp": 65,
-        "retail": {
-          "one": 65,
-          "three": 175,
-          "five": 275,
-          "ten": 510
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "Cagrilintide",
     "china": [
       {
@@ -1133,23 +762,6 @@
     "usa": []
   },
   {
-    "name": "Cagrilintide 2.5mg",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 55,
-          "three": 145,
-          "five": 225,
-          "ten": 420
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "Cardiogen",
     "china": [
       {
@@ -1206,23 +818,6 @@
           "three": 90,
           "five": 140,
           "ten": 265
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "CGL5mg+SM5mg",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 135,
-        "msrp": 50,
-        "retail": {
-          "one": 50,
-          "three": 135,
-          "five": 210,
-          "ten": 390
         }
       }
     ],
@@ -1819,7 +1414,7 @@
     "usa": []
   },
   {
-    "name": "GLOW (BPC-157 + TB500 + GHK-Cu)",
+    "name": "GLOW",
     "china": [
       {
         "strength": "70mg",
@@ -1846,23 +1441,6 @@
         }
       }
     ]
-  },
-  {
-    "name": "GLP-1",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 135,
-        "msrp": 50,
-        "retail": {
-          "one": 50,
-          "three": 135,
-          "five": 210,
-          "ten": 390
-        }
-      }
-    ],
-    "usa": []
   },
   {
     "name": "Glutathione",
@@ -1909,17 +1487,6 @@
     "china": [
       {
         "strength": "2mg",
-        "price": 70,
-        "msrp": 30,
-        "retail": {
-          "one": 30,
-          "three": 70,
-          "five": 110,
-          "ten": 210
-        }
-      },
-      {
-        "strength": "5mg",
         "price": 85,
         "msrp": 35,
         "retail": {
@@ -1928,15 +1495,9 @@
           "five": 135,
           "ten": 250
         }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Gonadorelin Acetate",
-    "china": [
+      },
       {
-        "strength": "2mg",
+        "strength": "5mg",
         "price": 85,
         "msrp": 35,
         "retail": {
@@ -2032,40 +1593,6 @@
         }
       }
     ]
-  },
-  {
-    "name": "Healthy Hair skin nails Blend",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Healthy Hair skin nails Blend NIACINAMIDE 50mg THIAMINE HCL 50mg PANTOTHENIC ACID 25mg CHOLINE 10mg INOSITOL 10mg NIACIN 5mg BIOTIN 100mcg FOLIC ACID 100mcg RIBOFLAVIN 100mcg",
-    "china": [
-      {
-        "strength": "150.30mg",
-        "price": 155,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 245,
-          "ten": 460
-        }
-      }
-    ],
-    "usa": []
   },
   {
     "name": "Hexarelin Acetate",
@@ -2280,23 +1807,6 @@
           "three": 315,
           "five": 490,
           "ten": 920
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Hyaluronic Acid",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 180,
-        "msrp": 70,
-        "retail": {
-          "one": 70,
-          "three": 180,
-          "five": 285,
-          "ten": 530
         }
       }
     ],
@@ -2558,6 +2068,17 @@
           "five": 225,
           "ten": 420
         }
+      },
+      {
+        "strength": "80mg",
+        "price": 285,
+        "msrp": 105,
+        "retail": {
+          "one": 105,
+          "three": 285,
+          "five": 445,
+          "ten": 840
+        }
       }
     ],
     "usa": [
@@ -2584,40 +2105,6 @@
         }
       }
     ]
-  },
-  {
-    "name": "KPV5",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 65,
-        "msrp": 25,
-        "retail": {
-          "one": 25,
-          "three": 65,
-          "five": 105,
-          "ten": 195
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "KPV10",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 85,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 85,
-          "five": 130,
-          "ten": 245
-        }
-      }
-    ],
-    "usa": []
   },
   {
     "name": "L-Carnitine",
@@ -2704,62 +2191,6 @@
     ]
   },
   {
-    "name": "L-Carnitine 20mg L-Arginine 20mg Methionine 25mg Inositol 50mg Choline 50mg B6 (Pyridoxine) 25mg B5(Dexpanthenol) 25mg B12 (Methy|cobalamin) 1mg",
-    "china": [
-      {
-        "strength": "216mg",
-        "price": 125,
-        "msrp": 45,
-        "retail": {
-          "one": 45,
-          "three": 125,
-          "five": 195,
-          "ten": 360
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "L-carnitine 20mg L-arginine 20mg methonine 25mg Inositol 50mg choline 50mg B6(Pyridoxine)25mg B5(dexpanthenol) 1mg 2%benzyl alcohol 2%Lidocaine 0.1% In sterile Water",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 135,
-        "msrp": 50,
-        "retail": {
-          "one": 50,
-          "three": 135,
-          "five": 210,
-          "ten": 390
-        }
-      },
-      {
-        "strength": "30ml",
-        "price": 220,
-        "msrp": 80,
-        "retail": {
-          "one": 80,
-          "three": 220,
-          "five": 340,
-          "ten": 640
-        }
-      },
-      {
-        "strength": "50ml",
-        "price": 305,
-        "msrp": 115,
-        "retail": {
-          "one": 115,
-          "three": 305,
-          "five": 475,
-          "ten": 895
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "LC120",
     "china": [
       {
@@ -2816,216 +2247,7 @@
     "usa": []
   },
   {
-    "name": "Lemon Bottle",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      },
-      {
-        "strength": "10ml",
-        "price": 110,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 110,
-          "five": 170,
-          "ten": 320
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Lipo Lab PPC Solution",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 75,
-        "msrp": 30,
-        "retail": {
-          "one": 30,
-          "three": 75,
-          "five": 120,
-          "ten": 220
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Lipo-B",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 95,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 95,
-          "five": 150,
-          "ten": 280
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Lipo-c",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 95,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 95,
-          "five": 150,
-          "ten": 280
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "LiPO-C",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "LiPO-C Plus",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Lipo-C with vitamins B12",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Lipo-C with vitamins No B12",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Lipo-C(FatBLaster)",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "LiPO-CwithB12",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "LL-37",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 120,
-        "msrp": 45,
-        "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 185,
-          "ten": 350
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 200,
-        "msrp": 75,
-        "retail": {
-          "one": 75,
-          "three": 200,
-          "five": 315,
-          "ten": 585
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "LL37",
     "china": [
       {
         "strength": "5mg",
@@ -3040,13 +2262,13 @@
       },
       {
         "strength": "10mg",
-        "price": 190,
-        "msrp": 70,
+        "price": 200,
+        "msrp": 75,
         "retail": {
-          "one": 70,
-          "three": 190,
-          "five": 300,
-          "ten": 560
+          "one": 75,
+          "three": 200,
+          "five": 315,
+          "ten": 585
         }
       }
     ],
@@ -3148,23 +2370,6 @@
     "usa": []
   },
   {
-    "name": "Melanotan II",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 90,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 90,
-          "five": 140,
-          "ten": 265
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "Melanotan-1",
     "china": [
       {
@@ -3185,8 +2390,8 @@
         "retail": {
           "one": 35,
           "three": 90,
-          "five": 135,
-          "ten": 255
+          "five": 140,
+          "ten": 265
         }
       }
     ],
@@ -3206,69 +2411,6 @@
   },
   {
     "name": "Melanotan-2",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 95,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 95,
-          "five": 150,
-          "ten": 280
-        }
-      }
-    ],
-    "usa": [
-      {
-        "strength": "10mg",
-        "price": 85,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 85,
-          "five": 135,
-          "ten": 250
-        }
-      }
-    ]
-  },
-  {
-    "name": "Melatonin",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 90,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 90,
-          "five": 140,
-          "ten": 265
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "melatonin Ⅰ",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 85,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 85,
-          "five": 135,
-          "ten": 250
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "melatonin Ⅱ",
     "china": [
       {
         "strength": "10mg",
@@ -3293,10 +2435,22 @@
         }
       }
     ],
-    "usa": []
+    "usa": [
+      {
+        "strength": "10mg",
+        "price": 85,
+        "msrp": 35,
+        "retail": {
+          "one": 35,
+          "three": 85,
+          "five": 135,
+          "ten": 250
+        }
+      }
+    ]
   },
   {
-    "name": "methonine 15mg choline chloride 50mg carnitine 50mg dexpanthenol 5mg",
+    "name": "Methionine 15mg + Choline Chloride 50mg + L-Carnitine 50mg + Dexpanthenol 5mg",
     "china": [
       {
         "strength": "10ml",
@@ -3330,13 +2484,7 @@
           "five": 440,
           "ten": 825
         }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Methonine 15mg Choline Choride 50mg L-Carnitine 50mg Dexpanthenol 5mg",
-    "china": [
+      },
       {
         "strength": "120mg",
         "price": 115,
@@ -3498,23 +2646,6 @@
     ]
   },
   {
-    "name": "NA Semax amidate",
-    "china": [
-      {
-        "strength": "30mg",
-        "price": 155,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 245,
-          "ten": 460
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "NAD+",
     "china": [
       {
@@ -3621,23 +2752,6 @@
           "three": 105,
           "five": 165,
           "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "PE 22-28",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 110,
-        "msrp": 45,
-        "retail": {
-          "one": 45,
-          "three": 110,
-          "five": 175,
-          "ten": 325
         }
       }
     ],
@@ -3767,34 +2881,6 @@
     "usa": []
   },
   {
-    "name": "PNC 27",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 115,
-        "msrp": 45,
-        "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 180,
-          "ten": 335
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 180,
-        "msrp": 70,
-        "retail": {
-          "one": 70,
-          "three": 180,
-          "five": 280,
-          "ten": 525
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "PNC-27",
     "china": [
       {
@@ -3852,52 +2938,7 @@
     ]
   },
   {
-    "name": "Pure water",
-    "china": [
-      {
-        "strength": "3mg",
-        "price": 35,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 35,
-          "five": 55,
-          "ten": 100
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 35,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 35,
-          "five": 55,
-          "ten": 100
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "Relaxation PM",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 115,
-        "msrp": 45,
-        "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 180,
-          "ten": 335
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "RelaxatlonPM",
     "china": [
       {
         "strength": "10ml",
@@ -3908,6 +2949,17 @@
           "three": 105,
           "five": 165,
           "ten": 305
+        }
+      },
+      {
+        "strength": "10mg",
+        "price": 115,
+        "msrp": 45,
+        "retail": {
+          "one": 45,
+          "three": 115,
+          "five": 180,
+          "ten": 335
         }
       }
     ],
@@ -4108,17 +3160,17 @@
     ]
   },
   {
-    "name": "Retatrutide 5mg+cagrilintide 5mg",
+    "name": "Retatrutide + Cagrilintide",
     "china": [
       {
         "strength": "10mg",
-        "price": 140,
-        "msrp": 55,
+        "price": 220,
+        "msrp": 80,
         "retail": {
-          "one": 55,
-          "three": 140,
-          "five": 220,
-          "ten": 415
+          "one": 80,
+          "three": 220,
+          "five": 340,
+          "ten": 640
         }
       }
     ],
@@ -4136,40 +3188,6 @@
           "three": 260,
           "five": 410,
           "ten": 770
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Retatrutide+cagrilintide",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 220,
-        "msrp": 80,
-        "retail": {
-          "one": 80,
-          "three": 220,
-          "five": 340,
-          "ten": 640
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "RT5mg+CGL5mg",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 55,
-          "three": 145,
-          "five": 225,
-          "ten": 420
         }
       }
     ],
@@ -4239,6 +3257,17 @@
           "five": 200,
           "ten": 375
         }
+      },
+      {
+        "strength": "20mg",
+        "price": 145,
+        "msrp": 55,
+        "retail": {
+          "one": 55,
+          "three": 145,
+          "five": 225,
+          "ten": 420
+        }
       }
     ],
     "usa": []
@@ -4248,13 +3277,13 @@
     "china": [
       {
         "strength": "5mg",
-        "price": 95,
-        "msrp": 35,
+        "price": 135,
+        "msrp": 50,
         "retail": {
-          "one": 35,
-          "three": 95,
-          "five": 150,
-          "ten": 280
+          "one": 50,
+          "three": 135,
+          "five": 210,
+          "ten": 390
         }
       },
       {
@@ -4401,23 +3430,6 @@
     ]
   },
   {
-    "name": "Semax 10mg+Selank 10mg",
-    "china": [
-      {
-        "strength": "20mg",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 55,
-          "three": 145,
-          "five": 225,
-          "ten": 420
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "Sermorelin Acetate",
     "china": [
       {
@@ -4468,7 +3480,7 @@
     "usa": []
   },
   {
-    "name": "SLU-PP-322",
+    "name": "SLU-PP-332",
     "china": [
       {
         "strength": "5mg",
@@ -4482,11 +3494,6 @@
         }
       }
     ],
-    "usa": []
-  },
-  {
-    "name": "SLU-PP-332",
-    "china": [],
     "usa": [
       {
         "strength": "5mg",
@@ -4581,79 +3588,6 @@
     ]
   },
   {
-    "name": "Sterile water",
-    "china": [
-      {
-        "strength": "3ml",
-        "price": 35,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 35,
-          "five": 55,
-          "ten": 105
-        }
-      },
-      {
-        "strength": "5ml",
-        "price": 40,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 40,
-          "five": 60,
-          "ten": 110
-        }
-      },
-      {
-        "strength": "10ml",
-        "price": 40,
-        "msrp": 15,
-        "retail": {
-          "one": 15,
-          "three": 40,
-          "five": 60,
-          "ten": 110
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "SUPER Human Blend L-Arginine 110mg L-Ornithin 110mg L-Citruline 120mg L-Lysine 70mg L-Glutamine 40mg L-Proline 60mg L-Taurine 60mg L-Carnitine 220mg NAC 75mg",
-    "china": [
-      {
-        "strength": "865mg",
-        "price": 155,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 245,
-          "ten": 460
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "SuperHumanBlend",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "Survodutide",
     "china": [
       {
@@ -4731,34 +3665,6 @@
         }
       }
     ]
-  },
-  {
-    "name": "TB500 (ThymosinB4Acetate）",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 90,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 90,
-          "five": 140,
-          "ten": 265
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 55,
-          "three": 145,
-          "five": 225,
-          "ten": 420
-        }
-      }
-    ],
-    "usa": []
   },
   {
     "name": "Tesamorelin",
@@ -4857,6 +3763,17 @@
           "five": 400,
           "ten": 755
         }
+      },
+      {
+        "strength": "20mg",
+        "price": 190,
+        "msrp": 70,
+        "retail": {
+          "one": 70,
+          "three": 190,
+          "five": 300,
+          "ten": 560
+        }
       }
     ],
     "usa": []
@@ -4879,7 +3796,7 @@
     "usa": []
   },
   {
-    "name": "Thymalin",
+    "name": "Thymalin/Thymulin",
     "china": [
       {
         "strength": "10mg",
@@ -4890,6 +3807,17 @@
           "three": 105,
           "five": 165,
           "ten": 305
+        }
+      },
+      {
+        "strength": "20mg",
+        "price": 155,
+        "msrp": 60,
+        "retail": {
+          "one": 60,
+          "three": 155,
+          "five": 245,
+          "ten": 460
         }
       }
     ],
@@ -4906,34 +3834,6 @@
         }
       }
     ]
-  },
-  {
-    "name": "Thymalin/Thymulin",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 95,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 95,
-          "five": 150,
-          "ten": 280
-        }
-      },
-      {
-        "strength": "20mg",
-        "price": 155,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 245,
-          "ten": 460
-        }
-      }
-    ],
-    "usa": []
   },
   {
     "name": "Thymosin Alpha-1",
@@ -4985,34 +3885,6 @@
         }
       }
     ]
-  },
-  {
-    "name": "ThymosinAlpha-1",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 90,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 90,
-          "five": 140,
-          "ten": 265
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 150,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 150,
-          "five": 240,
-          "ten": 445
-        }
-      }
-    ],
-    "usa": []
   },
   {
     "name": "Tirzepatide",
@@ -5253,40 +4125,6 @@
     ]
   },
   {
-    "name": "TSM5mg+IPA5mg",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 135,
-        "msrp": 50,
-        "retail": {
-          "one": 50,
-          "three": 135,
-          "five": 210,
-          "ten": 390
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "TSM10mg+IPA10mg",
-    "china": [
-      {
-        "strength": "20mg",
-        "price": 190,
-        "msrp": 70,
-        "retail": {
-          "one": 70,
-          "three": 190,
-          "five": 300,
-          "ten": 560
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
     "name": "Vasoactive Intestinal Peptide",
     "china": [
       {
@@ -5382,23 +4220,6 @@
           "three": 230,
           "five": 355,
           "ten": 670
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "vitamin B12",
-    "china": [
-      {
-        "strength": "10ml",
-        "price": 70,
-        "msrp": 30,
-        "retail": {
-          "one": 30,
-          "three": 70,
-          "five": 110,
-          "ten": 210
         }
       }
     ],
