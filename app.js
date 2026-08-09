@@ -53,7 +53,8 @@ function renderInStockSection() {
   for (const product of state.products) {
     for (const strength of productStrengths(product)) {
       const quantity = stockQuantity(product.name, strength);
-      if (quantity >= 10 && quantity % 10 === 0) items.push({ product, category: categoryFor(product.name), strength, quantity });
+      const kits = Math.floor(quantity / 10);
+      if (kits > 0) items.push({ product, category: categoryFor(product.name), strength, quantity, kits });
     }
   }
   inStockSection.hidden = items.length === 0;
@@ -64,7 +65,7 @@ function renderInStockSection() {
   }
   const ordered = [...categories.map((item) => item.name), "Other"];
   inStockCount.textContent = `${items.length} available strength${items.length === 1 ? "" : "s"}`;
-  inStockGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="in-stock-category"><h3>${escapeHtml(name)}</h3><div class="in-stock-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.quantity} vial${item.quantity === 1 ? "" : "s"} available</b></button>`).join("")}</div></section>`).join("");
+  inStockGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="in-stock-category"><h3>${escapeHtml(name)}</h3><div class="in-stock-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.kits} kit${item.kits === 1 ? "" : "s"} available</b></button>`).join("")}</div></section>`).join("");
 }
 
 async function refreshInventory() {
