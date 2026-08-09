@@ -1,6 +1,18 @@
 name: Sync prices from TPLPrice
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - "catalog-data.json"
+      - "index.html"
+      - "app.js"
+      - "styles.css"
+      - "access.css"
+      - "msrp.css"
+      - "tier-pricing.css"
+      - "cart.css"
   schedule:
     - cron: "2-59/5 * * * *"
   workflow_dispatch:
