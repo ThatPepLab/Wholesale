@@ -9,7 +9,7 @@ function unlockSite() { document.body.classList.remove("site-locked"); accessGat
 if (sessionStorage.getItem("tplWholesaleAccess") === "granted") unlockSite();
 accessForm.addEventListener("submit", async (event) => { event.preventDefault(); accessError.textContent = ""; accessButton.disabled = true; if (await accessDigest(accessPassword.value) === accessHash) { sessionStorage.setItem("tplWholesaleAccess", "granted"); unlockSite(); } else { accessError.textContent = "Incorrect password."; accessPassword.select(); } accessButton.disabled = false; });
 
-const state = { products: [], selectedProduct: null, selectedStrength: "", carts: { china: [], usa: [] } };
+const state = { products: [], selectedProduct: null, selectedStrength: "", carts: { china: [], usa: [] }, inventory: new Map() };
 const search = document.querySelector("#search");
 const suggestions = document.querySelector("#suggestions");
 const selection = document.querySelector("#selection");
@@ -17,6 +17,9 @@ const selectedName = document.querySelector("#selected-name");
 const strengthSelect = document.querySelector("#strength");
 const prices = document.querySelector("#prices");
 const prompt = document.querySelector("#prompt");
+const inStockSection = document.querySelector("#in-stock-section");
+const inStockGroups = document.querySelector("#in-stock-groups");
+const inStockCount = document.querySelector("#in-stock-count");
 const cartCount = document.querySelector("#cart-count");
 const cartContainers = { china: document.querySelector("#china-cart"), usa: document.querySelector("#usa-cart") };
 const cartTotals = { china: document.querySelector("#china-totals"), usa: document.querySelector("#usa-totals") };
@@ -27,6 +30,59 @@ const formStatus = document.querySelector("#form-status");
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
 const strengthNumber = (value) => Number.parseFloat(value) || 0;
+
+const categories = [
+  { name: "Weight Loss", test: /semaglutide|tirzepatide|trizepatide|retatrutide|cagrilintide|cagilintide|mazdutide|survodutide|eloralintide|adipotide|aod-?9604|hgh fragment|lemon bottle|lipo lab|lipo-[bc]|lipo-c|fat blaster|5-amino/i },
+  { name: "Energy & Metabolic", test: /mots|ss-?31|nad\+|aicar|slu-?pp|l-carnitine|lc120|lc216|mic\b|superhuman|humanin|vitamin b12/i },
+  { name: "Recovery & Repair", test: /bpc|tb500|tb-?500|glow|klow|kpv|ll-?37|ara-?290|cartalax|bronchogen|cardiogen|vesugen|lysine-proline-valine/i },
+  { name: "Growth & Performance", test: /hgh|cjc|ghrp|ipamorelin|tesamorelin|sermorelin|igf|mgf|follistatin|ace-?031|gdf-?8|mk677|epo\b/i },
+  { name: "Cognitive & Mood", test: /semax|selank|dihexa|dsip|pe-?22|pinealon|cerebrolysin|cortagen|adamax|melatonin|relaxation/i },
+  { name: "Sexual & Hormone", test: /pt-?141|oxytocin|hcg\b|hmg\b|kisspeptin|gonadorelin|alprostadil|testagen/i },
+  { name: "Skin, Hair & Beauty", test: /melanotan|snap-?8|matrixyl|ahk-?cu|ghk-?cu|healthy hair|botulinum|hyaluronic/i },
+  { name: "Immune & Wellness", test: /thym|epithalon|glutathione|foxo|pnc|vilon|crystagen|vip\b|vasoactive|dermorphin/i },
+  { name: "Supplies", test: /water|saline|phosphate buffered|acetic acid/i }
+];
+const categoryFor = (name) => categories.find((category) => category.test.test(name))?.name || "Other";
+const stockKey = (product, strength) => `${String(product).trim().toLowerCase()}|${String(strength).trim().toLowerCase()}`;
+const stockQuantity = (product, strength) => state.inventory.get(stockKey(product, strength)) || 0;
+const productStrengths = (product) => [...new Set([...product.china, ...product.usa].map((item) => item.strength))].sort((a, b) => strengthNumber(a) - strengthNumber(b));
+
+function renderInStockSection() {
+  const groups = new Map();
+  const items = [];
+  for (const product of state.products) {
+    for (const strength of productStrengths(product)) {
+      const quantity = stockQuantity(product.name, strength);
+      if (quantity > 0) items.push({ product, category: categoryFor(product.name), strength, quantity });
+    }
+  }
+  inStockSection.hidden = items.length === 0;
+  if (!items.length) { inStockGroups.innerHTML = ""; inStockCount.textContent = ""; return; }
+  for (const item of items) {
+    if (!groups.has(item.category)) groups.set(item.category, []);
+    groups.get(item.category).push(item);
+  }
+  const ordered = [...categories.map((item) => item.name), "Other"];
+  inStockCount.textContent = `${items.length} available strength${items.length === 1 ? "" : "s"}`;
+  inStockGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="in-stock-category"><h3>${escapeHtml(name)}</h3><div class="in-stock-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.quantity} vial${item.quantity === 1 ? "" : "s"} available</b></button>`).join("")}</div></section>`).join("");
+}
+
+async function refreshInventory() {
+  try {
+    const response = await fetch(`https://raw.githubusercontent.com/ThatPepLab/InStock/main/inventory.json?updated=${Date.now()}`, { cache: "no-store" });
+    if (!response.ok) throw new Error("Inventory unavailable");
+    const entries = await response.json();
+    const next = new Map();
+    for (const entry of Array.isArray(entries) ? entries : []) {
+      const quantity = Math.max(0, Math.floor(Number(entry.quantity) || 0));
+      if (entry.product && entry.strength && quantity > 0) next.set(stockKey(entry.product, entry.strength), quantity);
+    }
+    state.inventory = next;
+    renderInStockSection();
+  } catch (error) {
+    console.warn("Inventory check failed", error);
+  }
+}
 
 function matchingProducts() {
   const query = search.value.trim().toLowerCase();
@@ -45,7 +101,7 @@ function chooseProduct(name) {
   search.value = product.name;
   suggestions.hidden = true;
   selectedName.textContent = product.name;
-  const strengths = [...new Set([...product.china, ...product.usa].map((item) => item.strength))].sort((a, b) => strengthNumber(a) - strengthNumber(b));
+  const strengths = productStrengths(product);
   strengthSelect.innerHTML = strengths.map((strength) => `<option value="${escapeHtml(strength)}">${escapeHtml(strength)}</option>`).join("");
   state.selectedStrength = strengths[0] || "";
   strengthSelect.value = state.selectedStrength;
@@ -98,6 +154,7 @@ function addToCart(region) {
   renderCart();
   formStatus.textContent = `${state.selectedProduct.name} ${item.strength} added to the ${region === "usa" ? "U.S." : "China"} cart.`;
 }
+inStockGroups.addEventListener("click", (event) => { const button = event.target.closest("[data-stock-product]"); if (!button) return; chooseProduct(button.dataset.stockProduct); if (state.selectedProduct && productStrengths(state.selectedProduct).includes(button.dataset.stockStrength)) { state.selectedStrength = button.dataset.stockStrength; strengthSelect.value = state.selectedStrength; renderPrice(); selection.scrollIntoView({ behavior: "smooth", block: "start" }); } });
 search.addEventListener("input", () => { state.selectedProduct = null; selection.hidden = true; prompt.hidden = false; renderSuggestions(); });
 search.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); const first = matchingProducts()[0]; if (first) chooseProduct(first.name); } });
 suggestions.addEventListener("click", (event) => { const button = event.target.closest("[data-product]"); if (button) chooseProduct(button.dataset.product); });
@@ -149,5 +206,7 @@ prices.addEventListener("keydown", (event) => {
     event.target.click();
   }
 });
-fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; }).catch(() => { prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
+fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; renderInStockSection(); }).catch(() => { prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
+refreshInventory();
+setInterval(refreshInventory, 300000);
 renderCart();
