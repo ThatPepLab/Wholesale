@@ -1625,6 +1625,17 @@
           "five": 245,
           "ten": 455
         }
+      },
+      {
+        "strength": "10000iu",
+        "price": 170,
+        "msrp": 65,
+        "retail": {
+          "one": 65,
+          "three": 170,
+          "five": 270,
+          "ten": 500
+        }
       }
     ]
   },
@@ -2490,7 +2501,19 @@
         }
       }
     ],
-    "usa": []
+    "usa": [
+      {
+        "strength": "10mg",
+        "price": 80,
+        "msrp": 30,
+        "retail": {
+          "one": 30,
+          "three": 80,
+          "five": 125,
+          "ten": 235
+        }
+      }
+    ]
   },
   {
     "name": "Methionine 15mg + Choline Chloride 50mg + L-Carnitine 50mg + Dexpanthenol 5mg",
@@ -3136,24 +3159,24 @@
       },
       {
         "strength": "15mg",
-        "price": 150,
-        "msrp": 60,
+        "price": 175,
+        "msrp": 65,
         "retail": {
-          "one": 60,
-          "three": 150,
-          "five": 240,
-          "ten": 445
+          "one": 65,
+          "three": 175,
+          "five": 275,
+          "ten": 520
         }
       },
       {
         "strength": "20mg",
-        "price": 220,
-        "msrp": 80,
+        "price": 235,
+        "msrp": 90,
         "retail": {
-          "one": 80,
-          "three": 220,
-          "five": 340,
-          "ten": 640
+          "one": 90,
+          "three": 235,
+          "five": 365,
+          "ten": 685
         }
       },
       {
@@ -3191,13 +3214,13 @@
       },
       {
         "strength": "60mg",
-        "price": 435,
+        "price": 440,
         "msrp": 165,
         "retail": {
           "one": 165,
-          "three": 435,
-          "five": 685,
-          "ten": 1285
+          "three": 440,
+          "five": 690,
+          "ten": 1290
         }
       }
     ]
@@ -3276,13 +3299,13 @@
     "usa": [
       {
         "strength": "10mg",
-        "price": 95,
-        "msrp": 35,
+        "price": 120,
+        "msrp": 45,
         "retail": {
-          "one": 35,
-          "three": 95,
-          "five": 150,
-          "ten": 280
+          "one": 45,
+          "three": 120,
+          "five": 190,
+          "ten": 350
         }
       }
     ]
@@ -3450,13 +3473,13 @@
       },
       {
         "strength": "10mg",
-        "price": 105,
+        "price": 110,
         "msrp": 40,
         "retail": {
           "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 305
+          "three": 110,
+          "five": 170,
+          "ten": 320
         }
       }
     ]
