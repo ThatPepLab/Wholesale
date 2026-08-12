@@ -1488,6 +1488,234 @@
     ]
   },
   {
+    "name": "GLP-3RT",
+    "china": [
+      {
+        "strength": "5mg",
+        "price": 125,
+        "msrp": 45,
+        "retail": {
+          "one": 45,
+          "three": 125,
+          "five": 195,
+          "ten": 360
+        }
+      },
+      {
+        "strength": "10mg",
+        "price": 150,
+        "msrp": 60,
+        "retail": {
+          "one": 60,
+          "three": 150,
+          "five": 240,
+          "ten": 445
+        }
+      },
+      {
+        "strength": "15mg",
+        "price": 195,
+        "msrp": 75,
+        "retail": {
+          "one": 75,
+          "three": 195,
+          "five": 305,
+          "ten": 570
+        }
+      },
+      {
+        "strength": "20mg",
+        "price": 220,
+        "msrp": 80,
+        "retail": {
+          "one": 80,
+          "three": 220,
+          "five": 340,
+          "ten": 640
+        }
+      },
+      {
+        "strength": "30mg",
+        "price": 285,
+        "msrp": 105,
+        "retail": {
+          "one": 105,
+          "three": 285,
+          "five": 445,
+          "ten": 840
+        }
+      },
+      {
+        "strength": "40mg",
+        "price": 350,
+        "msrp": 130,
+        "retail": {
+          "one": 130,
+          "three": 350,
+          "five": 550,
+          "ten": 1035
+        }
+      },
+      {
+        "strength": "50mg",
+        "price": 420,
+        "msrp": 160,
+        "retail": {
+          "one": 160,
+          "three": 420,
+          "five": 660,
+          "ten": 1245
+        }
+      },
+      {
+        "strength": "60mg",
+        "price": 370,
+        "msrp": 140,
+        "retail": {
+          "one": 140,
+          "three": 370,
+          "five": 580,
+          "ten": 1090
+        }
+      },
+      {
+        "strength": "100mg",
+        "price": 445,
+        "msrp": 165,
+        "retail": {
+          "one": 165,
+          "three": 445,
+          "five": 700,
+          "ten": 1315
+        }
+      }
+    ],
+    "usa": [
+      {
+        "strength": "5mg",
+        "price": 85,
+        "msrp": 35,
+        "retail": {
+          "one": 35,
+          "three": 85,
+          "five": 135,
+          "ten": 250
+        }
+      },
+      {
+        "strength": "10mg",
+        "price": 150,
+        "msrp": 60,
+        "retail": {
+          "one": 60,
+          "three": 150,
+          "five": 240,
+          "ten": 445
+        }
+      },
+      {
+        "strength": "15mg",
+        "price": 175,
+        "msrp": 65,
+        "retail": {
+          "one": 65,
+          "three": 175,
+          "five": 275,
+          "ten": 520
+        }
+      },
+      {
+        "strength": "20mg",
+        "price": 235,
+        "msrp": 90,
+        "retail": {
+          "one": 90,
+          "three": 235,
+          "five": 365,
+          "ten": 685
+        }
+      },
+      {
+        "strength": "30mg",
+        "price": 315,
+        "msrp": 115,
+        "retail": {
+          "one": 115,
+          "three": 315,
+          "five": 490,
+          "ten": 920
+        }
+      },
+      {
+        "strength": "40mg",
+        "price": 275,
+        "msrp": 105,
+        "retail": {
+          "one": 105,
+          "three": 275,
+          "five": 430,
+          "ten": 810
+        }
+      },
+      {
+        "strength": "50mg",
+        "price": 390,
+        "msrp": 145,
+        "retail": {
+          "one": 145,
+          "three": 390,
+          "five": 610,
+          "ten": 1145
+        }
+      },
+      {
+        "strength": "60mg",
+        "price": 440,
+        "msrp": 165,
+        "retail": {
+          "one": 165,
+          "three": 440,
+          "five": 690,
+          "ten": 1290
+        }
+      }
+    ]
+  },
+  {
+    "name": "GLP-3RT + Cagrilintide",
+    "china": [
+      {
+        "strength": "10mg",
+        "price": 220,
+        "msrp": 80,
+        "retail": {
+          "one": 80,
+          "three": 220,
+          "five": 340,
+          "ten": 640
+        }
+      }
+    ],
+    "usa": []
+  },
+  {
+    "name": "GLP-3RT 20mg + Trizepatide 40mg (10ml)",
+    "china": [
+      {
+        "strength": "60mg",
+        "price": 260,
+        "msrp": 100,
+        "retail": {
+          "one": 100,
+          "three": 260,
+          "five": 410,
+          "ten": 770
+        }
+      }
+    ],
+    "usa": []
+  },
+  {
     "name": "Glutathione",
     "china": [
       {
@@ -3026,234 +3254,6 @@
           "three": 115,
           "five": 180,
           "ten": 335
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Retatrutide",
-    "china": [
-      {
-        "strength": "5mg",
-        "price": 125,
-        "msrp": 45,
-        "retail": {
-          "one": 45,
-          "three": 125,
-          "five": 195,
-          "ten": 360
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 150,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 150,
-          "five": 240,
-          "ten": 445
-        }
-      },
-      {
-        "strength": "15mg",
-        "price": 195,
-        "msrp": 75,
-        "retail": {
-          "one": 75,
-          "three": 195,
-          "five": 305,
-          "ten": 570
-        }
-      },
-      {
-        "strength": "20mg",
-        "price": 220,
-        "msrp": 80,
-        "retail": {
-          "one": 80,
-          "three": 220,
-          "five": 340,
-          "ten": 640
-        }
-      },
-      {
-        "strength": "30mg",
-        "price": 285,
-        "msrp": 105,
-        "retail": {
-          "one": 105,
-          "three": 285,
-          "five": 445,
-          "ten": 840
-        }
-      },
-      {
-        "strength": "40mg",
-        "price": 350,
-        "msrp": 130,
-        "retail": {
-          "one": 130,
-          "three": 350,
-          "five": 550,
-          "ten": 1035
-        }
-      },
-      {
-        "strength": "50mg",
-        "price": 420,
-        "msrp": 160,
-        "retail": {
-          "one": 160,
-          "three": 420,
-          "five": 660,
-          "ten": 1245
-        }
-      },
-      {
-        "strength": "60mg",
-        "price": 370,
-        "msrp": 140,
-        "retail": {
-          "one": 140,
-          "three": 370,
-          "five": 580,
-          "ten": 1090
-        }
-      },
-      {
-        "strength": "100mg",
-        "price": 445,
-        "msrp": 165,
-        "retail": {
-          "one": 165,
-          "three": 445,
-          "five": 700,
-          "ten": 1315
-        }
-      }
-    ],
-    "usa": [
-      {
-        "strength": "5mg",
-        "price": 85,
-        "msrp": 35,
-        "retail": {
-          "one": 35,
-          "three": 85,
-          "five": 135,
-          "ten": 250
-        }
-      },
-      {
-        "strength": "10mg",
-        "price": 150,
-        "msrp": 60,
-        "retail": {
-          "one": 60,
-          "three": 150,
-          "five": 240,
-          "ten": 445
-        }
-      },
-      {
-        "strength": "15mg",
-        "price": 175,
-        "msrp": 65,
-        "retail": {
-          "one": 65,
-          "three": 175,
-          "five": 275,
-          "ten": 520
-        }
-      },
-      {
-        "strength": "20mg",
-        "price": 235,
-        "msrp": 90,
-        "retail": {
-          "one": 90,
-          "three": 235,
-          "five": 365,
-          "ten": 685
-        }
-      },
-      {
-        "strength": "30mg",
-        "price": 315,
-        "msrp": 115,
-        "retail": {
-          "one": 115,
-          "three": 315,
-          "five": 490,
-          "ten": 920
-        }
-      },
-      {
-        "strength": "40mg",
-        "price": 275,
-        "msrp": 105,
-        "retail": {
-          "one": 105,
-          "three": 275,
-          "five": 430,
-          "ten": 810
-        }
-      },
-      {
-        "strength": "50mg",
-        "price": 390,
-        "msrp": 145,
-        "retail": {
-          "one": 145,
-          "three": 390,
-          "five": 610,
-          "ten": 1145
-        }
-      },
-      {
-        "strength": "60mg",
-        "price": 440,
-        "msrp": 165,
-        "retail": {
-          "one": 165,
-          "three": 440,
-          "five": 690,
-          "ten": 1290
-        }
-      }
-    ]
-  },
-  {
-    "name": "Retatrutide + Cagrilintide",
-    "china": [
-      {
-        "strength": "10mg",
-        "price": 220,
-        "msrp": 80,
-        "retail": {
-          "one": 80,
-          "three": 220,
-          "five": 340,
-          "ten": 640
-        }
-      }
-    ],
-    "usa": []
-  },
-  {
-    "name": "Retatrutide 20mg + Trizepatide 40mg (10ml)",
-    "china": [
-      {
-        "strength": "60mg",
-        "price": 260,
-        "msrp": 100,
-        "retail": {
-          "one": 100,
-          "three": 260,
-          "five": 410,
-          "ten": 770
         }
       }
     ],
