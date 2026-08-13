@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Search available products and strengths, build regional carts, and submit a wholesale order request.">
+  <meta name="description" content="Search available products and strengths, build a cart, and submit a wholesale order request.">
   <title>Wholesale Product Catalog</title>
-  <link rel="stylesheet" href="styles.css?v=20260809-2">
+  <link rel="stylesheet" href="styles.css?v=20260813-1">
   <link rel="stylesheet" href="cart.css?v=20260807-5">
   <link rel="stylesheet" href="access.css?v=20260807-8">
 </head>
 <body class="site-locked">
   <section id="access-gate" class="access-gate" aria-labelledby="access-title"><form id="access-form" class="access-card"><div class="access-mark" aria-hidden="true">P</div><p class="selected-label">WHOLESALE ACCESS</p><h1 id="access-title">Enter Password</h1><p>Enter the shared password to view the wholesale catalog.</p><label for="access-password">Password</label><input id="access-password" type="password" autocomplete="current-password" autofocus required><button id="access-button" type="submit">Open Catalog</button><p id="access-error" class="access-error" role="alert"></p></form></section>
-  <header class="hero"><div class="hero-inner"><div class="brand-mark" aria-hidden="true">P</div><div><p class="eyebrow">WHOLESALE PRODUCT CATALOG</p><h1>Available Products</h1><p class="hero-copy">Search a product, choose the strength, and add a 10-vial kit to its regional cart.</p></div></div></header>
+  <header class="hero"><div class="hero-inner"><div class="brand-mark" aria-hidden="true">P</div><div><p class="eyebrow">WHOLESALE PRODUCT CATALOG</p><h1>Available Products</h1><p class="hero-copy">Search a product, choose the strength, and add a 10-vial kit to your cart.</p></div></div></header>
   <main><section class="catalog-wrap">
   <section id="in-stock-section" class="in-stock-section" aria-labelledby="in-stock-heading" hidden>
     <div class="in-stock-heading"><div><p class="selected-label">AVAILABLE NOW</p><h2 id="in-stock-heading">In Stock Now</h2></div><span id="in-stock-count" class="stock-total"></span></div>
@@ -27,19 +27,18 @@
     <section id="selection" class="selection" hidden><p class="selected-label">Selected product</p><h2 id="selected-name"></h2><label class="strength-field" for="strength"><span>Choose available strength</span><select id="strength"></select></label><div id="prices" class="kit-prices" aria-live="polite"></div></section>
   </div>
   <section class="cart-section" aria-labelledby="cart-heading">
-    <div class="cart-heading-row"><div><p class="selected-label">ORDER REQUEST</p><h2 id="cart-heading">Your Carts</h2></div><span id="cart-count" class="cart-count">0 kits</span></div>
+    <div class="cart-heading-row"><div><p class="selected-label">ORDER REQUEST</p><h2 id="cart-heading">Your Cart</h2></div><span id="cart-count" class="cart-count">0 kits</span></div>
     <div class="cart-grid">
-      <section class="cart-panel" aria-labelledby="china-cart-heading"><h3 id="china-cart-heading"><span class="source-dot" aria-hidden="true"></span>China Cart</h3><div id="china-cart" class="cart-lines"><p class="empty-cart">No China kits added.</p></div><div id="china-totals" class="cart-totals" hidden></div></section>
-      <section class="cart-panel" aria-labelledby="usa-cart-heading"><h3 id="usa-cart-heading"><span class="source-dot usa" aria-hidden="true"></span>U.S. Cart</h3><div id="usa-cart" class="cart-lines"><p class="empty-cart">No U.S. kits added.</p></div><div id="usa-totals" class="cart-totals" hidden></div></section>
+      <section class="cart-panel" aria-labelledby="order-cart-heading"><h3 id="order-cart-heading">10 Vial Kits</h3><div id="cart-lines" class="cart-lines"><p class="empty-cart">No kits added.</p></div><div id="cart-totals" class="cart-totals" hidden></div></section>
     </div>
     <form id="order-form" class="order-form" action="https://formspree.io/f/mzepdzel" method="POST">
       <h3>Customer Information</h3><div class="customer-fields"><label><span>Name</span><input name="customer_name" autocomplete="name" required></label><label><span>Email</span><input type="email" name="email" autocomplete="email" required></label><label><span>Phone</span><input type="tel" name="phone" autocomplete="tel" required></label><label class="notes-field"><span>Order notes</span><textarea name="notes" rows="3" placeholder="Optional"></textarea></label></div>
       <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
-      <input type="hidden" name="china_order" id="china-order-field"><input type="hidden" name="usa_order" id="usa-order-field"><input type="hidden" name="order_total" id="order-total-field">
+      <input type="hidden" name="order_summary" id="order-summary-field"><input type="hidden" name="order_total" id="order-total-field">
       <div class="order-submit-row"><div><span>Estimated total</span><strong id="grand-total">$0</strong></div><button id="submit-order" type="submit" disabled>Submit Order Request</button></div><p class="order-disclaimer">This submits an order request only. Payment is not collected on this website.</p><p id="form-status" class="form-status" role="status" aria-live="polite"></p>
     </form>
   </section></section></main>
   <footer><p>All listed kit prices are for 10 vials.</p></footer>
-  <script src="app.js?v=20260812-1" defer></script>
+  <script src="app.js?v=20260813-1" defer></script>
 </body>
 </html>

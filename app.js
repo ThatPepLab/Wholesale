@@ -9,7 +9,7 @@ function unlockSite() { document.body.classList.remove("site-locked"); accessGat
 if (sessionStorage.getItem("tplWholesaleAccess") === "granted") unlockSite();
 accessForm.addEventListener("submit", async (event) => { event.preventDefault(); accessError.textContent = ""; accessButton.disabled = true; if (await accessDigest(accessPassword.value) === accessHash) { sessionStorage.setItem("tplWholesaleAccess", "granted"); unlockSite(); } else { accessError.textContent = "Incorrect password."; accessPassword.select(); } accessButton.disabled = false; });
 
-const state = { products: [], selectedProduct: null, selectedStrength: "", carts: { china: [], usa: [] }, inventory: new Map() };
+const state = { products: [], selectedProduct: null, selectedStrength: "", cart: [], inventory: new Map() };
 const search = document.querySelector("#search");
 const suggestions = document.querySelector("#suggestions");
 const categorySelect = document.querySelector("#category");
@@ -23,8 +23,8 @@ const inStockSection = document.querySelector("#in-stock-section");
 const inStockGroups = document.querySelector("#in-stock-groups");
 const inStockCount = document.querySelector("#in-stock-count");
 const cartCount = document.querySelector("#cart-count");
-const cartContainers = { china: document.querySelector("#china-cart"), usa: document.querySelector("#usa-cart") };
-const cartTotals = { china: document.querySelector("#china-totals"), usa: document.querySelector("#usa-totals") };
+const cartContainer = document.querySelector("#cart-lines");
+const cartTotals = document.querySelector("#cart-totals");
 const orderForm = document.querySelector("#order-form");
 const grandTotal = document.querySelector("#grand-total");
 const submitOrder = document.querySelector("#submit-order");
@@ -47,7 +47,7 @@ const categories = [
 const categoryFor = (name) => categories.find((category) => category.test.test(name))?.name || "Other";
 const stockKey = (product, strength) => `${String(product).trim().toLowerCase()}|${String(strength).trim().toLowerCase()}`;
 const stockQuantity = (product, strength) => state.inventory.get(stockKey(product, strength)) || 0;
-const productStrengths = (product) => [...new Set([...product.china, ...product.usa].map((item) => item.strength))].sort((a, b) => strengthNumber(a) - strengthNumber(b));
+const productStrengths = (product) => product.items.map((item) => item.strength).sort((a, b) => strengthNumber(a) - strengthNumber(b));
 
 function renderInStockSection() {
   const groups = new Map();
@@ -127,51 +127,46 @@ function chooseProduct(name) {
   renderPrice();
   selection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
-function regionPrice(label, item) {
+function kitCard(item, localKits) {
   if (!item) return "";
-  const region = label === "U.S." ? "usa" : "china";
-  return `<article class="kit-card"><div class="region-label"><span class="source-dot ${region === "usa" ? "usa" : "china"}" aria-hidden="true"></span>${label}</div><p class="kit-label">10 Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p><button class="add-cart-button" type="button" data-add-region="${region}">Add 10 Vial Kit to ${label} Cart</button></article>`;
+  const usAvailable = item.usAvailable || localKits > 0;
+  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local kit${localKits === 1 ? "" : "s"}` : ""}</div>` : ""}<div class="kit-card-body"><p class="kit-label">10 Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p><button class="add-cart-button" type="button" data-add-kit>Add 10 Vial Kit to Cart</button></div></article>`;
 }
 function renderPrice() {
   if (!state.selectedProduct || !state.selectedStrength) return;
-  const china = state.selectedProduct.china.find((item) => item.strength === state.selectedStrength);
-  const usa = state.selectedProduct.usa.find((item) => item.strength === state.selectedStrength);
+  const item = state.selectedProduct.items.find((entry) => entry.strength === state.selectedStrength);
   const completeKits = Math.floor(stockQuantity(state.selectedProduct.name, state.selectedStrength) / 10);
-  prices.innerHTML = completeKits > 0 && usa ? regionPrice("U.S.", usa) : `${regionPrice("China", china)}${regionPrice("U.S.", usa)}`;
+  prices.innerHTML = kitCard(item, completeKits);
 }
-function cartSubtotal(region) { return state.carts[region].reduce((sum, item) => sum + (item.price * item.quantity), 0); }
-function regionTotal(region) { return state.carts[region].length ? cartSubtotal(region) + 40 : 0; }
-function orderSummary(region) {
-  if (!state.carts[region].length) return "No items";
-  const lines = state.carts[region].map((item) => `${item.quantity} x ${item.name} — ${item.strength} — 10 vial kit @ ${money.format(item.price)} = ${money.format(item.quantity * item.price)}`);
-  return `${lines.join("\n")}\nSubtotal: ${money.format(cartSubtotal(region))}\nShipping: $40\n${region === "usa" ? "U.S." : "China"} total: ${money.format(regionTotal(region))}`;
+function cartSubtotal() { return state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0); }
+function orderTotal() { return state.cart.length ? cartSubtotal() + 20 : 0; }
+function orderSummary() {
+  if (!state.cart.length) return "No items";
+  const lines = state.cart.map((item) => `${item.quantity} x ${item.name} — ${item.strength} — 10 vial kit @ ${money.format(item.price)} = ${money.format(item.quantity * item.price)}${item.usAvailable ? " — US Available" : ""}`);
+  return `${lines.join("\n")}\nSubtotal: ${money.format(cartSubtotal())}\nShipping: $20\nOrder total: ${money.format(orderTotal())}`;
 }
 function renderCart() {
-  ["china", "usa"].forEach((region) => {
-    const items = state.carts[region];
-    cartContainers[region].innerHTML = items.length ? items.map((item) => `<div class="cart-line"><div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.strength)} · 10 vial kit · ${money.format(item.price)}</span></div><div class="quantity-control" aria-label="Quantity for ${escapeHtml(item.name)} ${escapeHtml(item.strength)}"><button type="button" data-cart-action="decrease" data-region="${region}" data-key="${escapeHtml(item.key)}" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button type="button" data-cart-action="increase" data-region="${region}" data-key="${escapeHtml(item.key)}" aria-label="Increase quantity">+</button><button type="button" class="remove-item" data-cart-action="remove" data-region="${region}" data-key="${escapeHtml(item.key)}" aria-label="Remove item">Remove</button></div><strong>${money.format(item.price * item.quantity)}</strong></div>`).join("") : `<p class="empty-cart">No ${region === "usa" ? "U.S." : "China"} kits added.</p>`;
-    cartTotals[region].hidden = !items.length;
-    cartTotals[region].innerHTML = items.length ? `<div><span>Subtotal</span><strong>${money.format(cartSubtotal(region))}</strong></div><div><span>Shipping</span><strong>$40</strong></div><div class="regional-total"><span>${region === "usa" ? "U.S." : "China"} total</span><strong>${money.format(regionTotal(region))}</strong></div>` : "";
-  });
-  const kitCount = [...state.carts.china, ...state.carts.usa].reduce((sum, item) => sum + item.quantity, 0);
-  const total = regionTotal("china") + regionTotal("usa");
+  cartContainer.innerHTML = state.cart.length ? state.cart.map((item) => `<div class="cart-line"><div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.strength)} · 10 vial kit · ${money.format(item.price)}${item.usAvailable ? " · US Available" : ""}</span></div><div class="quantity-control" aria-label="Quantity for ${escapeHtml(item.name)} ${escapeHtml(item.strength)}"><button type="button" data-cart-action="decrease" data-key="${escapeHtml(item.key)}" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button type="button" data-cart-action="increase" data-key="${escapeHtml(item.key)}" aria-label="Increase quantity">+</button><button type="button" class="remove-item" data-cart-action="remove" data-key="${escapeHtml(item.key)}" aria-label="Remove item">Remove</button></div><strong>${money.format(item.price * item.quantity)}</strong></div>`).join("") : `<p class="empty-cart">No kits added.</p>`;
+  cartTotals.hidden = !state.cart.length;
+  cartTotals.innerHTML = state.cart.length ? `<div><span>Subtotal</span><strong>${money.format(cartSubtotal())}</strong></div><div><span>Shipping</span><strong>$20</strong></div><div class="regional-total"><span>Order total</span><strong>${money.format(orderTotal())}</strong></div>` : "";
+  const kitCount = state.cart.reduce((sum, item) => sum + item.quantity, 0);
+  const total = orderTotal();
   cartCount.textContent = `${kitCount} ${kitCount === 1 ? "kit" : "kits"}`;
   grandTotal.textContent = money.format(total);
   submitOrder.disabled = kitCount === 0;
-  document.querySelector("#china-order-field").value = orderSummary("china");
-  document.querySelector("#usa-order-field").value = orderSummary("usa");
+  document.querySelector("#order-summary-field").value = orderSummary();
   document.querySelector("#order-total-field").value = money.format(total);
 }
-function addToCart(region) {
+function addToCart() {
   if (!state.selectedProduct || !state.selectedStrength) return;
-  const item = state.selectedProduct[region].find((entry) => entry.strength === state.selectedStrength);
+  const item = state.selectedProduct.items.find((entry) => entry.strength === state.selectedStrength);
   if (!item) return;
   const key = `${state.selectedProduct.name}|${item.strength}`;
-  const existing = state.carts[region].find((entry) => entry.key === key);
+  const existing = state.cart.find((entry) => entry.key === key);
   if (existing) existing.quantity += 1;
-  else state.carts[region].push({ key, name: state.selectedProduct.name, strength: item.strength, price: item.price, quantity: 1 });
+  else state.cart.push({ key, name: state.selectedProduct.name, strength: item.strength, price: item.price, usAvailable: item.usAvailable || stockQuantity(state.selectedProduct.name, item.strength) >= 10, quantity: 1 });
   renderCart();
-  formStatus.textContent = `${state.selectedProduct.name} ${item.strength} added to the ${region === "usa" ? "U.S." : "China"} cart.`;
+  formStatus.textContent = `${state.selectedProduct.name} ${item.strength} added to the cart.`;
 }
 inStockGroups.addEventListener("click", (event) => { const button = event.target.closest("[data-stock-product]"); if (!button) return; chooseProduct(button.dataset.stockProduct); if (state.selectedProduct && productStrengths(state.selectedProduct).includes(button.dataset.stockStrength)) { state.selectedStrength = button.dataset.stockStrength; strengthSelect.value = state.selectedStrength; renderPrice(); selection.scrollIntoView({ behavior: "smooth", block: "start" }); } });
 search.addEventListener("input", () => { state.selectedProduct = null; selection.hidden = true; renderSuggestions(); });
@@ -180,30 +175,29 @@ document.addEventListener("click", (event) => { const button = event.target.clos
 categorySelect.addEventListener("change", renderCatalog);
 strengthSelect.addEventListener("change", () => { state.selectedStrength = strengthSelect.value; renderPrice(); });
 prices.addEventListener("click", (event) => {
-  const addButton = event.target.closest("[data-add-region]");
-  if (addButton) addToCart(addButton.dataset.addRegion);
+  const addButton = event.target.closest("[data-add-kit]");
+  if (addButton) addToCart();
 });
 document.querySelector(".cart-section").addEventListener("click", (event) => {
   const button = event.target.closest("[data-cart-action]");
   if (!button) return;
-  const items = state.carts[button.dataset.region];
-  const item = items.find((entry) => entry.key === button.dataset.key);
+  const item = state.cart.find((entry) => entry.key === button.dataset.key);
   if (!item) return;
   if (button.dataset.cartAction === "increase") item.quantity += 1;
   if (button.dataset.cartAction === "decrease") item.quantity -= 1;
-  if (button.dataset.cartAction === "remove" || item.quantity <= 0) state.carts[button.dataset.region] = items.filter((entry) => entry.key !== item.key);
+  if (button.dataset.cartAction === "remove" || item.quantity <= 0) state.cart = state.cart.filter((entry) => entry.key !== item.key);
   renderCart();
 });
 orderForm.addEventListener("submit", async (event) => {
   event.preventDefault();
-  if (!state.carts.china.length && !state.carts.usa.length) return;
+  if (!state.cart.length) return;
   submitOrder.disabled = true;
   submitOrder.textContent = "Sending…";
   formStatus.textContent = "Submitting your order request…";
   try {
     const response = await fetch(orderForm.action, { method: "POST", body: new FormData(orderForm), headers: { Accept: "application/json" } });
     if (!response.ok) throw new Error("Submission failed");
-    state.carts = { china: [], usa: [] };
+    state.cart = [];
     orderForm.reset();
     renderCart();
     formStatus.textContent = "Order request sent. We will contact you to confirm availability and payment.";
@@ -211,7 +205,7 @@ orderForm.addEventListener("submit", async (event) => {
     formStatus.textContent = "The order request could not be sent. Please check your information and try again.";
   } finally {
     submitOrder.textContent = "Submit Order Request";
-    submitOrder.disabled = !state.carts.china.length && !state.carts.usa.length;
+    submitOrder.disabled = !state.cart.length;
   }
 });
 fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; const names = [...new Set(products.map((product) => categoryFor(product.name)))].sort(); categorySelect.insertAdjacentHTML("beforeend", names.map((name) => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join("")); renderInStockSection(); renderCatalog(); }).catch(() => { prompt.hidden = false; prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
