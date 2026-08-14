@@ -39,20 +39,20 @@ function landedCost(offer) {
   return discountedPrice + shipping;
 }
 
-function wholesaleKitPrice(highestLandedCost) {
-  const markedUpSingleVial = (highestLandedCost / 10) * 3.5;
+function wholesaleKitPrice(averageLandedCost) {
+  const markedUpSingleVial = (averageLandedCost / 10) * 3.5;
   return roundToFive((markedUpSingleVial + 10) * 3 * 0.9);
 }
 
-function singleVialMsrp(highestLandedCost) {
-  return roundToFive((highestLandedCost / 10) * 3.5) + 10;
+function singleVialMsrp(averageLandedCost) {
+  return roundToFive((averageLandedCost / 10) * 3.5) + 10;
 }
 
-function retailTiers(highestLandedCost) {
-  const rawSingle = (highestLandedCost / 10) * 3.5 + 10;
+function retailTiers(averageLandedCost) {
+  const rawSingle = (averageLandedCost / 10) * 3.5 + 10;
   return {
     one: roundToFive(rawSingle),
-    three: wholesaleKitPrice(highestLandedCost),
+    three: wholesaleKitPrice(averageLandedCost),
     five: roundToFive(rawSingle * 5 * 0.85),
     ten: roundToFive(rawSingle * 10 * 0.8),
   };
@@ -68,13 +68,16 @@ for (const offer of offers.filter((item) => item.vials === 10)) {
 const products = new Map();
 for (const [key, matchingOffers] of groups) {
   const [name, strength] = key.split("\u0000");
-  const highestLandedCost = Math.max(...matchingOffers.map(landedCost));
+  const landedPrices = matchingOffers.map(landedCost);
+  const highestLandedCost = Math.max(...landedPrices);
+  const lowestLandedCost = Math.min(...landedPrices);
+  const averageLandedCost = (highestLandedCost + lowestLandedCost) / 2;
   if (!products.has(name)) products.set(name, { name, items: [] });
   products.get(name).items.push({
     strength,
-    price: wholesaleKitPrice(highestLandedCost),
-    msrp: singleVialMsrp(highestLandedCost),
-    retail: retailTiers(highestLandedCost),
+    price: wholesaleKitPrice(averageLandedCost),
+    msrp: singleVialMsrp(averageLandedCost),
+    retail: retailTiers(averageLandedCost),
     usAvailable: matchingOffers.some((offer) => /US Warehouse/i.test(offer.vendor)),
   });
 }
@@ -87,4 +90,4 @@ const catalog = [...products.values()]
   .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
 
 fs.writeFileSync(outputPath, `${JSON.stringify(catalog, null, 2)}\n`);
-console.log(`Generated ${catalog.length} products from ${offers.length} TPLPrice offers using highest landed cost.`);
+console.log(`Generated ${catalog.length} products from ${offers.length} TPLPrice offers using the average of highest and lowest landed cost.`);
