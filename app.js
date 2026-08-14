@@ -39,7 +39,7 @@ const categories = [
   { name: "Recovery & Repair", test: /bpc|tb500|tb-?500|glow|klow|kpv|ll-?37|ara-?290|cartalax|bronchogen|cardiogen|vesugen|lysine-proline-valine/i },
   { name: "Growth & Performance", test: /hgh|cjc|ghrp|ipamorelin|tesamorelin|sermorelin|igf|mgf|follistatin|ace-?031|gdf-?8|mk677|epo\b/i },
   { name: "Cognitive & Mood", test: /semax|selank|dihexa|dsip|pe-?22|pinealon|cerebrolysin|cortagen|adamax|melatonin|relaxation/i },
-  { name: "Sexual & Hormone", test: /pt-?141|oxytocin|hcg\b|hmg\b|kisspeptin|gonadorelin|alprostadil|testagen/i },
+  { name: "Sexual & Hormone", test: /pt-?141|oxytocin|hcg\b|hmg\b|kisspeptin|gonadorelin|alprostadil|testagen|testosterone/i },
   { name: "Skin, Hair & Beauty", test: /melanotan|snap-?8|matrixyl|ahk-?cu|ghk-?cu|healthy hair|botulinum|hyaluronic/i },
   { name: "Immune & Wellness", test: /thym|epithalon|glutathione|foxo|pnc|vilon|crystagen|vip\b|vasoactive|dermorphin/i },
   { name: "Supplies", test: /water|saline|phosphate buffered|acetic acid/i }

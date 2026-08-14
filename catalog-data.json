@@ -3338,6 +3338,52 @@
     ]
   },
   {
+    "name": "Testosterone Cypionate",
+    "items": [
+      {
+        "strength": "250mg",
+        "price": 390,
+        "msrp": 145,
+        "retail": {
+          "one": 145,
+          "three": 390,
+          "five": 610,
+          "ten": 1145
+        },
+        "usAvailable": true
+      }
+    ]
+  },
+  {
+    "name": "Testosterone Enanthate",
+    "items": [
+      {
+        "strength": "250mg",
+        "price": 360,
+        "msrp": 135,
+        "retail": {
+          "one": 135,
+          "three": 360,
+          "five": 565,
+          "ten": 1060
+        },
+        "usAvailable": true
+      },
+      {
+        "strength": "300mg",
+        "price": 435,
+        "msrp": 165,
+        "retail": {
+          "one": 165,
+          "three": 435,
+          "five": 685,
+          "ten": 1285
+        },
+        "usAvailable": true
+      }
+    ]
+  },
+  {
     "name": "Thymalin/Thymulin",
     "items": [
       {
