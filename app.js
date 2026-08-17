@@ -102,11 +102,25 @@ function renderComingSoonSection() {
   comingSoonCount.textContent = `${items.length} incoming strength${items.length === 1 ? "" : "s"}`;
   comingSoonGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="coming-soon-category"><h3>${escapeHtml(name)}</h3><div class="coming-soon-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.kits > 0 ? `${item.kits} kit${item.kits === 1 ? "" : "s"} coming` : "More on the way"}<small>${escapeHtml(formatArrival(item.expectedArrival))}</small></b></button>`).join("")}</div></section>`).join("");
 }
+async function fetchInventoryEntries() {
+  const stamp = Date.now();
+  const sources = [
+    `https://raw.githubusercontent.com/ThatPepLab/InStock/main/inventory.json?updated=${stamp}`,
+    `inventory.json?updated=${stamp}`
+  ];
+  for (const source of sources) {
+    try {
+      const response = await fetch(source, { cache: "no-store" });
+      if (response.ok) return await response.json();
+    } catch (error) {
+      console.warn("Inventory source failed", source, error);
+    }
+  }
+  throw new Error("Inventory unavailable");
+}
 async function refreshInventory() {
   try {
-    const response = await fetch(`inventory.json?updated=${Date.now()}`, { cache: "no-store" });
-    if (!response.ok) throw new Error("Inventory unavailable");
-    const entries = await response.json();
+    const entries = await fetchInventoryEntries();
     const next = new Map();
     const incoming = new Map();
     for (const entry of Array.isArray(entries) ? entries : []) {
