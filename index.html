@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Search available products and strengths, build a cart, and submit a wholesale order request.">
   <title>Wholesale Product Catalog</title>
-  <link rel="stylesheet" href="styles.css?v=20260813-2">
+  <link rel="stylesheet" href="styles.css?v=20260817-1">
   <link rel="stylesheet" href="cart.css?v=20260807-5">
   <link rel="stylesheet" href="access.css?v=20260807-8">
 </head>
@@ -17,6 +17,11 @@
     <div class="in-stock-heading"><div><p class="selected-label">AVAILABLE NOW</p><h2 id="in-stock-heading">In Stock Now</h2></div><span id="in-stock-count" class="stock-total"></span></div>
     <p class="in-stock-copy">Choose an available strength below to view its 10-vial kit pricing.</p>
     <div id="in-stock-groups" class="in-stock-groups" aria-live="polite"></div>
+  </section>
+  <section id="coming-soon-section" class="coming-soon-section" aria-labelledby="coming-soon-heading" hidden>
+    <div class="in-stock-heading"><div><p class="selected-label">MORE ON THE WAY</p><h2 id="coming-soon-heading">Coming Soon</h2></div><span id="coming-soon-count" class="coming-soon-total"></span></div>
+    <p class="in-stock-copy">These strengths have incoming inventory. Expected arrival dates are shown when available.</p>
+    <div id="coming-soon-groups" class="coming-soon-groups" aria-live="polite"></div>
   </section>
   <div class="finder-card">
     <label class="search-field" for="search"><span>Search products</span><input id="search" type="search" placeholder="Start typing a product name…" autocomplete="off" aria-controls="suggestions"></label>
@@ -39,6 +44,6 @@
     </form>
   </section></section></main>
   <footer><p>All listed kit prices are for 10 vials.</p></footer>
-  <script src="app.js?v=20260813-1" defer></script>
+  <script src="app.js?v=20260817-1" defer></script>
 </body>
 </html>
