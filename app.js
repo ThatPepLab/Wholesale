@@ -81,6 +81,7 @@ function formatArrival(value) {
 }
 
 function renderComingSoonSection() {
+  if (!comingSoonSection || !comingSoonGroups || !comingSoonCount) return;
   const groups = new Map();
   const items = [];
   for (const product of state.products) {
@@ -207,7 +208,7 @@ function addToCart() {
   renderCart();
   formStatus.textContent = `${state.selectedProduct.name} ${item.strength} added to the cart.`;
 }
-comingSoonGroups.addEventListener("click", (event) => { const button = event.target.closest("[data-stock-product]"); if (!button) return; chooseProduct(button.dataset.stockProduct); if (state.selectedProduct && productStrengths(state.selectedProduct).includes(button.dataset.stockStrength)) { state.selectedStrength = button.dataset.stockStrength; strengthSelect.value = state.selectedStrength; renderPrice(); selection.scrollIntoView({ behavior: "smooth", block: "start" }); } });
+if (comingSoonGroups) comingSoonGroups.addEventListener("click", (event) => { const button = event.target.closest("[data-stock-product]"); if (!button) return; chooseProduct(button.dataset.stockProduct); if (state.selectedProduct && productStrengths(state.selectedProduct).includes(button.dataset.stockStrength)) { state.selectedStrength = button.dataset.stockStrength; strengthSelect.value = state.selectedStrength; renderPrice(); selection.scrollIntoView({ behavior: "smooth", block: "start" }); } });
 inStockGroups.addEventListener("click", (event) => { const button = event.target.closest("[data-stock-product]"); if (!button) return; chooseProduct(button.dataset.stockProduct); if (state.selectedProduct && productStrengths(state.selectedProduct).includes(button.dataset.stockStrength)) { state.selectedStrength = button.dataset.stockStrength; strengthSelect.value = state.selectedStrength; renderPrice(); selection.scrollIntoView({ behavior: "smooth", block: "start" }); } });
 search.addEventListener("input", () => { state.selectedProduct = null; selection.hidden = true; renderSuggestions(); });
 search.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); const first = matchingProducts()[0]; if (first) chooseProduct(first.name); } });
