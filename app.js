@@ -9,7 +9,7 @@ function unlockSite() { document.body.classList.remove("site-locked"); accessGat
 if (sessionStorage.getItem("tplWholesaleAccess") === "granted") unlockSite();
 accessForm.addEventListener("submit", async (event) => { event.preventDefault(); accessError.textContent = ""; accessButton.disabled = true; if (await accessDigest(accessPassword.value) === accessHash) { sessionStorage.setItem("tplWholesaleAccess", "granted"); unlockSite(); } else { accessError.textContent = "Incorrect password."; accessPassword.select(); } accessButton.disabled = false; });
 
-const state = { products: [], selectedProduct: null, selectedStrength: "", cart: [], inventory: new Map() };
+const state = { products: [], selectedProduct: null, selectedStrength: "", cart: [], inventory: new Map(), incoming: new Map() };
 const search = document.querySelector("#search");
 const suggestions = document.querySelector("#suggestions");
 const categorySelect = document.querySelector("#category");
@@ -22,6 +22,9 @@ const prompt = document.querySelector("#prompt");
 const inStockSection = document.querySelector("#in-stock-section");
 const inStockGroups = document.querySelector("#in-stock-groups");
 const inStockCount = document.querySelector("#in-stock-count");
+const comingSoonSection = document.querySelector("#coming-soon-section");
+const comingSoonGroups = document.querySelector("#coming-soon-groups");
+const comingSoonCount = document.querySelector("#coming-soon-count");
 const cartCount = document.querySelector("#cart-count");
 const cartContainer = document.querySelector("#cart-lines");
 const cartTotals = document.querySelector("#cart-totals");
@@ -47,6 +50,7 @@ const categories = [
 const categoryFor = (name) => categories.find((category) => category.test.test(name))?.name || "Other";
 const stockKey = (product, strength) => `${String(product).trim().toLowerCase()}|${String(strength).trim().toLowerCase()}`;
 const stockQuantity = (product, strength) => state.inventory.get(stockKey(product, strength)) || 0;
+const incomingInventory = (product, strength) => state.incoming.get(stockKey(product, strength)) || null;
 const productStrengths = (product) => product.items.map((item) => item.strength).sort((a, b) => strengthNumber(a) - strengthNumber(b));
 
 function renderInStockSection() {
@@ -70,19 +74,54 @@ function renderInStockSection() {
   inStockGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="in-stock-category"><h3>${escapeHtml(name)}</h3><div class="in-stock-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.kits} kit${item.kits === 1 ? "" : "s"} available</b></button>`).join("")}</div></section>`).join("");
 }
 
+function formatArrival(value) {
+  if (!value) return "Arrival date pending";
+  const date = new Date(`${value}T12:00:00`);
+  return Number.isNaN(date.getTime()) ? String(value) : `Expected ${new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(date)}`;
+}
+
+function renderComingSoonSection() {
+  const groups = new Map();
+  const items = [];
+  for (const product of state.products) {
+    for (const strength of productStrengths(product)) {
+      const incoming = incomingInventory(product.name, strength);
+      if (!incoming) continue;
+      const kits = Math.floor(incoming.incomingQuantity / 10);
+      items.push({ product, category: categoryFor(product.name), strength, kits, ...incoming });
+    }
+  }
+  comingSoonSection.hidden = items.length === 0;
+  if (!items.length) { comingSoonGroups.innerHTML = ""; comingSoonCount.textContent = ""; return; }
+  for (const item of items) {
+    if (!groups.has(item.category)) groups.set(item.category, []);
+    groups.get(item.category).push(item);
+  }
+  const ordered = [...categories.map((item) => item.name), "Other"];
+  comingSoonCount.textContent = `${items.length} incoming strength${items.length === 1 ? "" : "s"}`;
+  comingSoonGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="coming-soon-category"><h3>${escapeHtml(name)}</h3><div class="coming-soon-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.kits > 0 ? `${item.kits} kit${item.kits === 1 ? "" : "s"} coming` : "More on the way"}<small>${escapeHtml(formatArrival(item.expectedArrival))}</small></b></button>`).join("")}</div></section>`).join("");
+}
 async function refreshInventory() {
   try {
-    const response = await fetch(`https://api.github.com/repos/ThatPepLab/InStock/contents/inventory.json?ref=main&updated=${Date.now()}`, { cache: "no-store", headers: { Accept: "application/vnd.github+json" } });
+    const response = await fetch(`inventory.json?updated=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) throw new Error("Inventory unavailable");
-    const payload = await response.json();
-    const entries = JSON.parse(atob(String(payload.content || "").replace(/\s/g, "")));
+    const entries = await response.json();
     const next = new Map();
+    const incoming = new Map();
     for (const entry of Array.isArray(entries) ? entries : []) {
+      if (!entry.product || !entry.strength) continue;
+      const key = stockKey(entry.product, entry.strength);
       const quantity = Math.max(0, Math.floor(Number(entry.quantity) || 0));
-      if (entry.product && entry.strength && quantity > 0) next.set(stockKey(entry.product, entry.strength), quantity);
+      if (quantity > 0) next.set(key, quantity);
+      if (entry.moreOnWay === true) incoming.set(key, {
+        incomingQuantity: Math.max(0, Math.floor(Number(entry.incomingQuantity) || 0)),
+        expectedArrival: String(entry.expectedArrival || "").trim()
+      });
     }
     state.inventory = next;
+    state.incoming = incoming;
     renderInStockSection();
+    renderComingSoonSection();
     if (state.selectedProduct) renderPrice();
   } catch (error) {
     console.warn("Inventory check failed", error);
@@ -168,6 +207,7 @@ function addToCart() {
   renderCart();
   formStatus.textContent = `${state.selectedProduct.name} ${item.strength} added to the cart.`;
 }
+comingSoonGroups.addEventListener("click", (event) => { const button = event.target.closest("[data-stock-product]"); if (!button) return; chooseProduct(button.dataset.stockProduct); if (state.selectedProduct && productStrengths(state.selectedProduct).includes(button.dataset.stockStrength)) { state.selectedStrength = button.dataset.stockStrength; strengthSelect.value = state.selectedStrength; renderPrice(); selection.scrollIntoView({ behavior: "smooth", block: "start" }); } });
 inStockGroups.addEventListener("click", (event) => { const button = event.target.closest("[data-stock-product]"); if (!button) return; chooseProduct(button.dataset.stockProduct); if (state.selectedProduct && productStrengths(state.selectedProduct).includes(button.dataset.stockStrength)) { state.selectedStrength = button.dataset.stockStrength; strengthSelect.value = state.selectedStrength; renderPrice(); selection.scrollIntoView({ behavior: "smooth", block: "start" }); } });
 search.addEventListener("input", () => { state.selectedProduct = null; selection.hidden = true; renderSuggestions(); });
 search.addEventListener("keydown", (event) => { if (event.key === "Enter") { event.preventDefault(); const first = matchingProducts()[0]; if (first) chooseProduct(first.name); } });
@@ -208,7 +248,7 @@ orderForm.addEventListener("submit", async (event) => {
     submitOrder.disabled = !state.cart.length;
   }
 });
-fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; const names = [...new Set(products.map((product) => categoryFor(product.name)))].sort(); categorySelect.insertAdjacentHTML("beforeend", names.map((name) => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join("")); renderInStockSection(); renderCatalog(); }).catch(() => { prompt.hidden = false; prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
+fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((response) => { if (!response.ok) throw new Error("Catalog data could not be loaded."); return response.json(); }).then((products) => { state.products = products; const names = [...new Set(products.map((product) => categoryFor(product.name)))].sort(); categorySelect.insertAdjacentHTML("beforeend", names.map((name) => `<option value="${escapeHtml(name)}">${escapeHtml(name)}</option>`).join("")); renderInStockSection(); renderComingSoonSection(); renderCatalog(); }).catch(() => { prompt.hidden = false; prompt.innerHTML = "<strong>Catalog unavailable.</strong><span>Please refresh the page.</span>"; });
 refreshInventory();
 setInterval(refreshInventory, 300000);
 renderCart();
