@@ -23,6 +23,8 @@ const offers = JSON.parse(offersJson);
 const rules = Function(`"use strict"; return (${rulesSource});`)();
 const roundToFive = (amount) => Math.ceil(amount / 5) * 5;
 const numericStrength = (strength) => Number.parseFloat(strength) || 0;
+const excludedProducts = new Set(["hexarelin acetate"]);
+const retailBacPricePerVial = 10;
 
 function discountRate(rule, subtotal, useCrypto = true) {
   let rate = rule.baseDiscount || 0;
@@ -49,17 +51,17 @@ function singleVialMsrp(averageLandedCost) {
 }
 
 function retailTiers(averageLandedCost) {
-  const rawSingle = (averageLandedCost / 10) * 3.5 + 10;
+  const rawSingleWithBac = (averageLandedCost / 10) * 3.5 + retailBacPricePerVial;
   return {
-    one: roundToFive(rawSingle),
-    three: wholesaleKitPrice(averageLandedCost),
-    five: roundToFive(rawSingle * 5 * 0.85),
-    ten: roundToFive(rawSingle * 10 * 0.8),
+    one: Math.max(0, roundToFive(rawSingleWithBac) - retailBacPricePerVial),
+    three: Math.max(0, roundToFive(rawSingleWithBac * 3 * 0.9) - retailBacPricePerVial * 3),
+    five: Math.max(0, roundToFive(rawSingleWithBac * 5 * 0.85) - retailBacPricePerVial * 5),
+    ten: Math.max(0, roundToFive(rawSingleWithBac * 10 * 0.8) - retailBacPricePerVial * 10),
   };
 }
 
 const groups = new Map();
-for (const offer of offers.filter((item) => item.vials === 10)) {
+for (const offer of offers.filter((item) => item.vials === 10 && !excludedProducts.has(String(item.product || "").trim().toLowerCase()))) {
   const key = `${offer.product}\u0000${offer.strength}`;
   if (!groups.has(key)) groups.set(key, []);
   groups.get(key).push(offer);
