@@ -141,6 +141,7 @@ function renderSuggestions() {
 }
 function renderCatalog() {
   const selected = categorySelect.value;
+  const expanded = new Set([...catalogGroups.querySelectorAll(".catalog-group[open] summary span:first-child")].map((node) => node.textContent));
   const groups = new Map();
   for (const product of state.products) {
     const category = categoryFor(product.name);
@@ -149,7 +150,11 @@ function renderCatalog() {
     groups.get(category).push(product);
   }
   const ordered = [...categories.map((item) => item.name), "Other"];
-  catalogGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="catalog-group"><h2>${escapeHtml(name)}</h2><div class="product-buttons">${groups.get(name).sort((a, b) => a.name.localeCompare(b.name)).map((product) => `<button type="button" data-product="${escapeHtml(product.name)}">${escapeHtml(product.name)}</button>`).join("")}</div></section>`).join("");
+  catalogGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => {
+    const products = groups.get(name).sort((a, b) => a.name.localeCompare(b.name));
+    const open = selected !== "all" || expanded.has(name) ? " open" : "";
+    return `<details class="catalog-group"${open}><summary><span>${escapeHtml(name)}</span><small>${products.length} product${products.length === 1 ? "" : "s"}</small></summary><div class="product-buttons">${products.map((product) => `<button type="button" data-product="${escapeHtml(product.name)}">${escapeHtml(product.name)}</button>`).join("")}</div></details>`;
+  }).join("");
 }
 function chooseProduct(name) {
   const product = state.products.find((item) => item.name === name);
