@@ -30,9 +30,9 @@
     "category": "Weight Loss",
     "quantity": 0,
     "moreOnWay": true,
-    "incomingQuantity": 10,
+    "incomingQuantity": 20,
     "expectedArrival": "2026-08-19",
-    "updatedAt": "2026-08-14T21:31:31.722Z"
+    "updatedAt": "2026-08-17T15:56:07.816Z"
   },
   {
     "product": "GLP-3RT",
@@ -122,5 +122,17 @@
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": ""
+  },
+  {
+    "product": "Tirzepatide",
+    "strength": "15mg",
+    "sku": "",
+    "category": "Weight Loss",
+    "quantity": 0,
+    "moreOnWay": true,
+    "incomingQuantity": 10,
+    "expectedArrival": "2026-08-20",
+    "id": "tirzepatide--15mg",
+    "updatedAt": "2026-08-17T15:57:06.751Z"
   }
 ]
