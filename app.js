@@ -31,8 +31,12 @@ const cartTotals = document.querySelector("#cart-totals");
 const orderForm = document.querySelector("#order-form");
 const grandTotal = document.querySelector("#grand-total");
 const submitOrder = document.querySelector("#submit-order");
+const downloadCartPdf = document.querySelector("#download-cart-pdf");
 const formStatus = document.querySelector("#form-status");
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+const PDF_QR = { supplies: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM0AAADNAQAAAAAzx8nEAAAB+0lEQVR42u1YMW7kMBDjrBaQO/kH8kdi7bcCOLGSzb9i331E+sG4kwHbvGIv16W1isuUnoYgKQ5oIb6Z9YJv52f1n6wWEbksMYPtR5bQ7iIi8XyEIzm5K1aTo7dzjp7UCkTt0gDPnfv0L91yASCXanp9eEjm7A4XK9pmYVpesYcltLXca1iAN7HvMKn5rQCPGjDeRG4YfAPsnZ2WmEXak2GAf+dOe7jNF/n6UCqwIe3erSbbZCcgN1hq5EayVDODfpWG7f54tWeLogMg3MADg7ezGtq5higAd7n61aiZ15uLWG9niwJSR9pZRyLo4EtQQ4Sz2QDJOxHIZGeS6F30pcd4PozNF+HmS+/uqQRGbw9XgQ3SkveEwA0IChSpIIoaFtEBJO+Jk7snSz1fFB18CWQqcEz2cBFFasAYUxE1qQjv5EwmO7kqudE8+ZfOHkBu+iVivVVJUW8njLSTY4KoYeldDYsmewBA4OZ5uOhZyaIABlgqPEQNgSreyKTCA25D6d0GSI5VLiwcE3oMnhOAWin6MMjkIkrQkXY6+6Z8tTYA6yvgwXbvAFfl0HNWwM46pgKMRJWbMsDOavi4tUEBBB1rpCiAIa9BIppfMKxY9vfOTu6aS+9WKad7419rAyB5e7Dh3mu1Nnf16w0APyXm8nR2a5OfX3A/q2/mD0d+fuO8hiSrAAAAAElFTkSuQmCC", reorder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM0AAADNAQAAAAAzx8nEAAACFklEQVR42u1YMY7kIBCsNpYgY37AfGTt3Wet5JU98kqb3Isusv0S/APIsGS7LvDoLtoUgttOQHRSQFFdjRDfxFbh2/hJ/SepKCIVDtlEhtXwdoiIDPkR9uQUR48Gny4tgCNDgYM6xACfDgveBRIAqXJfSv0c7QB9VgAQfxXgRv1van6Hm0MTS7FXMQHHfXu1+7XIswSMh8hr3KGnOMAswCpyywwDfMaO1EB5Tva5kHLDGJCEg9MMcKkNPTnZ/DBCT31CeT0HALA7koQ+L4wKwCew2K0F3e44QXnTlKDo+x3tWiMham/atUZiGYom4XgRUzMojzY3RSsgyt00cV/NEmsA6MBHidMYqWfSa3KAnkMHzgUebMBTMkgyNYBLUko3QgfN0BMAHKQEN+jNy+3Lb6/2yQ285LY9IDk4wI7UDJ3jzAE6u4pW1/abuEla8DWDN0U0Mb8JjKPXYwAM7NZC1n3dFPNfyqVXoyeDoj7t7sgCNcXuLi1xd1IBK5ZYrya7mF+2x7y4euVkP1pIUD6+hfwqGjpAgvJJuINzAPRZwG+QJIPy+kQHNOiJxpYobSKV/bhvb9Q+Acf9MkD53Rfn0FOfdgdP9Cwi5jjEwNaIVRwcFjxET6W67Pgh+oSaIaSPbe6a8rdrU7s0ONq1nY57aqdSXVu36jEA+iHaG+SuKZftgXBwerKjT429zFheisrPF9xP6pv4A9r2b7AcxltOAAAAAElFTkSuQmCC" };
+const PDF_QR_URLS = { supplies: "https://thatpeplab.github.io/Supplies/", reorder: "https://thatpeplab.github.io/Wholesale/" };
+const pdfText = (value) => String(value ?? "").replace(/[–—]/g, "-").replace(/×/g, "x").replace(/[^\x20-\x7E]/g, "");
 const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character]));
 const strengthNumber = (value) => Number.parseFloat(value) || 0;
 
@@ -213,9 +217,39 @@ function renderCart() {
   cartCount.textContent = `${kitCount} ${kitCount === 1 ? "kit" : "kits"}`;
   grandTotal.textContent = money.format(total);
   submitOrder.disabled = kitCount === 0;
+  downloadCartPdf.disabled = kitCount === 0;
   document.querySelector("#order-summary-field").value = orderSummary();
   document.querySelector("#order-total-field").value = money.format(total);
 }
+function downloadCartPdfFile() {
+  if (!state.cart.length) return;
+  if (!window.jspdf?.jsPDF) { formStatus.textContent = "The PDF tool is unavailable. Please refresh and try again."; return; }
+  const doc = new window.jspdf.jsPDF({ unit: "pt", format: "letter" });
+  const margin = 42, pageWidth = doc.internal.pageSize.getWidth(), pageHeight = doc.internal.pageSize.getHeight(), contentWidth = pageWidth - margin * 2;
+  const navy = [1, 30, 65], orange = [230, 83, 0], muted = [93, 107, 122], line = [216, 222, 232];
+  let y = 44;
+  const addPageIfNeeded = (height) => { if (y + height > pageHeight - 48) { doc.addPage(); y = 44; } };
+  const writeLine = (label, value, bold = false) => { addPageIfNeeded(22); doc.setFont("helvetica", bold ? "bold" : "normal"); doc.setFontSize(10); doc.setTextColor(...navy); doc.text(pdfText(label), margin, y); doc.text(pdfText(value), pageWidth - margin, y, { align: "right" }); y += 18; };
+  doc.setFillColor(...navy); doc.roundedRect(margin, y, contentWidth, 60, 10, 10, "F");
+  doc.setFillColor(...orange); doc.rect(margin, y, 7, 60, "F");
+  doc.setTextColor(255, 255, 255); doc.setFont("helvetica", "bold"); doc.setFontSize(24); doc.text("Wholesale Cart", margin + 20, y + 38);
+  y += 84; doc.setTextColor(...muted); doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.text(`Created ${new Date().toLocaleString()}`, margin, y); y += 24;
+  state.cart.forEach((item) => {
+    addPageIfNeeded(55); doc.setDrawColor(...line); doc.line(margin, y, pageWidth - margin, y); y += 16;
+    doc.setTextColor(...navy); doc.setFont("helvetica", "bold"); doc.setFontSize(11); doc.text(pdfText(item.name), margin, y); doc.text(money.format(item.price * item.quantity), pageWidth - margin, y, { align: "right" }); y += 15;
+    doc.setTextColor(...muted); doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.text(pdfText(`${item.strength} | 10 vial kit | cart qty ${item.quantity}${item.usAvailable ? " | US Available" : ""}`), margin, y); y += 18;
+  });
+  addPageIfNeeded(96); doc.setDrawColor(...orange); doc.line(margin, y, pageWidth - margin, y); y += 22;
+  writeLine("Subtotal", money.format(cartSubtotal())); writeLine("Shipping", "$20"); y += 4; writeLine("ORDER TOTAL", money.format(orderTotal()), true);
+  const qrSize = 78, qrTop = pageHeight - margin - qrSize;
+  if (y > qrTop - 42) { doc.addPage(); y = 44; }
+  doc.setTextColor(...muted); doc.setFont("helvetica", "normal"); doc.setFontSize(8); doc.text("Order request only. Payment is not collected on this website.", pageWidth / 2, qrTop - 30, { align: "center" });
+  doc.setTextColor(...navy); doc.setFont("helvetica", "bold"); doc.setFontSize(10); doc.text("Supplies", margin + qrSize / 2, qrTop - 9, { align: "center" }); doc.text("ReOrder", pageWidth - margin - qrSize / 2, qrTop - 9, { align: "center" });
+  doc.addImage(PDF_QR.supplies, "PNG", margin, qrTop, qrSize, qrSize); doc.addImage(PDF_QR.reorder, "PNG", pageWidth - margin - qrSize, qrTop, qrSize, qrSize);
+  doc.link(margin, qrTop, qrSize, qrSize, { url: PDF_QR_URLS.supplies }); doc.link(pageWidth - margin - qrSize, qrTop, qrSize, qrSize, { url: PDF_QR_URLS.reorder });
+  doc.save("Wholesale-Cart.pdf"); formStatus.textContent = "Cart PDF downloaded with Supplies and ReOrder QR codes.";
+}
+
 function addToCart() {
   if (!state.selectedProduct || !state.selectedStrength) return;
   const item = state.selectedProduct.items.find((entry) => entry.strength === state.selectedStrength);
@@ -238,6 +272,7 @@ prices.addEventListener("click", (event) => {
   const addButton = event.target.closest("[data-add-kit]");
   if (addButton) addToCart();
 });
+downloadCartPdf.addEventListener("click", downloadCartPdfFile);
 document.querySelector(".cart-section").addEventListener("click", (event) => {
   const button = event.target.closest("[data-cart-action]");
   if (!button) return;
