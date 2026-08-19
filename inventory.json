@@ -2,14 +2,14 @@
   {
     "product": "BPC-157 + TB500",
     "strength": "20mg",
-    "quantity": 3,
+    "quantity": 2,
     "id": "bpc-157-tb500--20mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-08-14T21:17:27.464Z"
+    "updatedAt": "2026-08-19T15:53:18.186Z"
   },
   {
     "product": "GHK-Cu",
@@ -37,13 +37,14 @@
   {
     "product": "GLP-3RT",
     "strength": "20mg",
-    "quantity": 10,
+    "quantity": 9,
     "id": "glp-3rt--20mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
-    "expectedArrival": ""
+    "expectedArrival": "",
+    "updatedAt": "2026-08-19T15:53:33.959Z"
   },
   {
     "product": "HGH 191AA",
@@ -93,35 +94,38 @@
   {
     "product": "Semax",
     "strength": "10mg",
-    "quantity": 7,
+    "quantity": 6,
     "id": "semax--10mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
-    "expectedArrival": ""
+    "expectedArrival": "",
+    "updatedAt": "2026-08-19T15:54:00.019Z"
   },
   {
     "product": "SS-31",
     "strength": "10mg",
-    "quantity": 3,
+    "quantity": 2,
     "id": "ss-31--10mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
-    "expectedArrival": ""
+    "expectedArrival": "",
+    "updatedAt": "2026-08-19T15:54:22.967Z"
   },
   {
     "product": "TESAMORELIN",
     "strength": "10mg",
-    "quantity": 20,
+    "quantity": 22,
     "id": "tesamorelin--10mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
-    "expectedArrival": ""
+    "expectedArrival": "",
+    "updatedAt": "2026-08-19T15:54:39.171Z"
   },
   {
     "product": "Tirzepatide",
