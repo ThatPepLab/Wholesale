@@ -59,6 +59,18 @@
     "updatedAt": "2026-08-14T21:31:05.339Z"
   },
   {
+    "product": "HGH 191AA",
+    "strength": "36iu",
+    "sku": "",
+    "category": "Growth & Performance",
+    "quantity": 0,
+    "moreOnWay": true,
+    "incomingQuantity": 5,
+    "expectedArrival": "2026-08-26",
+    "id": "hgh-191aa--36iu",
+    "updatedAt": "2026-08-19T20:26:12.784Z"
+  },
+  {
     "product": "MOTS-C",
     "strength": "40mg",
     "quantity": 10,
@@ -138,5 +150,17 @@
     "expectedArrival": "2026-08-20",
     "id": "tirzepatide--15mg",
     "updatedAt": "2026-08-17T15:57:06.751Z"
+  },
+  {
+    "product": "Tirzepatide",
+    "strength": "20mg",
+    "sku": "",
+    "category": "Weight Loss",
+    "quantity": 0,
+    "moreOnWay": true,
+    "incomingQuantity": 7,
+    "expectedArrival": "2026-08-26",
+    "id": "tirzepatide--20mg",
+    "updatedAt": "2026-08-19T20:25:45.461Z"
   }
 ]
