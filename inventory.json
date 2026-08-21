@@ -28,11 +28,11 @@
     "strength": "10mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 2,
-    "moreOnWay": true,
-    "incomingQuantity": 20,
-    "expectedArrival": "2026-08-19",
-    "updatedAt": "2026-08-21T16:29:23.947Z"
+    "quantity": 22,
+    "moreOnWay": false,
+    "incomingQuantity": 0,
+    "expectedArrival": "",
+    "updatedAt": "2026-08-21T21:55:07.073Z"
   },
   {
     "product": "GLP-3RT",
@@ -51,12 +51,12 @@
     "strength": "15iu",
     "sku": "",
     "category": "Growth & Performance",
-    "quantity": 0,
-    "moreOnWay": true,
-    "incomingQuantity": 10,
-    "expectedArrival": "2026-08-20",
+    "quantity": 10,
+    "moreOnWay": false,
+    "incomingQuantity": 0,
+    "expectedArrival": "",
     "id": "hgh-191aa--15iu",
-    "updatedAt": "2026-08-14T21:31:05.339Z"
+    "updatedAt": "2026-08-21T21:54:43.487Z"
   },
   {
     "product": "HGH 191AA",
@@ -144,12 +144,12 @@
     "strength": "15mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 0,
-    "moreOnWay": true,
-    "incomingQuantity": 10,
-    "expectedArrival": "2026-08-20",
+    "quantity": 10,
+    "moreOnWay": false,
+    "incomingQuantity": 0,
+    "expectedArrival": "",
     "id": "tirzepatide--15mg",
-    "updatedAt": "2026-08-17T15:57:06.751Z"
+    "updatedAt": "2026-08-21T21:54:52.008Z"
   },
   {
     "product": "Tirzepatide",
