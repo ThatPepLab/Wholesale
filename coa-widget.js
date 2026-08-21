@@ -2,6 +2,10 @@
   const SOURCE = location.pathname.toLowerCase().includes("/tplprice/") ? "coa-data.json" : "https://raw.githubusercontent.com/ThatPepLab/TPLPrice/main/coa-data.json?updated=" + Date.now();
   let snapshot = { completed: [], pending: [], updatedAt: null };
   const esc = (value) => String(value == null ? "" : value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const approvedVendor = (value) => {
+    const key = String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
+    return key.includes("peptidelab") || key.includes("luvino") || key.includes("lunvio") || key.includes("lunivo");
+  };
   const productKey = (value) => String(value || "").toLowerCase()
     .replace(/\d+(?:\.\d+)?\s*(?:mg|mcg|iu|ml)\b/g, "")
     .replace(/semaglutide|glp[\s-]*1sg/g, "glp1sg")
@@ -24,7 +28,7 @@
   const prettyDate = (value) => { const date = new Date(String(value || "")); return Number.isNaN(date.getTime()) ? String(value || "Date not listed") : new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(date); };
   const matches = (product, strength) => {
     const productId = productKey(product), strengthId = strengthKey(strength);
-    const accepts = (record) => productKey(record.product) === productId && strengthKey(record.strength) === strengthId;
+    const accepts = (record) => approvedVendor(record.vendor) && productKey(record.product) === productId && strengthKey(record.strength) === strengthId;
     return {
       completed: (snapshot.completed || []).filter(accepts).sort((a, b) => dateValue(b.analysisDate) - dateValue(a.analysisDate)),
       pending: (snapshot.pending || []).filter(accepts).sort((a, b) => dateValue(b.dateSent) - dateValue(a.dateSent))
