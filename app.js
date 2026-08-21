@@ -193,7 +193,8 @@ function chooseProduct(name) {
 function kitCard(item, localKits) {
   if (!item) return "";
   const usAvailable = item.usAvailable || localKits > 0;
-  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local kit${localKits === 1 ? "" : "s"}` : ""}</div>` : ""}<div class="kit-card-body"><p class="kit-label">10 Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p><button class="add-cart-button" type="button" data-add-kit>Add 10 Vial Kit to Cart</button></div></article>`;
+  const coa = window.COARegistry?.markup(state.selectedProduct?.name, item.strength) || "";
+  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local kit${localKits === 1 ? "" : "s"}` : ""}</div>` : ""}<div class="kit-card-body"><p class="kit-label">10 Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p>${coa}<button class="add-cart-button" type="button" data-add-kit>Add 10 Vial Kit to Cart</button></div></article>`;
 }
 function renderPrice() {
   if (!state.selectedProduct || !state.selectedStrength) return;
@@ -307,3 +308,4 @@ fetch(`catalog-data.json?updated=${Date.now()}`, { cache: "no-store" }).then((re
 refreshInventory();
 setInterval(refreshInventory, 300000);
 renderCart();
+document.addEventListener("coa-data-updated", () => { if (state.selectedProduct) renderPrice(); });
