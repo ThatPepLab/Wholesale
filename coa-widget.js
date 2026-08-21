@@ -2,22 +2,6 @@
   const SOURCE = location.pathname.toLowerCase().includes("/tplprice/") ? "coa-data.json" : "https://raw.githubusercontent.com/ThatPepLab/TPLPrice/main/coa-data.json?updated=" + Date.now();
   let snapshot = { completed: [], pending: [], updatedAt: null };
   const esc = (value) => String(value == null ? "" : value).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
-  const vendorKey = (value) => {
-    const key = String(value || "").toLowerCase().replace(/[^a-z0-9]+/g, "");
-    if (key.includes("globalwellness")) return "globalwellness";
-    if (key.includes("innopeptideus")) return "innopeptideus";
-    if (key.includes("innopeptide")) return "innopeptide";
-    if (key.includes("kerui")) return "kerui";
-    if (key.includes("sqpept")) return "sqpeptide";
-    if (key.includes("wanshun")) return "wanshun";
-    if (key.includes("lunivo") || key.includes("luvino")) return key.includes("us") ? "lunivous" : "lunivo";
-    if (key.includes("marvelus")) return "marvelus";
-    if (key.includes("marvel")) return "marvel";
-    if (key.includes("lilipeptide")) return "lilipeptide";
-    if (key.includes("crushresearch")) return "crushresearch";
-    if (key.includes("peptidelab")) return "peptidelab";
-    return key.replace(/(?:peptides?|laborator(?:y|ies)|labs?|warehouse|international|usa|china)/g, "");
-  };
   const productKey = (value) => String(value || "").toLowerCase()
     .replace(/\d+(?:\.\d+)?\s*(?:mg|mcg|iu|ml)\b/g, "")
     .replace(/semaglutide|glp[\s-]*1sg/g, "glp1sg")
@@ -38,41 +22,42 @@
   };
   const dateValue = (value) => { const time = Date.parse(String(value || "")); return Number.isFinite(time) ? time : 0; };
   const prettyDate = (value) => { const date = new Date(String(value || "")); return Number.isNaN(date.getTime()) ? String(value || "Date not listed") : new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", year: "numeric" }).format(date); };
-  const matches = (product, strength, vendor) => {
-    const productId = productKey(product), strengthId = strengthKey(strength), vendorId = vendorKey(vendor || "");
-    const accepts = (record) => productKey(record.product) === productId && strengthKey(record.strength) === strengthId && (!vendorId || vendorKey(record.vendor) === vendorId);
+  const matches = (product, strength) => {
+    const productId = productKey(product), strengthId = strengthKey(strength);
+    const accepts = (record) => productKey(record.product) === productId && strengthKey(record.strength) === strengthId;
     return {
       completed: (snapshot.completed || []).filter(accepts).sort((a, b) => dateValue(b.analysisDate) - dateValue(a.analysisDate)),
       pending: (snapshot.pending || []).filter(accepts).sort((a, b) => dateValue(b.dateSent) - dateValue(a.dateSent))
     };
   };
   const markup = (product, strength, vendor) => {
-    const result = matches(product, strength, vendor);
+    const result = matches(product, strength);
     if (!result.completed.length && !result.pending.length) return "";
-    const attrs = ' data-coa-product="' + esc(product) + '" data-coa-strength="' + esc(strength) + '" data-coa-vendor="' + esc(vendor || "") + '"';
+    const attrs = ' data-coa-product="' + esc(product) + '" data-coa-strength="' + esc(strength) + '"';
     if (result.completed.length) {
       const newerPending = result.pending.some((pending) => dateValue(pending.dateSent) > dateValue(result.completed[0].analysisDate));
-      const vendors = new Set(result.completed.map((record) => vendorKey(record.vendor))).size;
-      const label = vendor ? "COA · " + prettyDate(result.completed[0].analysisDate) : "COA Available" + (vendors > 1 ? " · " + vendors + " vendors" : "");
+      const label = "Latest COA · " + prettyDate(result.completed[0].analysisDate);
       return '<button type="button" class="coa-status coa-complete"' + attrs + ">" + esc(label) + (newerPending ? "<span>Newer test pending</span>" : "") + "</button>";
     }
     return '<button type="button" class="coa-status coa-pending"' + attrs + ">COA Pending</button>";
   };
   function ensureModal() {
     if (document.querySelector("#coa-directory-modal")) return;
-    document.body.insertAdjacentHTML("beforeend", '<dialog id="coa-directory-modal" class="coa-modal"><div class="coa-modal-head"><div><p>PUBLIC TESTING RECORDS</p><h2 id="coa-modal-title">Certificate of Analysis</h2></div><button type="button" class="coa-modal-close" aria-label="Close COA details">×</button></div><div id="coa-modal-body"></div><p class="coa-source-note">Testing records are linked from the <a href="https://coa.reta-unfiltered.com/#directory" target="_blank" rel="noopener noreferrer">RU Inner Circle COA Library</a>. Confirm the vendor, product, vial size, date, and verification page.</p></dialog>');
+    document.body.insertAdjacentHTML("beforeend", '<dialog id="coa-directory-modal" class="coa-modal"><div class="coa-modal-head"><div><p>PRODUCT TESTING RECORD</p><h2 id="coa-modal-title">Certificate of Analysis</h2></div><button type="button" class="coa-modal-close" aria-label="Close COA details">×</button></div><div id="coa-modal-body"></div></dialog>');
   }
   function open(product, strength, vendor) {
     ensureModal();
-    const result = matches(product, strength, vendor);
+    const result = matches(product, strength);
     const modal = document.querySelector("#coa-directory-modal");
     document.querySelector("#coa-modal-title").textContent = product + " · " + strength;
-    const completeCards = result.completed.map((record) => {
+    const completeCards = result.completed.slice(0, 1).map((record) => {
       const report = record.reportUrl ? '<a class="coa-report-link" href="' + esc(record.reportUrl) + '" target="_blank" rel="noopener noreferrer">Open Official COA</a>' : '<span class="coa-unavailable">Verification link not listed</span>';
       const preview = record.previewUrl ? '<details class="coa-report-preview"><summary>Preview report</summary><iframe title="COA preview" src="' + esc(record.previewUrl) + '" loading="lazy"></iframe></details>' : "";
-      return '<article class="coa-record"><div class="coa-record-heading"><strong>' + esc(record.vendor) + "</strong><span>Completed " + esc(prettyDate(record.analysisDate)) + "</span></div><dl><div><dt>Testing lab</dt><dd>" + esc(record.lab || "Not listed") + "</dd></div><div><dt>Purity</dt><dd>" + esc(record.purity || "Not listed") + "</dd></div><div><dt>Net content</dt><dd>" + esc(record.netContent || "Not listed") + "</dd></div></dl>" + report + preview + "</article>";
+      return '<article class="coa-record"><div class="coa-record-heading"><strong>' + "Latest COA" + "</strong><span>Completed " + esc(prettyDate(record.analysisDate)) + "</span></div><dl><div><dt>Testing lab</dt><dd>" + esc(record.lab || "Not listed") + "</dd></div><div><dt>Purity</dt><dd>" + esc(record.purity || "Not listed") + "</dd></div><div><dt>Net content</dt><dd>" + esc(record.netContent || "Not listed") + "</dd></div></dl>" + report + preview + "</article>";
     }).join("");
-    const pendingCards = result.pending.map((record) => '<article class="coa-record coa-record-pending"><div class="coa-record-heading"><strong>' + esc(record.vendor) + "</strong><span>COA Pending</span></div><dl><div><dt>Expected</dt><dd>" + esc(prettyDate(record.expectedDate)) + "</dd></div></dl></article>").join("");
+    const latestCompletedDate = result.completed.length ? dateValue(result.completed[0].analysisDate) : 0;
+    const pendingToShow = result.pending.filter((record) => !result.completed.length || dateValue(record.dateSent) > latestCompletedDate).slice(0, 1);
+    const pendingCards = pendingToShow.map((record) => "<article class='coa-record coa-record-pending'><div class='coa-record-heading'><strong>Latest status</strong><span>Newer COA Pending</span></div><dl><div><dt>Expected</dt><dd>" + esc(prettyDate(record.expectedDate)) + "</dd></div></dl></article>").join("");
     document.querySelector("#coa-modal-body").innerHTML = completeCards + pendingCards || '<p class="coa-empty">No matching completed or pending test is listed.</p>';
     modal.showModal();
   }
@@ -84,7 +69,7 @@
   addStyles();
   document.addEventListener("click", (event) => {
     const button = event.target.closest && event.target.closest("[data-coa-product]");
-    if (button) { event.preventDefault(); open(button.dataset.coaProduct, button.dataset.coaStrength, button.dataset.coaVendor || ""); return; }
+    if (button) { event.preventDefault(); open(button.dataset.coaProduct, button.dataset.coaStrength); return; }
     if (event.target.closest && event.target.closest(".coa-modal-close")) document.querySelector("#coa-directory-modal")?.close();
     if (event.target.id === "coa-directory-modal") event.target.close();
   });
