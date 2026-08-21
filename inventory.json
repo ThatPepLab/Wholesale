@@ -28,23 +28,23 @@
     "strength": "10mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 0,
+    "quantity": 2,
     "moreOnWay": true,
     "incomingQuantity": 20,
     "expectedArrival": "2026-08-19",
-    "updatedAt": "2026-08-17T15:56:07.816Z"
+    "updatedAt": "2026-08-21T16:29:23.947Z"
   },
   {
     "product": "GLP-3RT",
     "strength": "20mg",
-    "quantity": 9,
+    "quantity": 7,
     "id": "glp-3rt--20mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-08-19T15:53:33.959Z"
+    "updatedAt": "2026-08-21T16:29:14.136Z"
   },
   {
     "product": "HGH 191AA",
