@@ -80,7 +80,7 @@ for (const [key, matchingOffers] of groups) {
     price: wholesaleKitPrice(averageLandedCost),
     msrp: singleVialMsrp(averageLandedCost),
     retail: retailTiers(averageLandedCost),
-    usAvailable: matchingOffers.some((offer) => /US Warehouse/i.test(offer.vendor)),
+    usAvailable: matchingOffers.some((offer) => /US Warehouse/i.test(offer.vendor) && !/out of stock/i.test(offer.note || "")),
   });
 }
 
