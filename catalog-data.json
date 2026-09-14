@@ -4,49 +4,37 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 130,
-        "msrp": 50,
+        "price": 125,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 100,
-          "five": 155,
-          "ten": 285
+          "one": 35,
+          "three": 95,
+          "five": 145,
+          "ten": 260
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 150,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 330
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "20mg",
-        "price": 135,
+        "price": 125,
         "msrp": 50,
         "retail": {
           "one": 40,
-          "three": 105,
-          "five": 160,
-          "ten": 295
+          "three": 95,
+          "five": 145,
+          "ten": 270
         },
         "usAvailable": false
       },
       {
         "strength": "50mg",
-        "price": 200,
-        "msrp": 75,
+        "price": 185,
+        "msrp": 70,
         "retail": {
-          "one": 65,
-          "three": 170,
-          "five": 265,
-          "ten": 490
+          "one": 60,
+          "three": 155,
+          "five": 240,
+          "ten": 440
         },
         "usAvailable": true
       }
@@ -57,13 +45,13 @@
     "items": [
       {
         "strength": "1mg",
-        "price": 190,
-        "msrp": 70,
+        "price": 150,
+        "msrp": 55,
         "retail": {
-          "one": 60,
-          "three": 160,
-          "five": 250,
-          "ten": 460
+          "one": 45,
+          "three": 120,
+          "five": 185,
+          "ten": 340
         },
         "usAvailable": false
       }
@@ -87,12 +75,12 @@
       {
         "strength": "10ml",
         "price": 85,
-        "msrp": 35,
+        "msrp": 30,
         "retail": {
-          "one": 25,
+          "one": 20,
           "three": 55,
-          "five": 85,
-          "ten": 150
+          "five": 80,
+          "ten": 140
         },
         "usAvailable": true
       }
@@ -128,140 +116,29 @@
     ]
   },
   {
-    "name": "Adamax-982",
-    "items": [
-      {
-        "strength": "5mg",
-        "price": 150,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 330
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 195,
-        "msrp": 75,
-        "retail": {
-          "one": 65,
-          "three": 165,
-          "five": 255,
-          "ten": 470
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "ADAMAX-984",
-    "items": [
-      {
-        "strength": "5mg",
-        "price": 150,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 335
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 210,
-        "msrp": 80,
-        "retail": {
-          "one": 70,
-          "three": 180,
-          "five": 280,
-          "ten": 520
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Adamax-1032 Contains adamantane",
-    "items": [
-      {
-        "strength": "5mg",
-        "price": 190,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 160,
-          "five": 245,
-          "ten": 455
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 265,
-        "msrp": 100,
-        "retail": {
-          "one": 90,
-          "three": 235,
-          "five": 365,
-          "ten": 680
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
     "name": "Adipotide",
     "items": [
       {
-        "strength": "2ml",
-        "price": 215,
-        "msrp": 80,
-        "retail": {
-          "one": 70,
-          "three": 185,
-          "five": 290,
-          "ten": 535
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "5mg",
-        "price": 200,
-        "msrp": 75,
+        "price": 230,
+        "msrp": 85,
         "retail": {
-          "one": 65,
-          "three": 170,
-          "five": 265,
-          "ten": 485
+          "one": 75,
+          "three": 200,
+          "five": 310,
+          "ten": 580
         },
         "usAvailable": false
       },
       {
-        "strength": "5ml",
+        "strength": "10mg",
         "price": 290,
         "msrp": 110,
         "retail": {
           "one": 100,
           "three": 260,
-          "five": 400,
-          "ten": 750
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 285,
-        "msrp": 105,
-        "retail": {
-          "one": 95,
-          "three": 255,
-          "five": 400,
-          "ten": 740
+          "five": 405,
+          "ten": 755
         },
         "usAvailable": false
       }
@@ -271,26 +148,14 @@
     "name": "AHK-Cu",
     "items": [
       {
-        "strength": "20mg",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 30,
-          "three": 75,
-          "five": 110,
-          "ten": 200
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "50mg",
         "price": 120,
         "msrp": 45,
         "retail": {
           "one": 35,
           "three": 90,
-          "five": 140,
-          "ten": 250
+          "five": 135,
+          "ten": 245
         },
         "usAvailable": false
       },
@@ -309,87 +174,29 @@
     ]
   },
   {
-    "name": "AICAR",
-    "items": [
-      {
-        "strength": "50mg",
-        "price": 160,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 205,
-          "ten": 375
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "100mg",
-        "price": 180,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 150,
-          "five": 230,
-          "ten": 425
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Alprostadil",
-    "items": [
-      {
-        "strength": "20mg",
-        "price": 210,
-        "msrp": 80,
-        "retail": {
-          "one": 70,
-          "three": 180,
-          "five": 280,
-          "ten": 520
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
     "name": "AOD-9604",
     "items": [
       {
-        "strength": "2mg",
-        "price": 115,
-        "msrp": 45,
-        "retail": {
-          "one": 35,
-          "three": 85,
-          "five": 130,
-          "ten": 240
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "5mg",
-        "price": 190,
-        "msrp": 70,
+        "price": 175,
+        "msrp": 65,
         "retail": {
-          "one": 60,
-          "three": 160,
-          "five": 250,
-          "ten": 460
+          "one": 55,
+          "three": 145,
+          "five": 225,
+          "ten": 415
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 245,
-        "msrp": 90,
+        "price": 255,
+        "msrp": 95,
         "retail": {
-          "one": 80,
-          "three": 215,
-          "five": 335,
-          "ten": 620
+          "one": 85,
+          "three": 225,
+          "five": 350,
+          "ten": 655
         },
         "usAvailable": true
       }
@@ -400,49 +207,25 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 160,
-        "msrp": 60,
+        "price": 150,
+        "msrp": 55,
         "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 200,
-          "ten": 370
+          "one": 45,
+          "three": 120,
+          "five": 185,
+          "ten": 340
         },
         "usAvailable": true
       },
       {
-        "strength": "16mg",
-        "price": 170,
-        "msrp": 65,
-        "retail": {
-          "one": 55,
-          "three": 140,
-          "five": 220,
-          "ten": 400
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "30mg",
-        "price": 240,
-        "msrp": 90,
-        "retail": {
-          "one": 80,
-          "three": 210,
-          "five": 330,
-          "ten": 610
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "40mg",
-        "price": 240,
-        "msrp": 90,
+        "price": 200,
+        "msrp": 75,
         "retail": {
-          "one": 80,
-          "three": 210,
-          "five": 325,
-          "ten": 605
+          "one": 65,
+          "three": 170,
+          "five": 265,
+          "ten": 490
         },
         "usAvailable": false
       }
@@ -458,8 +241,8 @@
         "retail": {
           "one": 20,
           "three": 50,
-          "five": 80,
-          "ten": 140
+          "five": 75,
+          "ten": 135
         },
         "usAvailable": true
       },
@@ -490,58 +273,41 @@
     ]
   },
   {
-    "name": "Botulinum toxin",
-    "items": [
-      {
-        "strength": "100iu",
-        "price": 150,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 120,
-          "five": 190,
-          "ten": 345
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
     "name": "BPC-157",
     "items": [
       {
         "strength": "5mg",
-        "price": 125,
+        "price": 115,
         "msrp": 45,
         "retail": {
           "one": 35,
-          "three": 95,
-          "five": 140,
-          "ten": 260
+          "three": 85,
+          "five": 125,
+          "ten": 230
         },
         "usAvailable": true
       },
       {
         "strength": "10mg",
-        "price": 140,
-        "msrp": 55,
+        "price": 135,
+        "msrp": 50,
         "retail": {
-          "one": 45,
-          "three": 110,
-          "five": 170,
-          "ten": 310
+          "one": 40,
+          "three": 105,
+          "five": 160,
+          "ten": 290
         },
         "usAvailable": true
       },
       {
         "strength": "20mg",
-        "price": 195,
-        "msrp": 75,
+        "price": 170,
+        "msrp": 65,
         "retail": {
-          "one": 65,
-          "three": 165,
-          "five": 250,
-          "ten": 465
+          "one": 55,
+          "three": 140,
+          "five": 215,
+          "ten": 395
         },
         "usAvailable": true
       }
@@ -551,26 +317,14 @@
     "name": "BPC-157 + TB500",
     "items": [
       {
-        "strength": "5mg",
-        "price": 165,
-        "msrp": 65,
-        "retail": {
-          "one": 55,
-          "three": 135,
-          "five": 210,
-          "ten": 390
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "10mg",
-        "price": 195,
-        "msrp": 75,
+        "price": 160,
+        "msrp": 60,
         "retail": {
-          "one": 65,
-          "three": 165,
-          "five": 255,
-          "ten": 475
+          "one": 50,
+          "three": 130,
+          "five": 205,
+          "ten": 375
         },
         "usAvailable": true
       },
@@ -583,18 +337,6 @@
           "three": 215,
           "five": 335,
           "ten": 625
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "30mg",
-        "price": 330,
-        "msrp": 125,
-        "retail": {
-          "one": 115,
-          "three": 300,
-          "five": 470,
-          "ten": 880
         },
         "usAvailable": true
       }
@@ -618,46 +360,17 @@
     ]
   },
   {
-    "name": "Bronchogen",
-    "items": [
-      {
-        "strength": "20mg",
-        "price": 200,
-        "msrp": 75,
-        "retail": {
-          "one": 65,
-          "three": 170,
-          "five": 260,
-          "ten": 480
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
     "name": "Cagrilintide",
     "items": [
       {
-        "strength": "2mg",
-        "price": 135,
-        "msrp": 50,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 300
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "5mg",
-        "price": 185,
-        "msrp": 70,
+        "price": 175,
+        "msrp": 65,
         "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
+          "one": 55,
+          "three": 145,
+          "five": 225,
+          "ten": 410
         },
         "usAvailable": true
       },
@@ -675,13 +388,13 @@
       },
       {
         "strength": "20mg",
-        "price": 345,
-        "msrp": 130,
+        "price": 280,
+        "msrp": 105,
         "retail": {
-          "one": 120,
-          "three": 315,
-          "five": 495,
-          "ten": 920
+          "one": 95,
+          "three": 250,
+          "five": 395,
+          "ten": 730
         },
         "usAvailable": false
       }
@@ -692,6 +405,18 @@
     "items": [
       {
         "strength": "5mg",
+        "price": 195,
+        "msrp": 75,
+        "retail": {
+          "one": 65,
+          "three": 165,
+          "five": 250,
+          "ten": 465
+        },
+        "usAvailable": false
+      },
+      {
+        "strength": "10mg",
         "price": 200,
         "msrp": 75,
         "retail": {
@@ -699,59 +424,6 @@
           "three": 170,
           "five": 265,
           "ten": 490
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 215,
-        "msrp": 80,
-        "retail": {
-          "one": 70,
-          "three": 185,
-          "five": 290,
-          "ten": 535
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "20mg",
-        "price": 270,
-        "msrp": 100,
-        "retail": {
-          "one": 90,
-          "three": 240,
-          "five": 375,
-          "ten": 695
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Cardiogen",
-    "items": [
-      {
-        "strength": "10mg",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 175,
-          "ten": 320
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "20mg",
-        "price": 200,
-        "msrp": 75,
-        "retail": {
-          "one": 65,
-          "three": 170,
-          "five": 260,
-          "ten": 485
         },
         "usAvailable": false
       }
@@ -762,30 +434,13 @@
     "items": [
       {
         "strength": "20mg",
-        "price": 175,
-        "msrp": 65,
+        "price": 150,
+        "msrp": 55,
         "retail": {
-          "one": 55,
-          "three": 145,
-          "five": 225,
-          "ten": 420
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Cerebrolysin",
-    "items": [
-      {
-        "strength": "60mg",
-        "price": 135,
-        "msrp": 50,
-        "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 300
+          "one": 45,
+          "three": 120,
+          "five": 185,
+          "ten": 340
         },
         "usAvailable": false
       }
@@ -813,13 +468,13 @@
     "items": [
       {
         "strength": "2mg",
-        "price": 115,
+        "price": 120,
         "msrp": 45,
         "retail": {
           "one": 35,
-          "three": 85,
-          "five": 130,
-          "ten": 240
+          "three": 90,
+          "five": 140,
+          "ten": 255
         },
         "usAvailable": false
       },
@@ -853,38 +508,26 @@
     "name": "CJC-1295 No DAC + Ipamorelin",
     "items": [
       {
-        "strength": "5mg",
-        "price": 165,
+        "strength": "10mg",
+        "price": 170,
         "msrp": 65,
         "retail": {
           "one": 55,
-          "three": 135,
-          "five": 210,
-          "ten": 390
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 195,
-        "msrp": 75,
-        "retail": {
-          "one": 65,
-          "three": 165,
-          "five": 250,
-          "ten": 465
+          "three": 140,
+          "five": 220,
+          "ten": 405
         },
         "usAvailable": true
       },
       {
         "strength": "20mg",
-        "price": 230,
-        "msrp": 85,
+        "price": 210,
+        "msrp": 80,
         "retail": {
-          "one": 75,
-          "three": 200,
-          "five": 310,
-          "ten": 575
+          "one": 70,
+          "three": 180,
+          "five": 285,
+          "ten": 525
         },
         "usAvailable": true
       }
@@ -895,37 +538,37 @@
     "items": [
       {
         "strength": "2mg",
-        "price": 150,
+        "price": 145,
         "msrp": 55,
         "retail": {
           "one": 45,
-          "three": 120,
-          "five": 185,
-          "ten": 335
+          "three": 115,
+          "five": 175,
+          "ten": 315
         },
         "usAvailable": false
       },
       {
         "strength": "5mg",
-        "price": 250,
-        "msrp": 95,
+        "price": 230,
+        "msrp": 85,
         "retail": {
-          "one": 85,
-          "three": 220,
-          "five": 345,
-          "ten": 640
+          "one": 75,
+          "three": 200,
+          "five": 310,
+          "ten": 570
         },
         "usAvailable": true
       },
       {
         "strength": "10mg",
-        "price": 340,
-        "msrp": 125,
+        "price": 325,
+        "msrp": 120,
         "retail": {
-          "one": 115,
-          "three": 310,
-          "five": 485,
-          "ten": 900
+          "one": 110,
+          "three": 295,
+          "five": 460,
+          "ten": 855
         },
         "usAvailable": false
       }
@@ -936,59 +579,13 @@
     "items": [
       {
         "strength": "20mg",
-        "price": 170,
-        "msrp": 65,
+        "price": 145,
+        "msrp": 55,
         "retail": {
-          "one": 55,
-          "three": 140,
-          "five": 220,
-          "ten": 405
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Crystagen",
-    "items": [
-      {
-        "strength": "20mg",
-        "price": 175,
-        "msrp": 65,
-        "retail": {
-          "one": 55,
-          "three": 145,
-          "five": 225,
-          "ten": 415
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Dermorphin",
-    "items": [
-      {
-        "strength": "5mg",
-        "price": 130,
-        "msrp": 50,
-        "retail": {
-          "one": 40,
-          "three": 100,
-          "five": 155,
-          "ten": 285
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 155,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 125,
-          "five": 190,
-          "ten": 345
+          "one": 45,
+          "three": 115,
+          "five": 180,
+          "ten": 330
         },
         "usAvailable": false
       }
@@ -998,38 +595,26 @@
     "name": "DSIP",
     "items": [
       {
-        "strength": "2mg",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 30,
-          "three": 75,
-          "five": 115,
-          "ten": 210
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "5mg",
-        "price": 135,
-        "msrp": 50,
+        "price": 120,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 160,
-          "ten": 290
+          "one": 35,
+          "three": 90,
+          "five": 140,
+          "ten": 255
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 150,
+        "price": 145,
         "msrp": 55,
         "retail": {
           "one": 45,
-          "three": 120,
-          "five": 185,
-          "ten": 340
+          "three": 115,
+          "five": 180,
+          "ten": 330
         },
         "usAvailable": false
       },
@@ -1040,37 +625,8 @@
         "retail": {
           "one": 60,
           "three": 150,
-          "five": 235,
-          "ten": 430
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Eloralintide",
-    "items": [
-      {
-        "strength": "5mg",
-        "price": 240,
-        "msrp": 90,
-        "retail": {
-          "one": 80,
-          "three": 210,
-          "five": 325,
-          "ten": 600
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 390,
-        "msrp": 145,
-        "retail": {
-          "one": 135,
-          "three": 360,
-          "five": 565,
-          "ten": 1055
+          "five": 230,
+          "ten": 425
         },
         "usAvailable": false
       }
@@ -1087,19 +643,19 @@
           "one": 40,
           "three": 100,
           "five": 155,
-          "ten": 280
+          "ten": 285
         },
         "usAvailable": true
       },
       {
         "strength": "25mg",
-        "price": 170,
+        "price": 175,
         "msrp": 65,
         "retail": {
           "one": 55,
-          "three": 140,
-          "five": 220,
-          "ten": 405
+          "three": 145,
+          "five": 225,
+          "ten": 415
         },
         "usAvailable": false
       },
@@ -1118,68 +674,17 @@
     ]
   },
   {
-    "name": "EPO",
-    "items": [
-      {
-        "strength": "3000iu",
-        "price": 170,
-        "msrp": 65,
-        "retail": {
-          "one": 55,
-          "three": 140,
-          "five": 215,
-          "ten": 400
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Follistatin",
-    "items": [
-      {
-        "strength": "1mg",
-        "price": 325,
-        "msrp": 120,
-        "retail": {
-          "one": 110,
-          "three": 295,
-          "five": 460,
-          "ten": 855
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
     "name": "FOXO4-DRI",
     "items": [
       {
         "strength": "10mg",
-        "price": 360,
-        "msrp": 135,
+        "price": 340,
+        "msrp": 125,
         "retail": {
-          "one": 125,
-          "three": 330,
-          "five": 515,
-          "ten": 960
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "GDF-8",
-    "items": [
-      {
-        "strength": "1mg",
-        "price": 265,
-        "msrp": 100,
-        "retail": {
-          "one": 90,
-          "three": 235,
-          "five": 370,
-          "ten": 685
+          "one": 115,
+          "three": 310,
+          "five": 480,
+          "ten": 895
         },
         "usAvailable": false
       }
@@ -1190,44 +695,27 @@
     "items": [
       {
         "strength": "50mg",
-        "price": 120,
-        "msrp": 45,
+        "price": 105,
+        "msrp": 40,
         "retail": {
-          "one": 35,
-          "three": 90,
-          "five": 135,
-          "ten": 245
+          "one": 30,
+          "three": 75,
+          "five": 115,
+          "ten": 205
         },
         "usAvailable": true
       },
       {
         "strength": "100mg",
-        "price": 135,
-        "msrp": 50,
+        "price": 115,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 160,
-          "ten": 290
+          "one": 35,
+          "three": 85,
+          "five": 130,
+          "ten": 240
         },
         "usAvailable": true
-      }
-    ]
-  },
-  {
-    "name": "GHK-Cu + Glutathione + NADH Blend",
-    "items": [
-      {
-        "strength": "402mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -1265,25 +753,25 @@
       },
       {
         "strength": "10mg",
-        "price": 135,
-        "msrp": 50,
+        "price": 140,
+        "msrp": 55,
         "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 300
+          "one": 45,
+          "three": 110,
+          "five": 170,
+          "ten": 315
         },
         "usAvailable": true
       },
       {
         "strength": "15mg",
         "price": 150,
-        "msrp": 55,
+        "msrp": 60,
         "retail": {
-          "one": 45,
+          "one": 50,
           "three": 120,
-          "five": 185,
-          "ten": 340
+          "five": 190,
+          "ten": 345
         },
         "usAvailable": true
       }
@@ -1294,25 +782,25 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 120,
+        "price": 115,
         "msrp": 45,
         "retail": {
           "one": 35,
-          "three": 90,
-          "five": 135,
-          "ten": 245
+          "three": 85,
+          "five": 130,
+          "ten": 235
         },
         "usAvailable": true
       },
       {
         "strength": "10mg",
-        "price": 135,
-        "msrp": 50,
+        "price": 140,
+        "msrp": 55,
         "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 165,
-          "ten": 300
+          "one": 45,
+          "three": 110,
+          "five": 175,
+          "ten": 315
         },
         "usAvailable": true
       }
@@ -1323,13 +811,13 @@
     "items": [
       {
         "strength": "70mg",
-        "price": 280,
-        "msrp": 105,
+        "price": 240,
+        "msrp": 90,
         "retail": {
-          "one": 95,
-          "three": 250,
-          "five": 385,
-          "ten": 715
+          "one": 80,
+          "three": 210,
+          "five": 325,
+          "ten": 610
         },
         "usAvailable": true
       }
@@ -1340,66 +828,78 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 145,
-        "msrp": 55,
+        "price": 125,
+        "msrp": 50,
         "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 175,
-          "ten": 320
+          "one": 40,
+          "three": 95,
+          "five": 145,
+          "ten": 270
         },
         "usAvailable": true
       },
       {
         "strength": "10mg",
-        "price": 165,
-        "msrp": 65,
+        "price": 150,
+        "msrp": 55,
         "retail": {
-          "one": 55,
-          "three": 135,
-          "five": 210,
-          "ten": 385
+          "one": 45,
+          "three": 120,
+          "five": 180,
+          "ten": 330
         },
         "usAvailable": true
       },
       {
         "strength": "15mg",
-        "price": 200,
-        "msrp": 75,
+        "price": 180,
+        "msrp": 65,
         "retail": {
-          "one": 65,
-          "three": 170,
-          "five": 265,
-          "ten": 490
+          "one": 55,
+          "three": 150,
+          "five": 230,
+          "ten": 420
         },
         "usAvailable": true
       },
       {
         "strength": "20mg",
-        "price": 215,
-        "msrp": 80,
+        "price": 190,
+        "msrp": 70,
         "retail": {
-          "one": 70,
-          "three": 185,
-          "five": 290,
-          "ten": 535
+          "one": 60,
+          "three": 160,
+          "five": 250,
+          "ten": 460
         },
         "usAvailable": true
       },
       {
         "strength": "30mg",
-        "price": 275,
-        "msrp": 105,
+        "price": 235,
+        "msrp": 90,
         "retail": {
-          "one": 95,
-          "three": 245,
-          "five": 380,
-          "ten": 710
+          "one": 80,
+          "three": 205,
+          "five": 315,
+          "ten": 590
         },
         "usAvailable": true
       },
       {
         "strength": "40mg",
+        "price": 280,
+        "msrp": 105,
+        "retail": {
+          "one": 95,
+          "three": 250,
+          "five": 385,
+          "ten": 720
+        },
+        "usAvailable": false
+      },
+      {
+        "strength": "50mg",
         "price": 310,
         "msrp": 115,
         "retail": {
@@ -1411,28 +911,16 @@
         "usAvailable": false
       },
       {
-        "strength": "50mg",
-        "price": 365,
-        "msrp": 135,
-        "retail": {
-          "one": 125,
-          "three": 335,
-          "five": 525,
-          "ten": 975
-        },
-        "usAvailable": true
-      },
-      {
         "strength": "60mg",
-        "price": 385,
-        "msrp": 145,
+        "price": 325,
+        "msrp": 125,
         "retail": {
-          "one": 135,
-          "three": 355,
-          "five": 555,
-          "ten": 1030
+          "one": 115,
+          "three": 295,
+          "five": 465,
+          "ten": 865
         },
-        "usAvailable": true
+        "usAvailable": false
       },
       {
         "strength": "100mg",
@@ -1453,30 +941,13 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 185,
-        "msrp": 70,
+        "price": 175,
+        "msrp": 65,
         "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 245,
-          "ten": 450
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "GLP-3RT 20mg + Trizepatide 40mg (10ml)",
-    "items": [
-      {
-        "strength": "60mg",
-        "price": 310,
-        "msrp": 115,
-        "retail": {
-          "one": 105,
-          "three": 280,
-          "five": 435,
-          "ten": 810
+          "one": 55,
+          "three": 145,
+          "five": 220,
+          "ten": 410
         },
         "usAvailable": false
       }
@@ -1487,25 +958,25 @@
     "items": [
       {
         "strength": "600mg",
-        "price": 135,
-        "msrp": 50,
+        "price": 120,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 160,
-          "ten": 290
+          "one": 35,
+          "three": 90,
+          "five": 135,
+          "ten": 250
         },
         "usAvailable": true
       },
       {
         "strength": "1500mg",
-        "price": 155,
+        "price": 160,
         "msrp": 60,
         "retail": {
           "one": 50,
-          "three": 125,
-          "five": 190,
-          "ten": 355
+          "three": 130,
+          "five": 200,
+          "ten": 370
         },
         "usAvailable": true
       }
@@ -1515,38 +986,26 @@
     "name": "HCG",
     "items": [
       {
-        "strength": "2000iu",
-        "price": 110,
-        "msrp": 40,
+        "strength": "5000iu",
+        "price": 155,
+        "msrp": 60,
         "retail": {
-          "one": 30,
-          "three": 80,
-          "five": 120,
-          "ten": 220
+          "one": 50,
+          "three": 125,
+          "five": 195,
+          "ten": 360
         },
         "usAvailable": false
       },
       {
-        "strength": "5000iu",
-        "price": 165,
-        "msrp": 65,
-        "retail": {
-          "one": 55,
-          "three": 135,
-          "five": 210,
-          "ten": 385
-        },
-        "usAvailable": true
-      },
-      {
         "strength": "10000iu",
-        "price": 225,
+        "price": 220,
         "msrp": 85,
         "retail": {
           "one": 75,
-          "three": 195,
-          "five": 305,
-          "ten": 565
+          "three": 190,
+          "five": 295,
+          "ten": 550
         },
         "usAvailable": true
       }
@@ -1566,18 +1025,6 @@
           "ten": 330
         },
         "usAvailable": false
-      },
-      {
-        "strength": "150.3mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -1585,96 +1032,19 @@
     "name": "HGH 191AA",
     "items": [
       {
-        "strength": "6iu",
-        "price": 150,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 185,
-          "ten": 335
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "8iu",
-        "price": 160,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 195,
-          "ten": 365
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "10iu",
-        "price": 150,
-        "msrp": 55,
+        "price": 135,
+        "msrp": 50,
         "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 335
+          "one": 40,
+          "three": 105,
+          "five": 160,
+          "ten": 290
         },
         "usAvailable": true
-      },
-      {
-        "strength": "12iu",
-        "price": 165,
-        "msrp": 65,
-        "retail": {
-          "one": 55,
-          "three": 135,
-          "five": 210,
-          "ten": 390
-        },
-        "usAvailable": false
       },
       {
         "strength": "15iu",
-        "price": 160,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 205,
-          "ten": 375
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "24iu",
-        "price": 220,
-        "msrp": 85,
-        "retail": {
-          "one": 75,
-          "three": 190,
-          "five": 295,
-          "ten": 550
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "36iu",
-        "price": 250,
-        "msrp": 95,
-        "retail": {
-          "one": 85,
-          "three": 220,
-          "five": 340,
-          "ten": 630
-        },
-        "usAvailable": true
-      }
-    ]
-  },
-  {
-    "name": "HGH Fragment 176-191",
-    "items": [
-      {
-        "strength": "5mg",
         "price": 150,
         "msrp": 60,
         "retail": {
@@ -1683,48 +1053,31 @@
           "five": 190,
           "ten": 345
         },
-        "usAvailable": false
+        "usAvailable": true
       },
       {
-        "strength": "10mg",
-        "price": 190,
-        "msrp": 70,
+        "strength": "24iu",
+        "price": 210,
+        "msrp": 80,
         "retail": {
-          "one": 60,
-          "three": 160,
-          "five": 250,
-          "ten": 460
+          "one": 70,
+          "three": 180,
+          "five": 280,
+          "ten": 515
         },
-        "usAvailable": false
+        "usAvailable": true
       },
       {
-        "strength": "15mg",
-        "price": 275,
-        "msrp": 105,
+        "strength": "36iu",
+        "price": 245,
+        "msrp": 95,
         "retail": {
-          "one": 95,
-          "three": 245,
-          "five": 380,
-          "ten": 710
+          "one": 85,
+          "three": 215,
+          "five": 335,
+          "ten": 625
         },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "HMG",
-    "items": [
-      {
-        "strength": "75iu",
-        "price": 155,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 125,
-          "five": 195,
-          "ten": 360
-        },
-        "usAvailable": false
+        "usAvailable": true
       }
     ]
   },
@@ -1733,13 +1086,13 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 295,
-        "msrp": 110,
+        "price": 215,
+        "msrp": 80,
         "retail": {
-          "one": 100,
-          "three": 265,
-          "five": 410,
-          "ten": 760
+          "one": 70,
+          "three": 185,
+          "five": 290,
+          "ten": 535
         },
         "usAvailable": false
       }
@@ -1750,30 +1103,6 @@
     "items": [
       {
         "strength": "0.1mg",
-        "price": 125,
-        "msrp": 50,
-        "retail": {
-          "one": 40,
-          "three": 95,
-          "five": 145,
-          "ten": 265
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "1mg",
-        "price": 295,
-        "msrp": 110,
-        "retail": {
-          "one": 100,
-          "three": 265,
-          "five": 415,
-          "ten": 775
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "100mcg",
         "price": 115,
         "msrp": 45,
         "retail": {
@@ -1781,6 +1110,30 @@
           "three": 85,
           "five": 130,
           "ten": 235
+        },
+        "usAvailable": true
+      },
+      {
+        "strength": "1mg",
+        "price": 270,
+        "msrp": 100,
+        "retail": {
+          "one": 90,
+          "three": 240,
+          "five": 375,
+          "ten": 700
+        },
+        "usAvailable": true
+      },
+      {
+        "strength": "100mcg",
+        "price": 110,
+        "msrp": 40,
+        "retail": {
+          "one": 30,
+          "three": 80,
+          "five": 120,
+          "ten": 220
         },
         "usAvailable": false
       },
@@ -1799,10 +1152,22 @@
     ]
   },
   {
-    "name": "IGF-DES",
+    "name": "Ipamorelin",
     "items": [
       {
-        "strength": "0.1mg",
+        "strength": "5mg",
+        "price": 120,
+        "msrp": 45,
+        "retail": {
+          "one": 35,
+          "three": 90,
+          "five": 135,
+          "ten": 245
+        },
+        "usAvailable": true
+      },
+      {
+        "strength": "10mg",
         "price": 145,
         "msrp": 55,
         "retail": {
@@ -1810,64 +1175,6 @@
           "three": 115,
           "five": 180,
           "ten": 330
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Immunological Enhancement Blend",
-    "items": [
-      {
-        "strength": "402.5mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Ipamorelin",
-    "items": [
-      {
-        "strength": "2mg",
-        "price": 95,
-        "msrp": 35,
-        "retail": {
-          "one": 25,
-          "three": 65,
-          "five": 100,
-          "ten": 180
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "5mg",
-        "price": 130,
-        "msrp": 50,
-        "retail": {
-          "one": 40,
-          "three": 100,
-          "five": 150,
-          "ten": 275
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "10mg",
-        "price": 150,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 335
         },
         "usAvailable": true
       }
@@ -1878,13 +1185,13 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 135,
-        "msrp": 50,
+        "price": 140,
+        "msrp": 55,
         "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 160,
-          "ten": 295
+          "one": 45,
+          "three": 110,
+          "five": 170,
+          "ten": 315
         },
         "usAvailable": false
       },
@@ -1907,13 +1214,13 @@
     "items": [
       {
         "strength": "80mg",
-        "price": 280,
-        "msrp": 105,
+        "price": 270,
+        "msrp": 100,
         "retail": {
-          "one": 95,
-          "three": 250,
-          "five": 390,
-          "ten": 725
+          "one": 90,
+          "three": 240,
+          "five": 370,
+          "ten": 690
         },
         "usAvailable": true
       }
@@ -1924,51 +1231,27 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 120,
+        "price": 110,
         "msrp": 45,
         "retail": {
           "one": 35,
-          "three": 90,
-          "five": 140,
-          "ten": 255
+          "three": 80,
+          "five": 125,
+          "ten": 230
         },
         "usAvailable": true
       },
       {
         "strength": "10mg",
-        "price": 135,
+        "price": 130,
         "msrp": 50,
         "retail": {
           "one": 40,
-          "three": 105,
-          "five": 160,
-          "ten": 290
+          "three": 100,
+          "five": 150,
+          "ten": 275
         },
         "usAvailable": true
-      },
-      {
-        "strength": "30mg",
-        "price": 200,
-        "msrp": 75,
-        "retail": {
-          "one": 65,
-          "three": 170,
-          "five": 260,
-          "ten": 485
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "50mg",
-        "price": 250,
-        "msrp": 95,
-        "retail": {
-          "one": 85,
-          "three": 220,
-          "five": 340,
-          "ten": 635
-        },
-        "usAvailable": false
       },
       {
         "strength": "80mg",
@@ -2012,54 +1295,6 @@
         "usAvailable": false
       },
       {
-        "strength": "200mg",
-        "price": 105,
-        "msrp": 40,
-        "retail": {
-          "one": 30,
-          "three": 75,
-          "five": 115,
-          "ten": 210
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "500mg",
-        "price": 305,
-        "msrp": 115,
-        "retail": {
-          "one": 105,
-          "three": 275,
-          "five": 425,
-          "ten": 795
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "600mg",
-        "price": 125,
-        "msrp": 50,
-        "retail": {
-          "one": 40,
-          "three": 95,
-          "five": 145,
-          "ten": 265
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "1200mg",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 175,
-          "ten": 320
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "5000mg",
         "price": 265,
         "msrp": 100,
@@ -2087,18 +1322,6 @@
           "ten": 325
         },
         "usAvailable": false
-      },
-      {
-        "strength": "10ml",
-        "price": 160,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 205,
-          "ten": 375
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2116,18 +1339,6 @@
           "ten": 325
         },
         "usAvailable": false
-      },
-      {
-        "strength": "10ml",
-        "price": 160,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 205,
-          "ten": 375
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2141,42 +1352,8 @@
         "retail": {
           "one": 45,
           "three": 115,
-          "five": 180,
-          "ten": 325
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Lipo Lab PPC Solution",
-    "items": [
-      {
-        "strength": "10ml",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 115,
           "five": 175,
-          "ten": 320
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Lipo Mino Mix",
-    "items": [
-      {
-        "strength": "244.4mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
+          "ten": 325
         },
         "usAvailable": false
       }
@@ -2196,18 +1373,6 @@
           "ten": 325
         },
         "usAvailable": false
-      },
-      {
-        "strength": "216mg",
-        "price": 160,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 195,
-          "ten": 360
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2225,18 +1390,6 @@
           "ten": 315
         },
         "usAvailable": true
-      },
-      {
-        "strength": "120mg",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 175,
-          "ten": 320
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2254,35 +1407,6 @@
           "ten": 330
         },
         "usAvailable": false
-      },
-      {
-        "strength": "526mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Lipo-C Focus",
-    "items": [
-      {
-        "strength": "425mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2298,23 +1422,6 @@
           "three": 115,
           "five": 180,
           "ten": 330
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Lipo-C Super Shred",
-    "items": [
-      {
-        "strength": "553mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
         },
         "usAvailable": false
       }
@@ -2354,42 +1461,25 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 135,
+        "price": 125,
         "msrp": 50,
         "retail": {
           "one": 40,
-          "three": 105,
-          "five": 160,
-          "ten": 295
+          "three": 95,
+          "five": 145,
+          "ten": 265
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 150,
+        "price": 140,
         "msrp": 55,
         "retail": {
           "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 335
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Matrixyl",
-    "items": [
-      {
-        "strength": "10mg",
-        "price": 115,
-        "msrp": 45,
-        "retail": {
-          "one": 35,
-          "three": 85,
-          "five": 130,
-          "ten": 235
+          "three": 110,
+          "five": 165,
+          "ten": 305
         },
         "usAvailable": false
       }
@@ -2433,18 +1523,6 @@
           "ten": 610
         },
         "usAvailable": false
-      },
-      {
-        "strength": "100mg",
-        "price": 250,
-        "msrp": 95,
-        "retail": {
-          "one": 85,
-          "three": 220,
-          "five": 345,
-          "ten": 640
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2452,26 +1530,14 @@
     "name": "Melanotan-1",
     "items": [
       {
-        "strength": "5mg",
-        "price": 145,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 175,
-          "ten": 315
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "10mg",
         "price": 125,
-        "msrp": 50,
+        "msrp": 45,
         "retail": {
-          "one": 40,
+          "one": 35,
           "three": 95,
-          "five": 150,
-          "ten": 270
+          "five": 140,
+          "ten": 260
         },
         "usAvailable": true
       }
@@ -2482,56 +1548,15 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 125,
-        "msrp": 50,
+        "price": 120,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 95,
-          "five": 150,
-          "ten": 270
+          "one": 35,
+          "three": 90,
+          "five": 140,
+          "ten": 255
         },
         "usAvailable": true
-      }
-    ]
-  },
-  {
-    "name": "Methionine 15mg + Choline Chloride 50mg + L-Carnitine 50mg + Dexpanthenol 5mg",
-    "items": [
-      {
-        "strength": "10ml",
-        "price": 165,
-        "msrp": 65,
-        "retail": {
-          "one": 55,
-          "three": 135,
-          "five": 210,
-          "ten": 390
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "30ml",
-        "price": 250,
-        "msrp": 95,
-        "retail": {
-          "one": 85,
-          "three": 220,
-          "five": 345,
-          "ten": 640
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "50ml",
-        "price": 320,
-        "msrp": 120,
-        "retail": {
-          "one": 110,
-          "three": 290,
-          "five": 450,
-          "ten": 840
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2541,46 +1566,12 @@
       {
         "strength": "2mg",
         "price": 125,
-        "msrp": 50,
+        "msrp": 45,
         "retail": {
-          "one": 40,
+          "one": 35,
           "three": 95,
           "five": 145,
-          "ten": 265
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "MIC(lipo C with B12)",
-    "items": [
-      {
-        "strength": "10mg",
-        "price": 180,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 150,
-          "five": 230,
-          "ten": 425
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "MK677",
-    "items": [
-      {
-        "strength": "5mg",
-        "price": 110,
-        "msrp": 40,
-        "retail": {
-          "one": 30,
-          "three": 80,
-          "five": 120,
-          "ten": 215
+          "ten": 260
         },
         "usAvailable": false
       }
@@ -2603,13 +1594,13 @@
       },
       {
         "strength": "10mg",
-        "price": 145,
-        "msrp": 55,
+        "price": 130,
+        "msrp": 50,
         "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 175,
-          "ten": 320
+          "one": 40,
+          "three": 100,
+          "five": 150,
+          "ten": 280
         },
         "usAvailable": true
       },
@@ -2627,32 +1618,15 @@
       },
       {
         "strength": "40mg",
-        "price": 280,
-        "msrp": 105,
+        "price": 245,
+        "msrp": 95,
         "retail": {
-          "one": 95,
-          "three": 250,
-          "five": 395,
-          "ten": 730
+          "one": 85,
+          "three": 215,
+          "five": 335,
+          "ten": 625
         },
         "usAvailable": true
-      }
-    ]
-  },
-  {
-    "name": "NA Semax Amidate",
-    "items": [
-      {
-        "strength": "30mg",
-        "price": 210,
-        "msrp": 80,
-        "retail": {
-          "one": 70,
-          "three": 180,
-          "five": 280,
-          "ten": 520
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2661,37 +1635,37 @@
     "items": [
       {
         "strength": "100mg",
-        "price": 130,
-        "msrp": 50,
+        "price": 115,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 100,
-          "five": 155,
-          "ten": 285
+          "one": 35,
+          "three": 85,
+          "five": 135,
+          "ten": 245
         },
         "usAvailable": true
       },
       {
         "strength": "500mg",
-        "price": 150,
+        "price": 145,
         "msrp": 55,
         "retail": {
           "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 330
+          "three": 115,
+          "five": 175,
+          "ten": 325
         },
         "usAvailable": true
       },
       {
         "strength": "1000mg",
-        "price": 190,
-        "msrp": 70,
+        "price": 195,
+        "msrp": 75,
         "retail": {
-          "one": 60,
-          "three": 160,
-          "five": 250,
-          "ten": 460
+          "one": 65,
+          "three": 165,
+          "five": 255,
+          "ten": 475
         },
         "usAvailable": true
       }
@@ -2702,6 +1676,18 @@
     "items": [
       {
         "strength": "2mg",
+        "price": 115,
+        "msrp": 45,
+        "retail": {
+          "one": 35,
+          "three": 85,
+          "five": 130,
+          "ten": 240
+        },
+        "usAvailable": false
+      },
+      {
+        "strength": "5mg",
         "price": 120,
         "msrp": 45,
         "retail": {
@@ -2713,25 +1699,13 @@
         "usAvailable": false
       },
       {
-        "strength": "5mg",
-        "price": 125,
-        "msrp": 45,
-        "retail": {
-          "one": 35,
-          "three": 95,
-          "five": 145,
-          "ten": 260
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "10mg",
-        "price": 140,
+        "price": 145,
         "msrp": 55,
         "retail": {
           "one": 45,
-          "three": 110,
-          "five": 170,
+          "three": 115,
+          "five": 175,
           "ten": 315
         },
         "usAvailable": false
@@ -2742,26 +1716,14 @@
     "name": "PE-22-28",
     "items": [
       {
-        "strength": "5mg",
-        "price": 110,
-        "msrp": 40,
-        "retail": {
-          "one": 30,
-          "three": 80,
-          "five": 120,
-          "ten": 220
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "10mg",
-        "price": 160,
-        "msrp": 60,
+        "price": 130,
+        "msrp": 50,
         "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 195,
-          "ten": 360
+          "one": 40,
+          "three": 100,
+          "five": 155,
+          "ten": 280
         },
         "usAvailable": false
       }
@@ -2772,25 +1734,13 @@
     "items": [
       {
         "strength": "2mg",
-        "price": 160,
+        "price": 150,
         "msrp": 60,
         "retail": {
           "one": 50,
-          "three": 130,
-          "five": 200,
-          "ten": 365
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "2ml",
-        "price": 215,
-        "msrp": 80,
-        "retail": {
-          "one": 70,
-          "three": 185,
-          "five": 290,
-          "ten": 535
+          "three": 120,
+          "five": 190,
+          "ten": 345
         },
         "usAvailable": false
       }
@@ -2801,25 +1751,25 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 125,
+        "price": 130,
         "msrp": 50,
         "retail": {
           "one": 40,
-          "three": 95,
-          "five": 145,
-          "ten": 270
+          "three": 100,
+          "five": 155,
+          "ten": 280
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
         "price": 150,
-        "msrp": 55,
+        "msrp": 60,
         "retail": {
-          "one": 45,
+          "one": 50,
           "three": 120,
-          "five": 180,
-          "ten": 335
+          "five": 190,
+          "ten": 345
         },
         "usAvailable": false
       },
@@ -2842,25 +1792,25 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 160,
+        "price": 155,
         "msrp": 60,
         "retail": {
           "one": 50,
-          "three": 130,
-          "five": 200,
-          "ten": 375
+          "three": 125,
+          "five": 190,
+          "ten": 350
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 215,
+        "price": 205,
         "msrp": 80,
         "retail": {
           "one": 70,
-          "three": 185,
-          "five": 285,
-          "ten": 525
+          "three": 175,
+          "five": 270,
+          "ten": 505
         },
         "usAvailable": false
       }
@@ -2871,13 +1821,13 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 150,
-        "msrp": 55,
+        "price": 135,
+        "msrp": 50,
         "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 335
+          "one": 40,
+          "three": 105,
+          "five": 160,
+          "ten": 295
         },
         "usAvailable": true
       }
@@ -2897,35 +1847,6 @@
           "ten": 330
         },
         "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 160,
-        "msrp": 60,
-        "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 195,
-          "ten": 365
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Relaxation PM Blend",
-    "items": [
-      {
-        "strength": "352mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -2934,25 +1855,25 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 125,
-        "msrp": 50,
+        "price": 115,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 95,
-          "five": 145,
-          "ten": 265
+          "one": 35,
+          "three": 85,
+          "five": 130,
+          "ten": 235
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 140,
-        "msrp": 55,
+        "price": 130,
+        "msrp": 50,
         "retail": {
-          "one": 45,
-          "three": 110,
-          "five": 170,
-          "ten": 315
+          "one": 40,
+          "three": 100,
+          "five": 150,
+          "ten": 280
         },
         "usAvailable": true
       },
@@ -2975,49 +1896,49 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 145,
-        "msrp": 55,
+        "price": 115,
+        "msrp": 45,
         "retail": {
-          "one": 45,
-          "three": 115,
-          "five": 175,
-          "ten": 320
+          "one": 35,
+          "three": 85,
+          "five": 125,
+          "ten": 230
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 140,
-        "msrp": 55,
+        "price": 130,
+        "msrp": 50,
         "retail": {
-          "one": 45,
-          "three": 110,
-          "five": 170,
-          "ten": 310
+          "one": 40,
+          "three": 100,
+          "five": 155,
+          "ten": 285
         },
         "usAvailable": false
       },
       {
         "strength": "15mg",
-        "price": 155,
-        "msrp": 60,
+        "price": 135,
+        "msrp": 50,
         "retail": {
-          "one": 50,
-          "three": 125,
-          "five": 190,
-          "ten": 350
+          "one": 40,
+          "three": 105,
+          "five": 160,
+          "ten": 295
         },
         "usAvailable": false
       },
       {
         "strength": "20mg",
-        "price": 155,
+        "price": 150,
         "msrp": 60,
         "retail": {
           "one": 50,
-          "three": 125,
+          "three": 120,
           "five": 190,
-          "ten": 355
+          "ten": 345
         },
         "usAvailable": false
       },
@@ -3032,18 +1953,6 @@
           "ten": 415
         },
         "usAvailable": false
-      },
-      {
-        "strength": "50mg",
-        "price": 205,
-        "msrp": 75,
-        "retail": {
-          "one": 65,
-          "three": 175,
-          "five": 270,
-          "ten": 500
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -3052,6 +1961,18 @@
     "items": [
       {
         "strength": "5mg",
+        "price": 115,
+        "msrp": 45,
+        "retail": {
+          "one": 35,
+          "three": 85,
+          "five": 130,
+          "ten": 235
+        },
+        "usAvailable": false
+      },
+      {
+        "strength": "10mg",
         "price": 125,
         "msrp": 50,
         "retail": {
@@ -3059,18 +1980,6 @@
           "three": 95,
           "five": 150,
           "ten": 270
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "10mg",
-        "price": 140,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 110,
-          "five": 170,
-          "ten": 310
         },
         "usAvailable": true
       },
@@ -3093,13 +2002,13 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 170,
-        "msrp": 65,
+        "price": 150,
+        "msrp": 60,
         "retail": {
-          "one": 55,
-          "three": 140,
-          "five": 215,
-          "ten": 400
+          "one": 50,
+          "three": 120,
+          "five": 190,
+          "ten": 345
         },
         "usAvailable": false
       },
@@ -3127,30 +2036,13 @@
         "retail": {
           "one": 45,
           "three": 120,
-          "five": 185,
-          "ten": 340
+          "five": 180,
+          "ten": 335
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 190,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 160,
-          "five": 245,
-          "ten": 455
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "SHRED Blend",
-    "items": [
-      {
-        "strength": "350.25mg",
         "price": 185,
         "msrp": 70,
         "retail": {
@@ -3168,13 +2060,13 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 195,
-        "msrp": 75,
+        "price": 185,
+        "msrp": 70,
         "retail": {
-          "one": 65,
-          "three": 165,
-          "five": 255,
-          "ten": 475
+          "one": 60,
+          "three": 155,
+          "five": 245,
+          "ten": 450
         },
         "usAvailable": true
       }
@@ -3185,13 +2077,13 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 130,
-        "msrp": 50,
+        "price": 120,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 100,
-          "five": 155,
-          "ten": 285
+          "one": 35,
+          "three": 90,
+          "five": 135,
+          "ten": 250
         },
         "usAvailable": false
       },
@@ -3206,18 +2098,6 @@
           "ten": 340
         },
         "usAvailable": false
-      },
-      {
-        "strength": "100mg",
-        "price": 280,
-        "msrp": 105,
-        "retail": {
-          "one": 95,
-          "three": 250,
-          "five": 390,
-          "ten": 725
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -3226,25 +2106,25 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 160,
+        "price": 155,
         "msrp": 60,
         "retail": {
           "one": 50,
-          "three": 130,
-          "five": 200,
-          "ten": 365
+          "three": 125,
+          "five": 190,
+          "ten": 355
         },
         "usAvailable": true
       },
       {
         "strength": "50mg",
-        "price": 365,
-        "msrp": 135,
+        "price": 320,
+        "msrp": 120,
         "retail": {
-          "one": 125,
-          "three": 335,
-          "five": 520,
-          "ten": 975
+          "one": 110,
+          "three": 290,
+          "five": 455,
+          "ten": 845
         },
         "usAvailable": true
       }
@@ -3305,18 +2185,6 @@
           "ten": 330
         },
         "usAvailable": false
-      },
-      {
-        "strength": "865mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 240,
-          "ten": 440
-        },
-        "usAvailable": false
       }
     ]
   },
@@ -3325,13 +2193,13 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 325,
-        "msrp": 125,
+        "price": 345,
+        "msrp": 130,
         "retail": {
-          "one": 115,
-          "three": 295,
-          "five": 465,
-          "ten": 865
+          "one": 120,
+          "three": 315,
+          "five": 490,
+          "ten": 910
         },
         "usAvailable": false
       }
@@ -3340,18 +2208,6 @@
   {
     "name": "TB500",
     "items": [
-      {
-        "strength": "2mg",
-        "price": 115,
-        "msrp": 45,
-        "retail": {
-          "one": 35,
-          "three": 85,
-          "five": 130,
-          "ten": 235
-        },
-        "usAvailable": false
-      },
       {
         "strength": "5mg",
         "price": 165,
@@ -3407,13 +2263,13 @@
       },
       {
         "strength": "10mg",
-        "price": 235,
-        "msrp": 90,
+        "price": 230,
+        "msrp": 85,
         "retail": {
-          "one": 80,
-          "three": 205,
-          "five": 315,
-          "ten": 585
+          "one": 75,
+          "three": 200,
+          "five": 310,
+          "ten": 575
         },
         "usAvailable": true
       },
@@ -3431,13 +2287,13 @@
       },
       {
         "strength": "20mg",
-        "price": 355,
-        "msrp": 135,
+        "price": 305,
+        "msrp": 115,
         "retail": {
-          "one": 125,
-          "three": 325,
-          "five": 505,
-          "ten": 945
+          "one": 105,
+          "three": 275,
+          "five": 425,
+          "ten": 795
         },
         "usAvailable": false
       }
@@ -3473,129 +2329,8 @@
     ]
   },
   {
-    "name": "Testagen",
-    "items": [
-      {
-        "strength": "20mg",
-        "price": 185,
-        "msrp": 70,
-        "retail": {
-          "one": 60,
-          "three": 155,
-          "five": 235,
-          "ten": 440
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Testosterone Cypionate",
-    "items": [
-      {
-        "strength": "250mg",
-        "price": 390,
-        "msrp": 145,
-        "retail": {
-          "one": 135,
-          "three": 360,
-          "five": 560,
-          "ten": 1045
-        },
-        "usAvailable": true
-      }
-    ]
-  },
-  {
-    "name": "Testosterone Enanthate",
-    "items": [
-      {
-        "strength": "250mg",
-        "price": 360,
-        "msrp": 135,
-        "retail": {
-          "one": 125,
-          "three": 330,
-          "five": 515,
-          "ten": 960
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "300mg",
-        "price": 435,
-        "msrp": 165,
-        "retail": {
-          "one": 155,
-          "three": 405,
-          "five": 635,
-          "ten": 1185
-        },
-        "usAvailable": true
-      }
-    ]
-  },
-  {
     "name": "Thymalin",
     "items": [
-      {
-        "strength": "10mg",
-        "price": 140,
-        "msrp": 55,
-        "retail": {
-          "one": 45,
-          "three": 110,
-          "five": 170,
-          "ten": 310
-        },
-        "usAvailable": true
-      }
-    ]
-  },
-  {
-    "name": "Thymosin Alpha-1",
-    "items": [
-      {
-        "strength": "5mg",
-        "price": 165,
-        "msrp": 65,
-        "retail": {
-          "one": 55,
-          "three": 135,
-          "five": 210,
-          "ten": 385
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10mg",
-        "price": 235,
-        "msrp": 90,
-        "retail": {
-          "one": 80,
-          "three": 205,
-          "five": 320,
-          "ten": 600
-        },
-        "usAvailable": true
-      }
-    ]
-  },
-  {
-    "name": "Tirzepatide",
-    "items": [
-      {
-        "strength": "5mg",
-        "price": 130,
-        "msrp": 50,
-        "retail": {
-          "one": 40,
-          "three": 100,
-          "five": 150,
-          "ten": 275
-        },
-        "usAvailable": false
-      },
       {
         "strength": "10mg",
         "price": 140,
@@ -3607,21 +2342,91 @@
           "ten": 305
         },
         "usAvailable": true
-      },
+      }
+    ]
+  },
+  {
+    "name": "Thymosin Alpha-1",
+    "items": [
       {
-        "strength": "15mg",
-        "price": 150,
+        "strength": "5mg",
+        "price": 160,
         "msrp": 60,
         "retail": {
           "one": 50,
-          "three": 120,
-          "five": 190,
-          "ten": 345
+          "three": 130,
+          "five": 200,
+          "ten": 365
+        },
+        "usAvailable": false
+      },
+      {
+        "strength": "10mg",
+        "price": 230,
+        "msrp": 85,
+        "retail": {
+          "one": 75,
+          "three": 200,
+          "five": 310,
+          "ten": 580
+        },
+        "usAvailable": true
+      }
+    ]
+  },
+  {
+    "name": "Tirzepatide",
+    "items": [
+      {
+        "strength": "5mg",
+        "price": 115,
+        "msrp": 45,
+        "retail": {
+          "one": 35,
+          "three": 85,
+          "five": 130,
+          "ten": 240
+        },
+        "usAvailable": false
+      },
+      {
+        "strength": "10mg",
+        "price": 120,
+        "msrp": 45,
+        "retail": {
+          "one": 35,
+          "three": 90,
+          "five": 140,
+          "ten": 255
+        },
+        "usAvailable": true
+      },
+      {
+        "strength": "15mg",
+        "price": 135,
+        "msrp": 50,
+        "retail": {
+          "one": 40,
+          "three": 105,
+          "five": 160,
+          "ten": 295
         },
         "usAvailable": true
       },
       {
         "strength": "20mg",
+        "price": 145,
+        "msrp": 55,
+        "retail": {
+          "one": 45,
+          "three": 115,
+          "five": 175,
+          "ten": 325
+        },
+        "usAvailable": true
+      },
+      {
+        "strength": "30mg",
         "price": 165,
         "msrp": 60,
         "retail": {
@@ -3633,7 +2438,7 @@
         "usAvailable": true
       },
       {
-        "strength": "30mg",
+        "strength": "40mg",
         "price": 195,
         "msrp": 75,
         "retail": {
@@ -3645,64 +2450,28 @@
         "usAvailable": true
       },
       {
-        "strength": "40mg",
-        "price": 215,
-        "msrp": 80,
-        "retail": {
-          "one": 70,
-          "three": 185,
-          "five": 285,
-          "ten": 530
-        },
-        "usAvailable": true
-      },
-      {
-        "strength": "45mg",
-        "price": 275,
-        "msrp": 105,
-        "retail": {
-          "one": 95,
-          "three": 245,
-          "five": 380,
-          "ten": 710
-        },
-        "usAvailable": false
-      },
-      {
         "strength": "50mg",
-        "price": 240,
-        "msrp": 90,
+        "price": 225,
+        "msrp": 85,
         "retail": {
-          "one": 80,
-          "three": 210,
-          "five": 330,
-          "ten": 610
+          "one": 75,
+          "three": 195,
+          "five": 305,
+          "ten": 565
         },
         "usAvailable": true
       },
       {
         "strength": "60mg",
-        "price": 275,
-        "msrp": 105,
+        "price": 240,
+        "msrp": 90,
         "retail": {
-          "one": 95,
-          "three": 245,
-          "five": 385,
-          "ten": 715
+          "one": 80,
+          "three": 210,
+          "five": 325,
+          "ten": 605
         },
         "usAvailable": true
-      },
-      {
-        "strength": "70mg",
-        "price": 255,
-        "msrp": 95,
-        "retail": {
-          "one": 85,
-          "three": 225,
-          "five": 350,
-          "ten": 655
-        },
-        "usAvailable": false
       },
       {
         "strength": "80mg",
@@ -3711,44 +2480,32 @@
         "retail": {
           "one": 90,
           "three": 240,
-          "five": 370,
-          "ten": 690
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "90mg",
-        "price": 300,
-        "msrp": 115,
-        "retail": {
-          "one": 105,
-          "three": 270,
-          "five": 425,
-          "ten": 785
+          "five": 375,
+          "ten": 700
         },
         "usAvailable": false
       },
       {
         "strength": "100mg",
-        "price": 305,
+        "price": 310,
         "msrp": 115,
         "retail": {
           "one": 105,
-          "three": 275,
-          "five": 430,
-          "ten": 805
+          "three": 280,
+          "five": 435,
+          "ten": 815
         },
         "usAvailable": false
       },
       {
         "strength": "120mg",
-        "price": 335,
+        "price": 330,
         "msrp": 125,
         "retail": {
           "one": 115,
-          "three": 305,
-          "five": 480,
-          "ten": 895
+          "three": 300,
+          "five": 465,
+          "ten": 870
         },
         "usAvailable": false
       }
@@ -3788,42 +2545,25 @@
     "items": [
       {
         "strength": "10mg",
-        "price": 135,
-        "msrp": 50,
+        "price": 120,
+        "msrp": 45,
         "retail": {
-          "one": 40,
-          "three": 105,
-          "five": 160,
-          "ten": 290
+          "one": 35,
+          "three": 90,
+          "five": 140,
+          "ten": 255
         },
         "usAvailable": false
       },
       {
         "strength": "20mg",
-        "price": 175,
-        "msrp": 65,
+        "price": 145,
+        "msrp": 55,
         "retail": {
-          "one": 55,
-          "three": 145,
-          "five": 225,
-          "ten": 420
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Vilon",
-    "items": [
-      {
-        "strength": "20mg",
-        "price": 205,
-        "msrp": 80,
-        "retail": {
-          "one": 70,
-          "three": 175,
-          "five": 275,
-          "ten": 510
+          "one": 45,
+          "three": 115,
+          "five": 175,
+          "ten": 315
         },
         "usAvailable": false
       }
@@ -3834,25 +2574,25 @@
     "items": [
       {
         "strength": "5mg",
-        "price": 165,
-        "msrp": 65,
+        "price": 160,
+        "msrp": 60,
         "retail": {
-          "one": 55,
-          "three": 135,
-          "five": 210,
-          "ten": 390
+          "one": 50,
+          "three": 130,
+          "five": 200,
+          "ten": 365
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 235,
-        "msrp": 90,
+        "price": 225,
+        "msrp": 85,
         "retail": {
-          "one": 80,
-          "three": 205,
-          "five": 320,
-          "ten": 595
+          "one": 75,
+          "three": 195,
+          "five": 305,
+          "ten": 565
         },
         "usAvailable": false
       }
@@ -3863,54 +2603,25 @@
     "items": [
       {
         "strength": "10ml",
-        "price": 130,
-        "msrp": 50,
+        "price": 110,
+        "msrp": 40,
         "retail": {
-          "one": 40,
-          "three": 100,
-          "five": 155,
-          "ten": 285
+          "one": 30,
+          "three": 80,
+          "five": 120,
+          "ten": 220
         },
         "usAvailable": false
       },
       {
         "strength": "10mg",
-        "price": 120,
+        "price": 115,
         "msrp": 45,
         "retail": {
           "one": 35,
-          "three": 90,
-          "five": 135,
-          "ten": 245
-        },
-        "usAvailable": false
-      }
-    ]
-  },
-  {
-    "name": "Water",
-    "items": [
-      {
-        "strength": "3ml",
-        "price": 90,
-        "msrp": 35,
-        "retail": {
-          "one": 25,
-          "three": 60,
-          "five": 85,
-          "ten": 155
-        },
-        "usAvailable": false
-      },
-      {
-        "strength": "10ml",
-        "price": 90,
-        "msrp": 35,
-        "retail": {
-          "one": 25,
-          "three": 60,
-          "five": 90,
-          "ten": 165
+          "three": 85,
+          "five": 130,
+          "ten": 235
         },
         "usAvailable": false
       }
