@@ -5,11 +5,11 @@
     "strength": "20mg",
     "sku": "",
     "category": "Recovery & Repair",
-    "quantity": 1,
-    "moreOnWay": true,
-    "incomingQuantity": 11,
-    "expectedArrival": "2026-09-10",
-    "updatedAt": "2026-09-04T17:27:59.303Z"
+    "quantity": 0,
+    "moreOnWay": false,
+    "incomingQuantity": 0,
+    "expectedArrival": "",
+    "updatedAt": "2026-09-14T20:18:46.144Z"
   },
   {
     "product": "GHK-Cu",
@@ -40,35 +40,35 @@
     "strength": "20mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 21,
+    "quantity": 14,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-09-11T21:14:26.748Z"
+    "updatedAt": "2026-09-14T20:17:57.628Z"
   },
   {
     "product": "HGH 191AA",
     "strength": "15iu",
     "sku": "",
     "category": "Growth & Performance",
-    "quantity": 9,
+    "quantity": 7,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
     "id": "hgh-191aa--15iu",
-    "updatedAt": "2026-09-04T17:25:41.620Z"
+    "updatedAt": "2026-09-14T20:19:29.579Z"
   },
   {
     "product": "HGH 191AA",
     "strength": "36iu",
     "sku": "",
     "category": "Growth & Performance",
-    "quantity": 6,
+    "quantity": 5,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
     "id": "hgh-191aa--36iu",
-    "updatedAt": "2026-09-09T17:31:27.945Z"
+    "updatedAt": "2026-09-14T20:19:37.220Z"
   },
   {
     "product": "MOTS-C",
@@ -84,14 +84,14 @@
   {
     "product": "NAD+",
     "strength": "1000mg",
-    "quantity": 5,
+    "quantity": 2,
     "id": "nad--1000mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-09-04T17:25:59.618Z"
+    "updatedAt": "2026-09-14T20:19:20.543Z"
   },
   {
     "product": "SELANK",
