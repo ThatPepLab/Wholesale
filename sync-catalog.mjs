@@ -24,6 +24,7 @@ const rules = Function(`"use strict"; return (${rulesSource});`)();
 const roundToFive = (amount) => Math.ceil(amount / 5) * 5;
 const numericStrength = (strength) => Number.parseFloat(strength) || 0;
 const excludedProducts = new Set(["hexarelin acetate"]);
+const twoVialPackProducts = new Set(["nandrolone decanoate","boldenone undecylenate","nandrolone phenylpropionate","methenolone enanthate","testosterone cypionate","testosterone enanthate","testosterone propionate","trenbolone acetate","trenbolone enanthate"]);
 const retailBacPricePerVial = 10;
 
 function discountRate(rule, subtotal, useCrypto = true) {
@@ -61,7 +62,11 @@ function retailTiers(averageLandedCost) {
 }
 
 const groups = new Map();
-for (const offer of offers.filter((item) => item.vials === 10 && !excludedProducts.has(String(item.product || "").trim().toLowerCase()))) {
+for (const offer of offers.filter((item) => {
+  const productName = String(item.product || "").trim().toLowerCase();
+  const supportedPack = item.vials === 10 || (item.vials === 2 && twoVialPackProducts.has(productName));
+  return supportedPack && !excludedProducts.has(productName);
+})) {
   const key = `${offer.product}\u0000${offer.strength}`;
   if (!groups.has(key)) groups.set(key, []);
   groups.get(key).push(offer);
@@ -75,8 +80,10 @@ for (const [key, matchingOffers] of groups) {
   const lowestLandedCost = Math.min(...landedPrices);
   const averageLandedCost = (highestLandedCost + lowestLandedCost) / 2;
   if (!products.has(name)) products.set(name, { name, items: [] });
+  const packSize = matchingOffers.every((offer) => offer.vials === 2) ? 2 : 10;
   products.get(name).items.push({
     strength,
+    packSize,
     price: wholesaleKitPrice(averageLandedCost),
     msrp: singleVialMsrp(averageLandedCost),
     retail: retailTiers(averageLandedCost),
