@@ -7,3 +7,21 @@
 
 /* NAD+ 1000mg certificate preview */
 .coa-hover{display:inline-block;position:relative;margin-left:8px}.coa-link{color:var(--orange);font-size:12px;font-weight:900;text-decoration:underline;text-underline-offset:2px;cursor:pointer}.coa-preview{position:fixed;z-index:2500;top:50%;left:50%;width:min(560px,86vw);max-height:78vh;padding:8px;border:3px solid var(--navy);border-radius:12px;background:#fff;box-shadow:0 22px 60px rgba(0,0,0,.38);object-fit:contain;opacity:0;visibility:hidden;transform:translate(-50%,-50%) scale(.97);transition:opacity .16s ease,transform .16s ease,visibility .16s;pointer-events:none}.coa-hover:hover .coa-preview,.coa-hover:focus-within .coa-preview{opacity:1;visibility:visible;transform:translate(-50%,-50%) scale(1)}
+
+/* Light Retail-style Wholesale layout */
+:root{--navy:#17385f;--navy-deep:#102844;--orange:#df6e2c;--paper:#f4f7fa;--line:#dbe3eb;--ink:#172638;--muted:#667487}
+.hero{border-bottom:5px solid var(--orange);background:linear-gradient(145deg,#fff 0%,#f5f9fd 70%,#fff3e9 100%);color:var(--navy-deep)}
+.hero-inner{width:min(820px,calc(100% - 36px));padding:34px 0 30px}
+.brand-mark{width:68px;height:68px;flex-basis:68px;color:#fff;box-shadow:0 10px 24px rgba(23,56,95,.14)}
+.eyebrow{color:var(--orange);font-size:12px;letter-spacing:.18em}
+.hero-copy{color:var(--muted);font-size:16px}
+.catalog-wrap{width:min(820px,calc(100% - 36px))}
+.finder-card,.cart-section{border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:0 8px 28px rgba(23,56,95,.08)}
+.selected-product-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:16px}
+.selected-product-heading h2{margin:0;color:var(--navy-deep);font-size:29px}
+.change-product{flex:0 0 auto;padding:9px 13px;border:2px solid var(--navy);border-radius:9px;background:#fff;color:var(--navy);font-size:12px;font-weight:900;cursor:pointer}
+.change-product:hover,.change-product:focus-visible{background:var(--navy);color:#fff}
+.finder-card.product-selected>.category-field,.finder-card.product-selected>#catalog-groups{display:none}
+.finder-card.product-selected .selection{margin-top:18px}
+.single-kit-card{border:1px solid var(--line);background:#f9fafc;box-shadow:none}
+@media(max-width:620px){.selected-product-heading{align-items:center}.selected-product-heading h2{font-size:24px}.change-product{padding:8px 10px}.hero-inner{padding-top:28px}}

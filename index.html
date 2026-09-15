@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Search available products and strengths, build a cart, and submit a wholesale order request.">
   <title>Wholesale Product Catalog</title>
-  <link rel="stylesheet" href="styles.css?v=20260817-2">
+  <link rel="stylesheet" href="styles.css?v=20260915-3">
   <link rel="stylesheet" href="cart.css?v=20260819-1">
   <link rel="stylesheet" href="access.css?v=20260807-8">
 </head>
@@ -29,7 +29,7 @@
     <label class="category-field" for="category"><span>Browse by category</span><select id="category"><option value="all">All categories</option></select></label>
     <div id="catalog-groups" class="catalog-groups" aria-live="polite"></div>
     <div id="prompt" class="finder-prompt" hidden></div>
-    <section id="selection" class="selection" hidden><p class="selected-label">Selected product</p><h2 id="selected-name"></h2><label class="strength-field" for="strength"><span>Choose available strength</span><select id="strength"></select></label><div id="prices" class="kit-prices" aria-live="polite"></div></section>
+    <section id="selection" class="selection" hidden><div class="selected-product-heading"><div><p class="selected-label">SELECTED PRODUCT</p><h2 id="selected-name"></h2></div><button id="change-product" class="change-product" type="button">Change Product</button></div><label class="strength-field" for="strength"><span>Choose available strength</span><select id="strength"></select></label><div id="prices" class="kit-prices" aria-live="polite"></div></section>
   </div>
   <section class="cart-section" aria-labelledby="cart-heading">
     <div class="cart-heading-row"><div><p class="selected-label">ORDER REQUEST</p><h2 id="cart-heading">Your Cart</h2></div><div class="cart-heading-actions"><span id="cart-count" class="cart-count">0 kits</span><button id="download-cart-pdf" type="button" disabled>Download Cart PDF</button></div></div>
@@ -46,6 +46,6 @@
   <footer><p>Each product shows its exact wholesale package quantity.</p></footer>
   <script src="https://thatpeplab.github.io/Retail/vendor/jspdf.umd.min.js"></script>
   <script src="coa-widget.js?v=20260821-3" defer></script>
-  <script src="app.js?v=20260915-2" defer></script>
+  <script src="app.js?v=20260915-3" defer></script>
 </body>
 </html>

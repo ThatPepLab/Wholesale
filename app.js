@@ -33,6 +33,7 @@ const grandTotal = document.querySelector("#grand-total");
 const submitOrder = document.querySelector("#submit-order");
 const downloadCartPdf = document.querySelector("#download-cart-pdf");
 const formStatus = document.querySelector("#form-status");
+const changeProduct = document.querySelector("#change-product");
 const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
 const PDF_QR = { supplies: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM0AAADNAQAAAAAzx8nEAAAB+0lEQVR42u1YMW7kMBDjrBaQO/kH8kdi7bcCOLGSzb9i331E+sG4kwHbvGIv16W1isuUnoYgKQ5oIb6Z9YJv52f1n6wWEbksMYPtR5bQ7iIi8XyEIzm5K1aTo7dzjp7UCkTt0gDPnfv0L91yASCXanp9eEjm7A4XK9pmYVpesYcltLXca1iAN7HvMKn5rQCPGjDeRG4YfAPsnZ2WmEXak2GAf+dOe7jNF/n6UCqwIe3erSbbZCcgN1hq5EayVDODfpWG7f54tWeLogMg3MADg7ezGtq5higAd7n61aiZ15uLWG9niwJSR9pZRyLo4EtQQ4Sz2QDJOxHIZGeS6F30pcd4PozNF+HmS+/uqQRGbw9XgQ3SkveEwA0IChSpIIoaFtEBJO+Jk7snSz1fFB18CWQqcEz2cBFFasAYUxE1qQjv5EwmO7kqudE8+ZfOHkBu+iVivVVJUW8njLSTY4KoYeldDYsmewBA4OZ5uOhZyaIABlgqPEQNgSreyKTCA25D6d0GSI5VLiwcE3oMnhOAWin6MMjkIkrQkXY6+6Z8tTYA6yvgwXbvAFfl0HNWwM46pgKMRJWbMsDOavi4tUEBBB1rpCiAIa9BIppfMKxY9vfOTu6aS+9WKad7419rAyB5e7Dh3mu1Nnf16w0APyXm8nR2a5OfX3A/q2/mD0d+fuO8hiSrAAAAAElFTkSuQmCC", reorder: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAM0AAADNAQAAAAAzx8nEAAACFklEQVR42u1YMY7kIBCsNpYgY37AfGTt3Wet5JU98kqb3Isusv0S/APIsGS7LvDoLtoUgttOQHRSQFFdjRDfxFbh2/hJ/SepKCIVDtlEhtXwdoiIDPkR9uQUR48Gny4tgCNDgYM6xACfDgveBRIAqXJfSv0c7QB9VgAQfxXgRv1van6Hm0MTS7FXMQHHfXu1+7XIswSMh8hr3KGnOMAswCpyywwDfMaO1EB5Tva5kHLDGJCEg9MMcKkNPTnZ/DBCT31CeT0HALA7koQ+L4wKwCew2K0F3e44QXnTlKDo+x3tWiMham/atUZiGYom4XgRUzMojzY3RSsgyt00cV/NEmsA6MBHidMYqWfSa3KAnkMHzgUebMBTMkgyNYBLUko3QgfN0BMAHKQEN+jNy+3Lb6/2yQ285LY9IDk4wI7UDJ3jzAE6u4pW1/abuEla8DWDN0U0Mb8JjKPXYwAM7NZC1n3dFPNfyqVXoyeDoj7t7sgCNcXuLi1xd1IBK5ZYrya7mF+2x7y4euVkP1pIUD6+hfwqGjpAgvJJuINzAPRZwG+QJIPy+kQHNOiJxpYobSKV/bhvb9Q+Acf9MkD53Rfn0FOfdgdP9Cwi5jjEwNaIVRwcFjxET6W67Pgh+oSaIaSPbe6a8rdrU7s0ONq1nY57aqdSXVu36jEA+iHaG+SuKZftgXBwerKjT429zFheisrPF9xP6pv4A9r2b7AcxltOAAAAAElFTkSuQmCC" };
 const PDF_QR_URLS = { supplies: "https://thatpeplab.github.io/Supplies/", reorder: "https://thatpeplab.github.io/Wholesale/" };
@@ -51,7 +52,7 @@ const categories = [
   { name: "Sexual & Hormone", test: /pt-?141|oxytocin|hcg\b|hmg\b|kisspeptin|gonadorelin|alprostadil|testagen|testosterone/i },
   { name: "Skin, Hair & Beauty", test: /melanotan|snap-?8|matrixyl|ahk-?cu|ghk-?cu|healthy hair|botulinum|hyaluronic/i },
   { name: "Immune & Wellness", test: /thym|epithalon|glutathione|foxo|pnc|vilon|crystagen|vip\b|vasoactive|dermorphin/i },
-  { name: "Supplies", test: /water|saline|phosphate buffered|acetic acid/i }
+  { name: "Supplies", test: /water|saline|phosphate buffered|acetic acid|peptide pen|cartridge/i }
 ];
 const categoryFor = (name) => categories.find((category) => category.test.test(name))?.name || "Other";
 const stockKey = (product, strength) => `${String(product).trim().toLowerCase()}|${String(strength).trim().toLowerCase()}`;
@@ -60,9 +61,9 @@ const incomingInventory = (product, strength) => state.incoming.get(stockKey(pro
 const productStrengths = (product) => product.items.map((item) => item.strength).sort((a, b) => strengthNumber(a) - strengthNumber(b));
 const catalogItem = (product, strength) => product?.items?.find((item) => item.strength === strength);
 const packSize = (item) => Math.max(1, Number(item?.packSize) || 10);
-const packageUnit = (item) => item?.packageUnit === "tablet" ? "Tablet" : "Vial";
-const packLabel = (item) => `${packSize(item)} ${packageUnit(item)} ${packageUnit(item) === "Tablet" ? "Pack" : packSize(item) === 2 ? "Pack" : "Kit"}`;
-const perUnitLabel = (item) => packageUnit(item) === "Tablet" ? "per tablet" : "per vial";
+const packageUnit = (item) => item?.packageUnit === "tablet" ? "Tablet" : item?.packageUnit === "pen" ? "Pen" : "Vial";
+const packLabel = (item) => packageUnit(item) === "Pen" ? `${packSize(item)} Pen` : `${packSize(item)} ${packageUnit(item)} ${packageUnit(item) === "Tablet" ? "Pack" : packSize(item) === 2 ? "Pack" : "Kit"}`;
+const perUnitLabel = (item) => packageUnit(item) === "Tablet" ? "per tablet" : packageUnit(item) === "Pen" ? "each" : "per vial";
 
 function renderInStockSection() {
   const groups = new Map();
@@ -193,10 +194,19 @@ function chooseProduct(name) {
   state.selectedStrength = strengths[0] || "";
   strengthSelect.value = state.selectedStrength;
   selection.hidden = false;
+  selection.closest(".finder-card")?.classList.add("product-selected");
   prompt.hidden = true;
   renderPrice();
   selection.scrollIntoView({ behavior: "smooth", block: "start" });
 }
+changeProduct?.addEventListener("click", () => {
+  state.selectedProduct = null;
+  selection.hidden = true;
+  selection.closest(".finder-card")?.classList.remove("product-selected");
+  search.value = "";
+  suggestions.hidden = true;
+  search.focus();
+});
 function kitCard(item, localKits) {
   if (!item) return "";
   const usAvailable = item.usAvailable || localKits > 0;

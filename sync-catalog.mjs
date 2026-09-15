@@ -138,5 +138,11 @@ const catalog = [...products.values()]
   }))
   .sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
 
+catalog.push({
+  name: "Disposable Peptide Pen w/ Cartridge",
+  items: [{ strength: "1 pen", packSize: 1, packageUnit: "pen", price: 10, msrp: 10, retail: { one: 10 }, usAvailable: true, restocksQuickly: false }],
+});
+catalog.sort((a, b) => a.name.localeCompare(b.name, undefined, { numeric: true }));
+
 fs.writeFileSync(outputPath, `${JSON.stringify(catalog, null, 2)}\n`);
 console.log(`Generated ${catalog.length} products from ${offers.length} TPLPrice offers using the average of highest and lowest landed cost.`);

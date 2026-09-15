@@ -1286,6 +1286,23 @@
     ]
   },
   {
+    "name": "Disposable Peptide Pen w/ Cartridge",
+    "items": [
+      {
+        "strength": "1 pen",
+        "packSize": 1,
+        "packageUnit": "pen",
+        "price": 10,
+        "msrp": 10,
+        "retail": {
+          "one": 10
+        },
+        "usAvailable": true,
+        "restocksQuickly": false
+      }
+    ]
+  },
+  {
     "name": "Drostanolone Enanthate",
     "items": [
       {
