@@ -43,6 +43,15 @@ function landedCost(offer) {
   return discountedPrice + shipping;
 }
 
+function extrapolatedTenVialLandedCost(offer) {
+  const rule = rules[offer.vendor] || { ship: 0 };
+  const packsNeeded = 10 / Number(offer.vials);
+  const subtotal = offer.price * packsNeeded;
+  const discountedPrice = subtotal * (1 - discountRate(rule, subtotal));
+  const shipping = rule.freeAt && subtotal >= rule.freeAt ? 0 : Number(rule.ship) || 0;
+  return discountedPrice + shipping;
+}
+
 function wholesaleKitPrice(averageLandedCost) {
   const markedUpSingleVial = (averageLandedCost / 10) * 3.5;
   return roundToFive((markedUpSingleVial + 10) * 3 * 0.9);
@@ -99,13 +108,18 @@ for (const [key, matchingOffers] of groups) {
   const isOilPack = twoVialPackProducts.has(productName) && matchingOffers.every((offer) => offer.vials === 2);
   const isTabletPack = tabletProducts.has(productName) && matchingOffers.every((offer) => offer.vials === 100);
   const packSize = isOilPack ? 2 : isTabletPack ? 100 : 10;
+  const oilTenVialLandedPrices = isOilPack ? matchingOffers.map(extrapolatedTenVialLandedCost) : [];
+  const oilAverageTenVialCost = isOilPack
+    ? (Math.max(...oilTenVialLandedPrices) + Math.min(...oilTenVialLandedPrices)) / 2
+    : 0;
+  const oilCostPerVial = isOilPack ? oilAverageTenVialCost / 10 : 0;
   products.get(name).items.push({
     strength,
     packSize,
     packageUnit: isTabletPack ? "tablet" : "vial",
-    price: isOilPack || isTabletPack ? wholesaleSpecialPackPrice(averageLandedCost) : wholesaleKitPrice(averageLandedCost),
-    msrp: isTabletPack ? roundToFive(averageLandedCost * 3.5) : isOilPack ? roundToFive((averageLandedCost / packSize) * 3.5) : singleVialMsrp(averageLandedCost),
-    retail: isOilPack ? unpreparedRetailTiers(averageLandedCost, packSize) : retailTiers(averageLandedCost),
+    price: isOilPack ? roundToFive(oilCostPerVial * packSize) : isTabletPack ? wholesaleSpecialPackPrice(averageLandedCost) : wholesaleKitPrice(averageLandedCost),
+    msrp: isTabletPack ? roundToFive(averageLandedCost * 3.5) : isOilPack ? roundToFive(oilCostPerVial * 3.5) : singleVialMsrp(averageLandedCost),
+    retail: isOilPack ? unpreparedRetailTiers(oilAverageTenVialCost, 10) : retailTiers(averageLandedCost),
     usAvailable: matchingOffers.some((offer) => /US Warehouse/i.test(offer.vendor) && !/out of stock/i.test(offer.note || "")),
   });
 }

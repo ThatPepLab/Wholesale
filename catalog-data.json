@@ -628,13 +628,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 90,
-        "msrp": 160,
+        "price": 60,
+        "msrp": 105,
         "retail": {
-          "one": 160,
-          "three": 435,
-          "five": 680,
-          "ten": 1280
+          "one": 105,
+          "three": 285,
+          "five": 450,
+          "ten": 840
         },
         "usAvailable": true
       }
@@ -2754,13 +2754,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 160,
-        "msrp": 280,
+        "price": 130,
+        "msrp": 225,
         "retail": {
-          "one": 280,
-          "three": 760,
-          "five": 1190,
-          "ten": 2240
+          "one": 225,
+          "three": 610,
+          "five": 960,
+          "ten": 1800
         },
         "usAvailable": true
       }
@@ -2947,13 +2947,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 95,
-        "msrp": 170,
+        "price": 65,
+        "msrp": 115,
         "retail": {
-          "one": 170,
-          "three": 460,
-          "five": 725,
-          "ten": 1360
+          "one": 115,
+          "three": 315,
+          "five": 490,
+          "ten": 920
         },
         "usAvailable": true
       }
@@ -2966,13 +2966,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 95,
-        "msrp": 170,
+        "price": 65,
+        "msrp": 115,
         "retail": {
-          "one": 170,
-          "three": 460,
-          "five": 725,
-          "ten": 1360
+          "one": 115,
+          "three": 315,
+          "five": 490,
+          "ten": 920
         },
         "usAvailable": true
       }
@@ -3926,13 +3926,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 70,
-        "msrp": 125,
+        "price": 40,
+        "msrp": 70,
         "retail": {
-          "one": 125,
-          "three": 340,
-          "five": 535,
-          "ten": 1000
+          "one": 70,
+          "three": 190,
+          "five": 300,
+          "ten": 560
         },
         "usAvailable": true
       }
@@ -3945,13 +3945,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 70,
-        "msrp": 125,
+        "price": 40,
+        "msrp": 70,
         "retail": {
-          "one": 125,
-          "three": 340,
-          "five": 535,
-          "ten": 1000
+          "one": 70,
+          "three": 190,
+          "five": 300,
+          "ten": 560
         },
         "usAvailable": true
       }
@@ -3964,13 +3964,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 70,
-        "msrp": 125,
+        "price": 40,
+        "msrp": 70,
         "retail": {
-          "one": 125,
-          "three": 340,
-          "five": 535,
-          "ten": 1000
+          "one": 70,
+          "three": 190,
+          "five": 300,
+          "ten": 560
         },
         "usAvailable": true
       }
@@ -4213,13 +4213,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 110,
-        "msrp": 195,
+        "price": 80,
+        "msrp": 140,
         "retail": {
-          "one": 195,
-          "three": 530,
-          "five": 830,
-          "ten": 1560
+          "one": 140,
+          "three": 380,
+          "five": 595,
+          "ten": 1120
         },
         "usAvailable": true
       }
@@ -4232,13 +4232,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 135,
-        "msrp": 240,
+        "price": 105,
+        "msrp": 185,
         "retail": {
-          "one": 240,
-          "three": 650,
-          "five": 1020,
-          "ten": 1920
+          "one": 185,
+          "three": 500,
+          "five": 790,
+          "ten": 1480
         },
         "usAvailable": true
       }
