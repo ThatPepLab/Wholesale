@@ -23,16 +23,28 @@
     "expectedArrival": ""
   },
   {
+    "product": "GLOW",
+    "strength": "70mg",
+    "sku": "",
+    "category": "Recovery & Repair",
+    "quantity": 0,
+    "moreOnWay": true,
+    "incomingQuantity": 10,
+    "expectedArrival": "2026-09-22",
+    "id": "glow--70mg",
+    "updatedAt": "2026-09-15T17:06:38.640Z"
+  },
+  {
     "id": "glp-3rt--10mg",
     "product": "GLP-3RT",
     "strength": "10mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 22,
+    "quantity": 21,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-08-21T21:55:07.073Z"
+    "updatedAt": "2026-09-15T17:07:55.033Z"
   },
   {
     "id": "glp-3rt--20mg",
@@ -40,11 +52,11 @@
     "strength": "20mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 14,
+    "quantity": 8,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-09-14T20:17:57.628Z"
+    "updatedAt": "2026-09-15T17:08:15.733Z"
   },
   {
     "product": "HGH 191AA",
@@ -69,6 +81,18 @@
     "expectedArrival": "",
     "id": "hgh-191aa--36iu",
     "updatedAt": "2026-09-14T20:19:37.220Z"
+  },
+  {
+    "product": "KLOW",
+    "strength": "80mg",
+    "sku": "",
+    "category": "Recovery & Repair",
+    "quantity": 0,
+    "moreOnWay": true,
+    "incomingQuantity": 10,
+    "expectedArrival": "2026-09-22",
+    "id": "klow--80mg",
+    "updatedAt": "2026-09-15T17:07:01.196Z"
   },
   {
     "product": "MOTS-C",
