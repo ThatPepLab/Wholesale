@@ -41,6 +41,7 @@ const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => (
 const strengthNumber = (value) => Number.parseFloat(value) || 0;
 
 const categories = [
+  { name: "Oil Based", test: /^(nandrolone decanoate|boldenone undecylenate|nandrolone phenylpropionate|methenolone enanthate|testosterone cypionate|testosterone enanthate|testosterone propionate|trenbolone acetate|trenbolone enanthate)$/i },
   { name: "Weight Loss", test: /semaglutide|tirzepatide|trizepatide|glp-?3rt|cagrilintide|cagilintide|mazdutide|survodutide|eloralintide|adipotide|aod-?9604|hgh fragment|lemon bottle|lipo lab|lipo-[bc]|lipo-c|fat blaster|5-amino/i },
   { name: "Energy & Metabolic", test: /mots|ss-?31|nad\+|aicar|slu-?pp|l-carnitine|lc120|lc216|mic\b|superhuman|humanin|vitamin b12/i },
   { name: "Recovery & Repair", test: /bpc|tb500|tb-?500|glow|klow|kpv|ll-?37|ara-?290|cartalax|bronchogen|cardiogen|vesugen|lysine-proline-valine/i },
@@ -56,6 +57,9 @@ const stockKey = (product, strength) => `${String(product).trim().toLowerCase()}
 const stockQuantity = (product, strength) => state.inventory.get(stockKey(product, strength)) || 0;
 const incomingInventory = (product, strength) => state.incoming.get(stockKey(product, strength)) || null;
 const productStrengths = (product) => product.items.map((item) => item.strength).sort((a, b) => strengthNumber(a) - strengthNumber(b));
+const catalogItem = (product, strength) => product?.items?.find((item) => item.strength === strength);
+const packSize = (item) => Number(item?.packSize) === 2 ? 2 : 10;
+const packLabel = (item) => `${packSize(item)} Vial ${packSize(item) === 2 ? "Pack" : "Kit"}`;
 
 function renderInStockSection() {
   const groups = new Map();
@@ -63,8 +67,8 @@ function renderInStockSection() {
   for (const product of state.products) {
     for (const strength of productStrengths(product)) {
       const quantity = stockQuantity(product.name, strength);
-      const kits = Math.floor(quantity / 10);
-      if (kits > 0) items.push({ product, category: categoryFor(product.name), strength, quantity, kits });
+      const item = catalogItem(product, strength), size = packSize(item), kits = Math.floor(quantity / size);
+      if (kits > 0) items.push({ product, item, category: categoryFor(product.name), strength, quantity, kits });
     }
   }
   inStockSection.hidden = items.length === 0;
@@ -75,7 +79,7 @@ function renderInStockSection() {
   }
   const ordered = [...categories.map((item) => item.name), "Other"];
   inStockCount.textContent = `${items.length} available strength${items.length === 1 ? "" : "s"}`;
-  inStockGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="in-stock-category"><h3>${escapeHtml(name)}</h3><div class="in-stock-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.kits} kit${item.kits === 1 ? "" : "s"} available</b></button>`).join("")}</div></section>`).join("");
+  inStockGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="in-stock-category"><h3>${escapeHtml(name)}</h3><div class="in-stock-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.kits} ${packLabel(item.item).toLowerCase()}${item.kits === 1 ? "" : "s"} available</b></button>`).join("")}</div></section>`).join("");
 }
 
 function formatArrival(value) {
@@ -92,8 +96,8 @@ function renderComingSoonSection() {
     for (const strength of productStrengths(product)) {
       const incoming = incomingInventory(product.name, strength);
       if (!incoming) continue;
-      const kits = Math.floor(incoming.incomingQuantity / 10);
-      items.push({ product, category: categoryFor(product.name), strength, kits, ...incoming });
+      const item = catalogItem(product, strength), size = packSize(item), kits = Math.floor(incoming.incomingQuantity / size);
+      items.push({ product, item, category: categoryFor(product.name), strength, kits, ...incoming });
     }
   }
   comingSoonSection.hidden = items.length === 0;
@@ -104,7 +108,7 @@ function renderComingSoonSection() {
   }
   const ordered = [...categories.map((item) => item.name), "Other"];
   comingSoonCount.textContent = `${items.length} incoming strength${items.length === 1 ? "" : "s"}`;
-  comingSoonGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="coming-soon-category"><h3>${escapeHtml(name)}</h3><div class="coming-soon-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.kits > 0 ? `${item.kits} kit${item.kits === 1 ? "" : "s"} coming` : "More on the way"}<small>${escapeHtml(formatArrival(item.expectedArrival))}</small></b></button>`).join("")}</div></section>`).join("");
+  comingSoonGroups.innerHTML = ordered.filter((name) => groups.has(name)).map((name) => `<section class="coming-soon-category"><h3>${escapeHtml(name)}</h3><div class="coming-soon-items">${groups.get(name).sort((a, b) => a.product.name.localeCompare(b.product.name) || strengthNumber(a.strength) - strengthNumber(b.strength)).map((item) => `<button type="button" data-stock-product="${escapeHtml(item.product.name)}" data-stock-strength="${escapeHtml(item.strength)}"><span><strong>${escapeHtml(item.product.name)}</strong><small>${escapeHtml(item.strength)} per vial</small></span><b>${item.kits > 0 ? `${item.kits} ${packLabel(item.item).toLowerCase()}${item.kits === 1 ? "" : "s"} coming` : "More on the way"}<small>${escapeHtml(formatArrival(item.expectedArrival))}</small></b></button>`).join("")}</div></section>`).join("");
 }
 async function fetchInventoryEntries() {
   const stamp = Date.now();
@@ -194,28 +198,29 @@ function kitCard(item, localKits) {
   if (!item) return "";
   const usAvailable = item.usAvailable || localKits > 0;
   const coa = window.COARegistry?.markup(state.selectedProduct?.name, item.strength) || "";
-  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local kit${localKits === 1 ? "" : "s"}` : ""}</div>` : ""}<div class="kit-card-body"><p class="kit-label">10 Vial Kit</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p>${coa}<button class="add-cart-button" type="button" data-add-kit>Add 10 Vial Kit to Cart</button></div></article>`;
+  const label = packLabel(item);
+  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local ${label.toLowerCase()}${localKits === 1 ? "" : "s"}` : ""}</div>` : ""}<div class="kit-card-body"><p class="kit-label">${label}</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p>${coa}<button class="add-cart-button" type="button" data-add-kit>Add ${label} to Cart</button></div></article>`;
 }
 function renderPrice() {
   if (!state.selectedProduct || !state.selectedStrength) return;
   const item = state.selectedProduct.items.find((entry) => entry.strength === state.selectedStrength);
-  const completeKits = Math.floor(stockQuantity(state.selectedProduct.name, state.selectedStrength) / 10);
+  const completeKits = Math.floor(stockQuantity(state.selectedProduct.name, state.selectedStrength) / packSize(item));
   prices.innerHTML = kitCard(item, completeKits);
 }
 function cartSubtotal() { return state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0); }
 function orderTotal() { return state.cart.length ? cartSubtotal() + 20 : 0; }
 function orderSummary() {
   if (!state.cart.length) return "No items";
-  const lines = state.cart.map((item) => `${item.quantity} x ${item.name} — ${item.strength} — 10 vial kit @ ${money.format(item.price)} = ${money.format(item.quantity * item.price)}${item.usAvailable ? " — US Available" : ""}`);
+  const lines = state.cart.map((item) => `${item.quantity} x ${item.name} — ${item.strength} — ${packLabel(item).toLowerCase()} @ ${money.format(item.price)} = ${money.format(item.quantity * item.price)}${item.usAvailable ? " — US Available" : ""}`);
   return `${lines.join("\n")}\nSubtotal: ${money.format(cartSubtotal())}\nShipping: $20\nOrder total: ${money.format(orderTotal())}`;
 }
 function renderCart() {
-  cartContainer.innerHTML = state.cart.length ? state.cart.map((item) => `<div class="cart-line"><div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.strength)} · 10 vial kit · ${money.format(item.price)}${item.usAvailable ? " · US Available" : ""}</span></div><div class="quantity-control" aria-label="Quantity for ${escapeHtml(item.name)} ${escapeHtml(item.strength)}"><button type="button" data-cart-action="decrease" data-key="${escapeHtml(item.key)}" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button type="button" data-cart-action="increase" data-key="${escapeHtml(item.key)}" aria-label="Increase quantity">+</button><button type="button" class="remove-item" data-cart-action="remove" data-key="${escapeHtml(item.key)}" aria-label="Remove item">Remove</button></div><strong>${money.format(item.price * item.quantity)}</strong></div>`).join("") : `<p class="empty-cart">No kits added.</p>`;
+  cartContainer.innerHTML = state.cart.length ? state.cart.map((item) => `<div class="cart-line"><div><strong>${escapeHtml(item.name)}</strong><span>${escapeHtml(item.strength)} · ${packLabel(item)} · ${money.format(item.price)}${item.usAvailable ? " · US Available" : ""}</span></div><div class="quantity-control" aria-label="Quantity for ${escapeHtml(item.name)} ${escapeHtml(item.strength)}"><button type="button" data-cart-action="decrease" data-key="${escapeHtml(item.key)}" aria-label="Decrease quantity">−</button><span>${item.quantity}</span><button type="button" data-cart-action="increase" data-key="${escapeHtml(item.key)}" aria-label="Increase quantity">+</button><button type="button" class="remove-item" data-cart-action="remove" data-key="${escapeHtml(item.key)}" aria-label="Remove item">Remove</button></div><strong>${money.format(item.price * item.quantity)}</strong></div>`).join("") : `<p class="empty-cart">No kits added.</p>`;
   cartTotals.hidden = !state.cart.length;
   cartTotals.innerHTML = state.cart.length ? `<div><span>Subtotal</span><strong>${money.format(cartSubtotal())}</strong></div><div><span>Shipping</span><strong>$20</strong></div><div class="regional-total"><span>Order total</span><strong>${money.format(orderTotal())}</strong></div>` : "";
   const kitCount = state.cart.reduce((sum, item) => sum + item.quantity, 0);
   const total = orderTotal();
-  cartCount.textContent = `${kitCount} ${kitCount === 1 ? "kit" : "kits"}`;
+  cartCount.textContent = `${kitCount} ${kitCount === 1 ? "package" : "packages"}`;
   grandTotal.textContent = money.format(total);
   submitOrder.disabled = kitCount === 0;
   downloadCartPdf.disabled = kitCount === 0;
@@ -238,7 +243,7 @@ function downloadCartPdfFile() {
   state.cart.forEach((item) => {
     addPageIfNeeded(55); doc.setDrawColor(...line); doc.line(margin, y, pageWidth - margin, y); y += 16;
     doc.setTextColor(...navy); doc.setFont("helvetica", "bold"); doc.setFontSize(11); doc.text(pdfText(item.name), margin, y); doc.text(money.format(item.price * item.quantity), pageWidth - margin, y, { align: "right" }); y += 15;
-    doc.setTextColor(...muted); doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.text(pdfText(`${item.strength} | 10 vial kit | cart qty ${item.quantity}${item.usAvailable ? " | US Available" : ""}`), margin, y); y += 18;
+    doc.setTextColor(...muted); doc.setFont("helvetica", "normal"); doc.setFontSize(9); doc.text(pdfText(`${item.strength} | ${packLabel(item)} | cart qty ${item.quantity}${item.usAvailable ? " | US Available" : ""}`), margin, y); y += 18;
   });
   addPageIfNeeded(96); doc.setDrawColor(...orange); doc.line(margin, y, pageWidth - margin, y); y += 22;
   writeLine("Subtotal", money.format(cartSubtotal())); writeLine("Shipping", "$20"); y += 4; writeLine("ORDER TOTAL", money.format(orderTotal()), true);
@@ -258,7 +263,7 @@ function addToCart() {
   const key = `${state.selectedProduct.name}|${item.strength}`;
   const existing = state.cart.find((entry) => entry.key === key);
   if (existing) existing.quantity += 1;
-  else state.cart.push({ key, name: state.selectedProduct.name, strength: item.strength, price: item.price, usAvailable: item.usAvailable || stockQuantity(state.selectedProduct.name, item.strength) >= 10, quantity: 1 });
+  else state.cart.push({ key, name: state.selectedProduct.name, strength: item.strength, packSize: packSize(item), price: item.price, usAvailable: item.usAvailable || stockQuantity(state.selectedProduct.name, item.strength) >= packSize(item), quantity: 1 });
   renderCart();
   formStatus.textContent = `${state.selectedProduct.name} ${item.strength} added to the cart.`;
 }
