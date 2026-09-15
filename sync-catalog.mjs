@@ -61,6 +61,12 @@ function wholesaleSpecialPackPrice(averageLandedCost) {
   return roundToFive(averageLandedCost);
 }
 
+function wholesaleOilPackPrice(extrapolatedTenVialCost, actualPackSize) {
+  const markedUpSingleVial = (extrapolatedTenVialCost / 10) * 3.5;
+  const wholesaleTenVialPrice = roundToFive(markedUpSingleVial * 3 * 0.9);
+  return roundToFive((wholesaleTenVialPrice / 10) * actualPackSize);
+}
+
 function singleVialMsrp(averageLandedCost) {
   return roundToFive((averageLandedCost / 10) * 3.5) + 10;
 }
@@ -117,7 +123,7 @@ for (const [key, matchingOffers] of groups) {
     strength,
     packSize,
     packageUnit: isTabletPack ? "tablet" : "vial",
-    price: isOilPack ? roundToFive(oilCostPerVial * packSize) : isTabletPack ? wholesaleSpecialPackPrice(averageLandedCost) : wholesaleKitPrice(averageLandedCost),
+    price: isOilPack ? wholesaleOilPackPrice(oilAverageTenVialCost, packSize) : isTabletPack ? wholesaleSpecialPackPrice(averageLandedCost) : wholesaleKitPrice(averageLandedCost),
     msrp: isTabletPack ? roundToFive(averageLandedCost * 3.5) : isOilPack ? roundToFive(oilCostPerVial * 3.5) : singleVialMsrp(averageLandedCost),
     retail: isOilPack ? unpreparedRetailTiers(oilAverageTenVialCost, 10) : retailTiers(averageLandedCost),
     usAvailable: matchingOffers.some((offer) => /US Warehouse/i.test(offer.vendor) && !/out of stock/i.test(offer.note || "")),

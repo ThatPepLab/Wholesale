@@ -628,7 +628,7 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 60,
+        "price": 55,
         "msrp": 105,
         "retail": {
           "one": 105,
@@ -2754,7 +2754,7 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 130,
+        "price": 125,
         "msrp": 225,
         "retail": {
           "one": 225,
@@ -2947,7 +2947,7 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 65,
+        "price": 60,
         "msrp": 115,
         "retail": {
           "one": 115,
@@ -2966,7 +2966,7 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 65,
+        "price": 60,
         "msrp": 115,
         "retail": {
           "one": 115,
@@ -4213,7 +4213,7 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 80,
+        "price": 75,
         "msrp": 140,
         "retail": {
           "one": 140,
@@ -4232,7 +4232,7 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 105,
+        "price": 100,
         "msrp": 185,
         "retail": {
           "one": 185,
