@@ -25,6 +25,7 @@ const roundToFive = (amount) => Math.ceil(amount / 5) * 5;
 const numericStrength = (strength) => Number.parseFloat(strength) || 0;
 const excludedProducts = new Set(["hexarelin acetate"]);
 const twoVialPackProducts = new Set(["nandrolone decanoate","boldenone undecylenate","nandrolone phenylpropionate","methenolone enanthate","testosterone cypionate","testosterone enanthate","testosterone propionate","trenbolone acetate","trenbolone enanthate"]);
+const tabletProducts = new Set(["arimidex","clenbuterol","clomid","dianabol 20","aromasin","cialis","viagra","turanabol","winstrol 10"]);
 const retailBacPricePerVial = 10;
 
 function discountRate(rule, subtotal, useCrypto = true) {
@@ -47,6 +48,10 @@ function wholesaleKitPrice(averageLandedCost) {
   return roundToFive((markedUpSingleVial + 10) * 3 * 0.9);
 }
 
+function wholesaleSpecialPackPrice(averageLandedCost) {
+  return roundToFive(averageLandedCost);
+}
+
 function singleVialMsrp(averageLandedCost) {
   return roundToFive((averageLandedCost / 10) * 3.5) + 10;
 }
@@ -61,10 +66,20 @@ function retailTiers(averageLandedCost) {
   };
 }
 
+function unpreparedRetailTiers(averageLandedCost, packSize) {
+  const one = roundToFive((averageLandedCost / packSize) * 3.5);
+  return {
+    one,
+    three: roundToFive(one * 3 * 0.9),
+    five: roundToFive(one * 5 * 0.85),
+    ten: roundToFive(one * 10 * 0.8),
+  };
+}
+
 const groups = new Map();
 for (const offer of offers.filter((item) => {
   const productName = String(item.product || "").trim().toLowerCase();
-  const supportedPack = item.vials === 10 || (item.vials === 2 && twoVialPackProducts.has(productName));
+  const supportedPack = item.vials === 10 || (item.vials === 2 && twoVialPackProducts.has(productName)) || (item.vials === 100 && tabletProducts.has(productName));
   return supportedPack && !excludedProducts.has(productName);
 })) {
   const key = `${offer.product}\u0000${offer.strength}`;
@@ -80,13 +95,17 @@ for (const [key, matchingOffers] of groups) {
   const lowestLandedCost = Math.min(...landedPrices);
   const averageLandedCost = (highestLandedCost + lowestLandedCost) / 2;
   if (!products.has(name)) products.set(name, { name, items: [] });
-  const packSize = matchingOffers.every((offer) => offer.vials === 2) ? 2 : 10;
+  const productName = name.trim().toLowerCase();
+  const isOilPack = twoVialPackProducts.has(productName) && matchingOffers.every((offer) => offer.vials === 2);
+  const isTabletPack = tabletProducts.has(productName) && matchingOffers.every((offer) => offer.vials === 100);
+  const packSize = isOilPack ? 2 : isTabletPack ? 100 : 10;
   products.get(name).items.push({
     strength,
     packSize,
-    price: wholesaleKitPrice(averageLandedCost),
-    msrp: singleVialMsrp(averageLandedCost),
-    retail: retailTiers(averageLandedCost),
+    packageUnit: isTabletPack ? "tablet" : "vial",
+    price: isOilPack || isTabletPack ? wholesaleSpecialPackPrice(averageLandedCost) : wholesaleKitPrice(averageLandedCost),
+    msrp: isTabletPack ? roundToFive(averageLandedCost * 3.5) : isOilPack ? roundToFive((averageLandedCost / packSize) * 3.5) : singleVialMsrp(averageLandedCost),
+    retail: isOilPack ? unpreparedRetailTiers(averageLandedCost, packSize) : retailTiers(averageLandedCost),
     usAvailable: matchingOffers.some((offer) => /US Warehouse/i.test(offer.vendor) && !/out of stock/i.test(offer.note || "")),
   });
 }

@@ -42,6 +42,7 @@ const strengthNumber = (value) => Number.parseFloat(value) || 0;
 
 const categories = [
   { name: "Oil Based", test: /^(nandrolone decanoate|boldenone undecylenate|nandrolone phenylpropionate|methenolone enanthate|testosterone cypionate|testosterone enanthate|testosterone propionate|trenbolone acetate|trenbolone enanthate)$/i },
+  { name: "Tablets", test: /^(arimidex|clenbuterol|clomid|dianabol 20|aromasin|cialis|viagra|turanabol|winstrol 10)$/i },
   { name: "Weight Loss", test: /semaglutide|tirzepatide|trizepatide|glp-?3rt|cagrilintide|cagilintide|mazdutide|survodutide|eloralintide|adipotide|aod-?9604|hgh fragment|lemon bottle|lipo lab|lipo-[bc]|lipo-c|fat blaster|5-amino/i },
   { name: "Energy & Metabolic", test: /mots|ss-?31|nad\+|aicar|slu-?pp|l-carnitine|lc120|lc216|mic\b|superhuman|humanin|vitamin b12/i },
   { name: "Recovery & Repair", test: /bpc|tb500|tb-?500|glow|klow|kpv|ll-?37|ara-?290|cartalax|bronchogen|cardiogen|vesugen|lysine-proline-valine/i },
@@ -58,8 +59,10 @@ const stockQuantity = (product, strength) => state.inventory.get(stockKey(produc
 const incomingInventory = (product, strength) => state.incoming.get(stockKey(product, strength)) || null;
 const productStrengths = (product) => product.items.map((item) => item.strength).sort((a, b) => strengthNumber(a) - strengthNumber(b));
 const catalogItem = (product, strength) => product?.items?.find((item) => item.strength === strength);
-const packSize = (item) => Number(item?.packSize) === 2 ? 2 : 10;
-const packLabel = (item) => `${packSize(item)} Vial ${packSize(item) === 2 ? "Pack" : "Kit"}`;
+const packSize = (item) => Math.max(1, Number(item?.packSize) || 10);
+const packageUnit = (item) => item?.packageUnit === "tablet" ? "Tablet" : "Vial";
+const packLabel = (item) => `${packSize(item)} ${packageUnit(item)} ${packageUnit(item) === "Tablet" ? "Pack" : packSize(item) === 2 ? "Pack" : "Kit"}`;
+const perUnitLabel = (item) => packageUnit(item) === "Tablet" ? "per tablet" : "per vial";
 
 function renderInStockSection() {
   const groups = new Map();
@@ -199,7 +202,7 @@ function kitCard(item, localKits) {
   const usAvailable = item.usAvailable || localKits > 0;
   const coa = window.COARegistry?.markup(state.selectedProduct?.name, item.strength) || "";
   const label = packLabel(item);
-  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local ${label.toLowerCase()}${localKits === 1 ? "" : "s"}` : ""}</div>` : ""}<div class="kit-card-body"><p class="kit-label">${label}</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} per vial</p>${coa}<button class="add-cart-button" type="button" data-add-kit>Add ${label} to Cart</button></div></article>`;
+  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local ${label.toLowerCase()}${localKits === 1 ? "" : "s"}` : ""}</div>` : ""}<div class="kit-card-body"><p class="kit-label">${label}</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} ${perUnitLabel(item)}</p>${coa}<button class="add-cart-button" type="button" data-add-kit>Add ${label} to Cart</button></div></article>`;
 }
 function renderPrice() {
   if (!state.selectedProduct || !state.selectedStrength) return;
@@ -263,7 +266,7 @@ function addToCart() {
   const key = `${state.selectedProduct.name}|${item.strength}`;
   const existing = state.cart.find((entry) => entry.key === key);
   if (existing) existing.quantity += 1;
-  else state.cart.push({ key, name: state.selectedProduct.name, strength: item.strength, packSize: packSize(item), price: item.price, usAvailable: item.usAvailable || stockQuantity(state.selectedProduct.name, item.strength) >= packSize(item), quantity: 1 });
+  else state.cart.push({ key, name: state.selectedProduct.name, strength: item.strength, packSize: packSize(item), packageUnit: item.packageUnit, price: item.price, usAvailable: item.usAvailable || stockQuantity(state.selectedProduct.name, item.strength) >= packSize(item), quantity: 1 });
   renderCart();
   formStatus.textContent = `${state.selectedProduct.name} ${item.strength} added to the cart.`;
 }
