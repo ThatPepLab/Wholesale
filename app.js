@@ -41,8 +41,8 @@ const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (character) => (
 const strengthNumber = (value) => Number.parseFloat(value) || 0;
 
 const categories = [
-  { name: "Oil Based", test: /^(nandrolone decanoate|boldenone undecylenate|nandrolone phenylpropionate|methenolone enanthate|testosterone cypionate|testosterone enanthate|testosterone propionate|trenbolone acetate|trenbolone enanthate)$/i },
-  { name: "Tablets", test: /^(arimidex|clenbuterol|clomid|dianabol 20|aromasin|cialis|viagra|turanabol|winstrol 10)$/i },
+  { name: "Oil Based", test: /^(nandrolone decanoate|boldenone undecylenate|nandrolone phenylpropionate|methenolone enanthate|testosterone cypionate|testosterone enanthate|testosterone propionate|trenbolone acetate|trenbolone enanthate|drostanolone propionate|drostanolone enanthate|testosterone blend)$/i },
+  { name: "Tablets", test: /^(arimidex|clenbuterol|clomid|dianabol 20|aromasin|cialis|viagra|turanabol|winstrol 10|anadrol|anavar 10|proviron|nolva|t3|winstrol 50)$/i },
   { name: "Weight Loss", test: /semaglutide|tirzepatide|trizepatide|glp-?3rt|cagrilintide|cagilintide|mazdutide|survodutide|eloralintide|adipotide|aod-?9604|hgh fragment|lemon bottle|lipo lab|lipo-[bc]|lipo-c|fat blaster|5-amino/i },
   { name: "Energy & Metabolic", test: /mots|ss-?31|nad\+|aicar|slu-?pp|l-carnitine|lc120|lc216|mic\b|superhuman|humanin|vitamin b12/i },
   { name: "Recovery & Repair", test: /bpc|tb500|tb-?500|glow|klow|kpv|ll-?37|ara-?290|cartalax|bronchogen|cardiogen|vesugen|lysine-proline-valine/i },
@@ -202,7 +202,7 @@ function kitCard(item, localKits) {
   const usAvailable = item.usAvailable || localKits > 0;
   const coa = window.COARegistry?.markup(state.selectedProduct?.name, item.strength) || "";
   const label = packLabel(item);
-  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local ${label.toLowerCase()}${localKits === 1 ? "" : "s"}` : ""}</div>` : ""}<div class="kit-card-body"><p class="kit-label">${label}</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} ${perUnitLabel(item)}</p>${coa}<button class="add-cart-button" type="button" data-add-kit>Add ${label} to Cart</button></div></article>`;
+  return `<article class="kit-card single-kit-card">${usAvailable ? `<div class="us-available-strip">US Available${localKits > 0 ? ` · ${localKits} local ${label.toLowerCase()}${localKits === 1 ? "" : "s"}` : ""}</div>` : item.restocksQuickly ? `<div class="us-available-strip">Out of stock · Restocks quickly</div>` : ""}<div class="kit-card-body"><p class="kit-label">${label}</p><p class="kit-price">${money.format(item.price)}</p><p class="kit-strength">${escapeHtml(item.strength)} ${perUnitLabel(item)}</p>${coa}<button class="add-cart-button" type="button" data-add-kit>Add ${label} to Cart</button></div></article>`;
 }
 function renderPrice() {
   if (!state.selectedProduct || !state.selectedStrength) return;

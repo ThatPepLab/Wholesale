@@ -24,8 +24,8 @@ const rules = Function(`"use strict"; return (${rulesSource});`)();
 const roundToFive = (amount) => Math.ceil(amount / 5) * 5;
 const numericStrength = (strength) => Number.parseFloat(strength) || 0;
 const excludedProducts = new Set(["hexarelin acetate"]);
-const twoVialPackProducts = new Set(["nandrolone decanoate","boldenone undecylenate","nandrolone phenylpropionate","methenolone enanthate","testosterone cypionate","testosterone enanthate","testosterone propionate","trenbolone acetate","trenbolone enanthate"]);
-const tabletProducts = new Set(["arimidex","clenbuterol","clomid","dianabol 20","aromasin","cialis","viagra","turanabol","winstrol 10"]);
+const twoVialPackProducts = new Set(["nandrolone decanoate","boldenone undecylenate","nandrolone phenylpropionate","methenolone enanthate","testosterone cypionate","testosterone enanthate","testosterone propionate","trenbolone acetate","trenbolone enanthate","drostanolone propionate","drostanolone enanthate","testosterone blend"]);
+const tabletProducts = new Set(["arimidex","clenbuterol","clomid","dianabol 20","aromasin","cialis","viagra","turanabol","winstrol 10","anadrol","anavar 10","proviron","nolva","t3","winstrol 50"]);
 const retailBacPricePerVial = 10;
 
 function discountRate(rule, subtotal, useCrypto = true) {
@@ -125,8 +125,9 @@ for (const [key, matchingOffers] of groups) {
     packageUnit: isTabletPack ? "tablet" : "vial",
     price: isOilPack ? wholesaleOilPackPrice(oilAverageTenVialCost, packSize) : isTabletPack ? wholesaleSpecialPackPrice(averageLandedCost) : wholesaleKitPrice(averageLandedCost),
     msrp: isTabletPack ? roundToFive(averageLandedCost * 3.5) : isOilPack ? roundToFive(oilCostPerVial * 3.5) : singleVialMsrp(averageLandedCost),
-    retail: isOilPack ? unpreparedRetailTiers(oilAverageTenVialCost, 10) : retailTiers(averageLandedCost),
+    retail: isOilPack ? unpreparedRetailTiers(oilAverageTenVialCost, 10) : isTabletPack ? { one: roundToFive(averageLandedCost * 3.5) } : retailTiers(averageLandedCost),
     usAvailable: matchingOffers.some((offer) => /US Warehouse/i.test(offer.vendor) && !/out of stock/i.test(offer.note || "")),
+    restocksQuickly: matchingOffers.some((offer) => /US Warehouse/i.test(offer.vendor) && /out of stock/i.test(offer.note || "")),
   });
 }
 
