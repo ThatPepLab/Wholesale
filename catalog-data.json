@@ -500,6 +500,21 @@
         },
         "usAvailable": false,
         "restocksQuickly": false
+      },
+      {
+        "strength": "30mg",
+        "packSize": 10,
+        "packageUnit": "vial",
+        "price": 250,
+        "msrp": 95,
+        "retail": {
+          "one": 85,
+          "three": 220,
+          "five": 340,
+          "ten": 635
+        },
+        "usAvailable": false,
+        "restocksQuickly": false
       }
     ]
   },
@@ -813,6 +828,26 @@
     ]
   },
   {
+    "name": "BPC-157 + KPV + TB500",
+    "items": [
+      {
+        "strength": "30mg",
+        "packSize": 10,
+        "packageUnit": "vial",
+        "price": 260,
+        "msrp": 100,
+        "retail": {
+          "one": 90,
+          "three": 230,
+          "five": 355,
+          "ten": 665
+        },
+        "usAvailable": false,
+        "restocksQuickly": false
+      }
+    ]
+  },
+  {
     "name": "Cagrilintide",
     "items": [
       {
@@ -840,7 +875,7 @@
           "one": 55,
           "three": 145,
           "five": 225,
-          "ten": 420
+          "ten": 415
         },
         "usAvailable": true,
         "restocksQuickly": false
@@ -954,13 +989,13 @@
         "strength": "20mg",
         "packSize": 10,
         "packageUnit": "vial",
-        "price": 175,
-        "msrp": 65,
+        "price": 180,
+        "msrp": 70,
         "retail": {
-          "one": 55,
-          "three": 145,
-          "five": 225,
-          "ten": 415
+          "one": 60,
+          "three": 150,
+          "five": 235,
+          "ten": 430
         },
         "usAvailable": false,
         "restocksQuickly": false
@@ -1976,6 +2011,21 @@
         "restocksQuickly": false
       },
       {
+        "strength": "1200mg",
+        "packSize": 10,
+        "packageUnit": "vial",
+        "price": 120,
+        "msrp": 45,
+        "retail": {
+          "one": 35,
+          "three": 90,
+          "five": 140,
+          "ten": 255
+        },
+        "usAvailable": false,
+        "restocksQuickly": false
+      },
+      {
         "strength": "1500mg",
         "packSize": 10,
         "packageUnit": "vial",
@@ -2719,13 +2769,13 @@
         "strength": "10ml",
         "packSize": 10,
         "packageUnit": "vial",
-        "price": 150,
-        "msrp": 55,
+        "price": 155,
+        "msrp": 60,
         "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 335
+          "one": 50,
+          "three": 125,
+          "five": 195,
+          "ten": 355
         },
         "usAvailable": true,
         "restocksQuickly": false
@@ -3164,13 +3214,13 @@
         "strength": "500mg",
         "packSize": 10,
         "packageUnit": "vial",
-        "price": 150,
+        "price": 145,
         "msrp": 55,
         "retail": {
           "one": 45,
-          "three": 120,
-          "five": 180,
-          "ten": 330
+          "three": 115,
+          "five": 175,
+          "ten": 325
         },
         "usAvailable": true,
         "restocksQuickly": false
@@ -3451,13 +3501,13 @@
         "strength": "5mg",
         "packSize": 10,
         "packageUnit": "vial",
-        "price": 160,
-        "msrp": 60,
+        "price": 185,
+        "msrp": 70,
         "retail": {
-          "one": 50,
-          "three": 130,
-          "five": 195,
-          "ten": 365
+          "one": 60,
+          "three": 155,
+          "five": 240,
+          "ten": 440
         },
         "usAvailable": false,
         "restocksQuickly": false
@@ -4261,6 +4311,21 @@
           "one": 90,
           "three": 230,
           "five": 360,
+          "ten": 665
+        },
+        "usAvailable": false,
+        "restocksQuickly": false
+      },
+      {
+        "strength": "17mg",
+        "packSize": 10,
+        "packageUnit": "vial",
+        "price": 260,
+        "msrp": 100,
+        "retail": {
+          "one": 90,
+          "three": 230,
+          "five": 355,
           "ten": 665
         },
         "usAvailable": false,
