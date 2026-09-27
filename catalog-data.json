@@ -668,7 +668,7 @@
           "ten": 170
         },
         "usAvailable": true,
-        "restocksQuickly": true
+        "restocksQuickly": false
       },
       {
         "strength": "5ml",
@@ -709,13 +709,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 55,
-        "msrp": 105,
+        "price": 60,
+        "msrp": 115,
         "retail": {
-          "one": 105,
-          "three": 285,
-          "five": 450,
-          "ten": 840
+          "one": 115,
+          "three": 315,
+          "five": 490,
+          "ten": 920
         },
         "usAvailable": true,
         "restocksQuickly": false
@@ -793,7 +793,7 @@
           "ten": 255
         },
         "usAvailable": true,
-        "restocksQuickly": true
+        "restocksQuickly": false
       },
       {
         "strength": "10mg",
@@ -1054,8 +1054,8 @@
         "retail": {
           "one": 245
         },
-        "usAvailable": true,
-        "restocksQuickly": false
+        "usAvailable": false,
+        "restocksQuickly": true
       }
     ]
   },
@@ -1334,46 +1334,6 @@
         },
         "usAvailable": true,
         "restocksQuickly": false
-      }
-    ]
-  },
-  {
-    "name": "Drostanolone Enanthate",
-    "items": [
-      {
-        "strength": "10ml",
-        "packSize": 2,
-        "packageUnit": "vial",
-        "price": 125,
-        "msrp": 225,
-        "retail": {
-          "one": 225,
-          "three": 610,
-          "five": 960,
-          "ten": 1800
-        },
-        "usAvailable": false,
-        "restocksQuickly": true
-      }
-    ]
-  },
-  {
-    "name": "Drostanolone Propionate",
-    "items": [
-      {
-        "strength": "10ml",
-        "packSize": 2,
-        "packageUnit": "vial",
-        "price": 90,
-        "msrp": 165,
-        "retail": {
-          "one": 165,
-          "three": 450,
-          "five": 705,
-          "ten": 1320
-        },
-        "usAvailable": false,
-        "restocksQuickly": true
       }
     ]
   },
@@ -1854,13 +1814,13 @@
         "strength": "10mg",
         "packSize": 10,
         "packageUnit": "vial",
-        "price": 150,
-        "msrp": 55,
+        "price": 160,
+        "msrp": 60,
         "retail": {
-          "one": 45,
-          "three": 120,
-          "five": 185,
-          "ten": 335
+          "one": 50,
+          "three": 130,
+          "five": 200,
+          "ten": 365
         },
         "usAvailable": true,
         "restocksQuickly": false
@@ -1893,7 +1853,7 @@
           "ten": 515
         },
         "usAvailable": true,
-        "restocksQuickly": true
+        "restocksQuickly": false
       },
       {
         "strength": "30mg",
@@ -2154,16 +2114,16 @@
         "strength": "10iu",
         "packSize": 10,
         "packageUnit": "vial",
-        "price": 130,
+        "price": 135,
         "msrp": 50,
         "retail": {
           "one": 40,
-          "three": 100,
-          "five": 150,
-          "ten": 275
+          "three": 105,
+          "five": 160,
+          "ten": 290
         },
         "usAvailable": true,
-        "restocksQuickly": false
+        "restocksQuickly": true
       },
       {
         "strength": "15iu",
@@ -2178,7 +2138,7 @@
           "ten": 375
         },
         "usAvailable": true,
-        "restocksQuickly": false
+        "restocksQuickly": true
       },
       {
         "strength": "24iu",
@@ -2433,7 +2393,7 @@
           "ten": 270
         },
         "usAvailable": true,
-        "restocksQuickly": true
+        "restocksQuickly": false
       },
       {
         "strength": "10mg",
@@ -3052,8 +3012,8 @@
           "five": 960,
           "ten": 1800
         },
-        "usAvailable": true,
-        "restocksQuickly": false
+        "usAvailable": false,
+        "restocksQuickly": true
       }
     ]
   },
@@ -3249,16 +3209,16 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 60,
-        "msrp": 115,
+        "price": 65,
+        "msrp": 120,
         "retail": {
-          "one": 115,
-          "three": 315,
-          "five": 490,
-          "ten": 920
+          "one": 120,
+          "three": 325,
+          "five": 510,
+          "ten": 960
         },
-        "usAvailable": true,
-        "restocksQuickly": false
+        "usAvailable": false,
+        "restocksQuickly": true
       }
     ]
   },
@@ -3276,23 +3236,6 @@
           "three": 315,
           "five": 490,
           "ten": 920
-        },
-        "usAvailable": true,
-        "restocksQuickly": false
-      }
-    ]
-  },
-  {
-    "name": "NOLVA",
-    "items": [
-      {
-        "strength": "20mg",
-        "packSize": 100,
-        "packageUnit": "tablet",
-        "price": 75,
-        "msrp": 255,
-        "retail": {
-          "one": 255
         },
         "usAvailable": false,
         "restocksQuickly": true
@@ -4122,23 +4065,6 @@
     ]
   },
   {
-    "name": "T3",
-    "items": [
-      {
-        "strength": "25mcg",
-        "packSize": 100,
-        "packageUnit": "tablet",
-        "price": 60,
-        "msrp": 210,
-        "retail": {
-          "one": 210
-        },
-        "usAvailable": false,
-        "restocksQuickly": true
-      }
-    ]
-  },
-  {
     "name": "TB500",
     "items": [
       {
@@ -4169,7 +4095,7 @@
           "ten": 375
         },
         "usAvailable": true,
-        "restocksQuickly": true
+        "restocksQuickly": false
       },
       {
         "strength": "10mg",
@@ -4375,13 +4301,13 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 40,
-        "msrp": 70,
+        "price": 45,
+        "msrp": 80,
         "retail": {
-          "one": 70,
-          "three": 190,
-          "five": 300,
-          "ten": 560
+          "one": 80,
+          "three": 220,
+          "five": 340,
+          "ten": 640
         },
         "usAvailable": true,
         "restocksQuickly": false
@@ -4395,16 +4321,16 @@
         "strength": "10ml",
         "packSize": 2,
         "packageUnit": "vial",
-        "price": 40,
-        "msrp": 70,
+        "price": 45,
+        "msrp": 80,
         "retail": {
-          "one": 70,
-          "three": 190,
-          "five": 300,
-          "ten": 560
+          "one": 80,
+          "three": 220,
+          "five": 340,
+          "ten": 640
         },
-        "usAvailable": true,
-        "restocksQuickly": false
+        "usAvailable": false,
+        "restocksQuickly": true
       }
     ]
   },
@@ -4765,8 +4691,8 @@
         "retail": {
           "one": 255
         },
-        "usAvailable": true,
-        "restocksQuickly": false
+        "usAvailable": false,
+        "restocksQuickly": true
       }
     ]
   },
@@ -4801,23 +4727,6 @@
           "ten": 410
         },
         "usAvailable": false,
-        "restocksQuickly": false
-      }
-    ]
-  },
-  {
-    "name": "VIAGRA",
-    "items": [
-      {
-        "strength": "50mg",
-        "packSize": 100,
-        "packageUnit": "tablet",
-        "price": 70,
-        "msrp": 245,
-        "retail": {
-          "one": 245
-        },
-        "usAvailable": true,
         "restocksQuickly": false
       }
     ]
@@ -4889,40 +4798,6 @@
         },
         "usAvailable": false,
         "restocksQuickly": false
-      }
-    ]
-  },
-  {
-    "name": "WINSTROL 10",
-    "items": [
-      {
-        "strength": "10mg",
-        "packSize": 100,
-        "packageUnit": "tablet",
-        "price": 70,
-        "msrp": 245,
-        "retail": {
-          "one": 245
-        },
-        "usAvailable": true,
-        "restocksQuickly": false
-      }
-    ]
-  },
-  {
-    "name": "WINSTROL 50",
-    "items": [
-      {
-        "strength": "50mg",
-        "packSize": 100,
-        "packageUnit": "tablet",
-        "price": 90,
-        "msrp": 315,
-        "retail": {
-          "one": 315
-        },
-        "usAvailable": false,
-        "restocksQuickly": true
       }
     ]
   },
