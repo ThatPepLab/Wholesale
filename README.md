@@ -4,15 +4,15 @@ A static, GitHub Pages-ready product catalog showing product names, available st
 
 ## Pricing calculation
 
-For each product strength and region:
+For each product strength:
 
-1. Find the lowest, median, and highest vendor prices for a 10-vial kit.
-2. Average those three prices.
-3. Divide the average kit cost by 10 and multiply by 3.5.
-4. Add $10 BAC water per vial.
-5. Multiply by three vials, apply the 10% three-vial discount, and round up to the next $5.
+1. Calculate each vendor's landed cost after applicable vendor discounts and shipping.
+2. Use the highest landed cost as the pricing basis.
+3. Divide that landed kit cost by 10 and multiply by 3.5 for the single-vial markup basis.
+4. Apply the existing Wholesale and Retail package formulas and round up to the next $5.
+5. For oil-based 2-vial packs, extrapolate each offer to a 10-vial landed cost first, then use the highest extrapolated landed cost.
 
-Run `node build-catalog.mjs` after replacing the source comparison file referenced at the top of that script.
+Run `node sync-catalog.mjs _tplprice/index.html catalog-data.json` to rebuild the catalog from TPLPrice.
 
 ## Publish with GitHub Pages
 
