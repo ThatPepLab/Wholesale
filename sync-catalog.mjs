@@ -95,7 +95,8 @@ const groups = new Map();
 for (const offer of offers.filter((item) => {
   const productName = String(item.product || "").trim().toLowerCase();
   const supportedPack = item.vials === 10 || (item.vials === 2 && twoVialPackProducts.has(productName)) || (item.vials === 100 && tabletProducts.has(productName));
-  return supportedPack && !excludedProducts.has(productName);
+  const vendorRule = rules[item.vendor] || {};
+  return supportedPack && !excludedProducts.has(productName) && !vendorRule.unknown;
 })) {
   const key = `${offer.product}\u0000${offer.strength}`;
   if (!groups.has(key)) groups.set(key, []);
