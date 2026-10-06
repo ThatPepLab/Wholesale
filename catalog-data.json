@@ -1974,16 +1974,16 @@
         "strength": "5000iu",
         "packSize": 10,
         "packageUnit": "vial",
-        "price": 180,
-        "msrp": 70,
+        "price": 165,
+        "msrp": 65,
         "retail": {
-          "one": 60,
-          "three": 150,
-          "five": 235,
-          "ten": 430
+          "one": 55,
+          "three": 135,
+          "five": 210,
+          "ten": 385
         },
         "usAvailable": false,
-        "restocksQuickly": true
+        "restocksQuickly": false
       },
       {
         "strength": "10000iu",
@@ -2038,7 +2038,7 @@
           "ten": 290
         },
         "usAvailable": true,
-        "restocksQuickly": true
+        "restocksQuickly": false
       },
       {
         "strength": "12iu",
@@ -2083,7 +2083,7 @@
           "ten": 515
         },
         "usAvailable": true,
-        "restocksQuickly": true
+        "restocksQuickly": false
       },
       {
         "strength": "36iu",
@@ -2098,7 +2098,7 @@
           "ten": 710
         },
         "usAvailable": true,
-        "restocksQuickly": true
+        "restocksQuickly": false
       }
     ]
   },
@@ -3212,8 +3212,8 @@
           "five": 490,
           "ten": 920
         },
-        "usAvailable": false,
-        "restocksQuickly": true
+        "usAvailable": true,
+        "restocksQuickly": false
       }
     ]
   },
@@ -3514,8 +3514,8 @@
         "retail": {
           "one": 280
         },
-        "usAvailable": false,
-        "restocksQuickly": true
+        "usAvailable": true,
+        "restocksQuickly": false
       }
     ]
   },
@@ -4324,8 +4324,8 @@
           "five": 340,
           "ten": 640
         },
-        "usAvailable": false,
-        "restocksQuickly": true
+        "usAvailable": true,
+        "restocksQuickly": false
       }
     ]
   },
