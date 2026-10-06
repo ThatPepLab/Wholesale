@@ -9,7 +9,8 @@
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-09-14T20:18:46.144Z"
+    "updatedAt": "2026-10-06T17:54:04.175Z",
+    "internalOnly": false
   },
   {
     "product": "GHK-Cu",
@@ -20,9 +21,11 @@
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
-    "expectedArrival": ""
+    "expectedArrival": "",
+    "internalOnly": false
   },
   {
+    "id": "glow--70mg",
     "product": "GLOW",
     "strength": "70mg",
     "sku": "",
@@ -30,9 +33,9 @@
     "quantity": 0,
     "moreOnWay": true,
     "incomingQuantity": 10,
-    "expectedArrival": "2026-09-22",
-    "id": "glow--70mg",
-    "updatedAt": "2026-09-15T17:06:38.640Z"
+    "expectedArrival": "2026-11-01",
+    "internalOnly": false,
+    "updatedAt": "2026-10-06T19:12:27.724Z"
   },
   {
     "id": "glp-3rt--10mg",
@@ -40,11 +43,12 @@
     "strength": "10mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 21,
+    "quantity": 58,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-09-15T17:07:55.033Z"
+    "updatedAt": "2026-10-06T19:11:43.296Z",
+    "internalOnly": false
   },
   {
     "id": "glp-3rt--20mg",
@@ -52,23 +56,25 @@
     "strength": "20mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 8,
-    "moreOnWay": true,
-    "incomingQuantity": 20,
-    "expectedArrival": "2026-09-22",
-    "updatedAt": "2026-09-15T22:45:44.404Z"
+    "quantity": 28,
+    "moreOnWay": false,
+    "incomingQuantity": 0,
+    "expectedArrival": "",
+    "updatedAt": "2026-10-06T17:57:45.434Z",
+    "internalOnly": false
   },
   {
     "product": "HGH 191AA",
     "strength": "15iu",
     "sku": "",
     "category": "Growth & Performance",
-    "quantity": 7,
+    "quantity": 5,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
     "id": "hgh-191aa--15iu",
-    "updatedAt": "2026-09-14T20:19:29.579Z"
+    "updatedAt": "2026-10-06T17:58:01.269Z",
+    "internalOnly": false
   },
   {
     "product": "HGH 191AA",
@@ -80,9 +86,11 @@
     "incomingQuantity": 0,
     "expectedArrival": "",
     "id": "hgh-191aa--36iu",
-    "updatedAt": "2026-09-14T20:19:37.220Z"
+    "updatedAt": "2026-09-14T20:19:37.220Z",
+    "internalOnly": false
   },
   {
+    "id": "klow--80mg",
     "product": "KLOW",
     "strength": "80mg",
     "sku": "",
@@ -90,32 +98,35 @@
     "quantity": 0,
     "moreOnWay": true,
     "incomingQuantity": 10,
-    "expectedArrival": "2026-09-22",
-    "id": "klow--80mg",
-    "updatedAt": "2026-09-15T17:07:01.196Z"
+    "expectedArrival": "2026-11-01",
+    "internalOnly": false,
+    "updatedAt": "2026-10-06T19:12:07.660Z"
   },
   {
     "product": "MOTS-C",
     "strength": "40mg",
-    "quantity": 10,
+    "quantity": 9,
     "id": "mots-c--40mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
-    "expectedArrival": ""
+    "expectedArrival": "",
+    "updatedAt": "2026-10-06T17:58:11.143Z",
+    "internalOnly": false
   },
   {
     "product": "NAD+",
     "strength": "1000mg",
-    "quantity": 1,
+    "quantity": 0,
     "id": "nad--1000mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-09-15T22:47:36.783Z"
+    "updatedAt": "2026-10-06T17:58:08.392Z",
+    "internalOnly": false
   },
   {
     "product": "SELANK",
@@ -126,55 +137,60 @@
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
-    "expectedArrival": ""
+    "expectedArrival": "",
+    "internalOnly": false
   },
   {
     "product": "Semax",
     "strength": "10mg",
-    "quantity": 6,
+    "quantity": 5,
     "id": "semax--10mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-08-19T15:54:00.019Z"
+    "updatedAt": "2026-10-06T17:58:15.899Z",
+    "internalOnly": false
   },
   {
     "product": "SS-31",
     "strength": "10mg",
-    "quantity": 2,
+    "quantity": 1,
     "id": "ss-31--10mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-08-19T15:54:22.967Z"
+    "updatedAt": "2026-10-06T17:58:19.769Z",
+    "internalOnly": false
   },
   {
     "product": "TESAMORELIN",
     "strength": "10mg",
-    "quantity": 22,
+    "quantity": 21,
     "id": "tesamorelin--10mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-08-19T15:54:39.171Z"
+    "updatedAt": "2026-10-06T17:58:23.634Z",
+    "internalOnly": false
   },
   {
     "product": "Testosterone Cypionate",
     "strength": "10ml",
     "sku": "",
     "category": "Oil Based",
-    "quantity": 0,
-    "moreOnWay": true,
-    "incomingQuantity": 4,
-    "expectedArrival": "2026-09-22",
+    "quantity": 2,
+    "moreOnWay": false,
+    "incomingQuantity": 0,
+    "expectedArrival": "",
     "id": "testosterone-cypionate--10ml",
-    "updatedAt": "2026-09-15T22:45:06.301Z"
+    "updatedAt": "2026-10-06T17:58:36.172Z",
+    "internalOnly": true
   },
   {
     "product": "Tirzepatide",
@@ -186,7 +202,8 @@
     "incomingQuantity": 0,
     "expectedArrival": "",
     "id": "tirzepatide--15mg",
-    "updatedAt": "2026-08-21T21:54:52.008Z"
+    "updatedAt": "2026-08-21T21:54:52.008Z",
+    "internalOnly": false
   },
   {
     "product": "Tirzepatide",
@@ -198,6 +215,20 @@
     "incomingQuantity": 0,
     "expectedArrival": "",
     "id": "tirzepatide--20mg",
-    "updatedAt": "2026-08-25T20:39:14.935Z"
+    "updatedAt": "2026-08-25T20:39:14.935Z",
+    "internalOnly": false
+  },
+  {
+    "product": "Wolverine",
+    "strength": "10mg",
+    "sku": "",
+    "category": "Recovery & Repair",
+    "quantity": 10,
+    "moreOnWay": false,
+    "incomingQuantity": 0,
+    "expectedArrival": "",
+    "internalOnly": false,
+    "id": "wolverine--10mg",
+    "updatedAt": "2026-10-06T19:11:11.510Z"
   }
 ]
