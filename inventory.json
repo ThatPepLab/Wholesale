@@ -14,15 +14,29 @@
   },
   {
     "product": "GHK-Cu",
+    "strength": "50mg",
+    "sku": "",
+    "category": "Skin, Hair & Beauty",
+    "quantity": 0,
+    "moreOnWay": true,
+    "incomingQuantity": 20,
+    "expectedArrival": "2026-11-06",
+    "internalOnly": false,
+    "id": "ghk-cu--50mg",
+    "updatedAt": "2026-10-23T21:44:24.979Z"
+  },
+  {
+    "product": "GHK-Cu",
     "strength": "100mg",
-    "quantity": 8,
+    "quantity": 5,
     "id": "ghk-cu--100mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "internalOnly": false
+    "internalOnly": false,
+    "updatedAt": "2026-10-23T21:39:57.742Z"
   },
   {
     "id": "glow--70mg",
@@ -33,9 +47,9 @@
     "quantity": 0,
     "moreOnWay": true,
     "incomingQuantity": 10,
-    "expectedArrival": "2026-11-01",
+    "expectedArrival": "2026-11-06",
     "internalOnly": false,
-    "updatedAt": "2026-10-06T19:12:27.724Z"
+    "updatedAt": "2026-10-23T21:43:59.843Z"
   },
   {
     "id": "glp-3rt--10mg",
@@ -43,11 +57,11 @@
     "strength": "10mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 58,
+    "quantity": 41,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-10-06T19:11:43.296Z",
+    "updatedAt": "2026-10-23T21:42:13.985Z",
     "internalOnly": false
   },
   {
@@ -56,24 +70,37 @@
     "strength": "20mg",
     "sku": "",
     "category": "Weight Loss",
-    "quantity": 28,
-    "moreOnWay": false,
-    "incomingQuantity": 0,
-    "expectedArrival": "",
-    "updatedAt": "2026-10-06T17:57:45.434Z",
-    "internalOnly": false
+    "quantity": 18,
+    "moreOnWay": true,
+    "incomingQuantity": 50,
+    "expectedArrival": "2026-11-06",
+    "internalOnly": false,
+    "updatedAt": "2026-10-23T21:42:48.067Z"
+  },
+  {
+    "product": "GLP-3RT",
+    "strength": "30mg",
+    "sku": "",
+    "category": "Weight Loss",
+    "quantity": 0,
+    "moreOnWay": true,
+    "incomingQuantity": 50,
+    "expectedArrival": "2026-11-06",
+    "internalOnly": false,
+    "id": "glp-3rt--30mg",
+    "updatedAt": "2026-10-23T21:43:35.834Z"
   },
   {
     "product": "HGH 191AA",
     "strength": "15iu",
     "sku": "",
     "category": "Growth & Performance",
-    "quantity": 5,
+    "quantity": 3,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
     "id": "hgh-191aa--15iu",
-    "updatedAt": "2026-10-06T17:58:01.269Z",
+    "updatedAt": "2026-10-23T21:44:55.359Z",
     "internalOnly": false
   },
   {
@@ -98,21 +125,21 @@
     "quantity": 0,
     "moreOnWay": true,
     "incomingQuantity": 10,
-    "expectedArrival": "2026-11-01",
+    "expectedArrival": "2026-11-06",
     "internalOnly": false,
-    "updatedAt": "2026-10-06T19:12:07.660Z"
+    "updatedAt": "2026-10-23T21:45:02.871Z"
   },
   {
     "product": "MOTS-C",
     "strength": "40mg",
-    "quantity": 9,
+    "quantity": 8,
     "id": "mots-c--40mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-10-06T17:58:11.143Z",
+    "updatedAt": "2026-10-23T21:45:08.766Z",
     "internalOnly": false
   },
   {
@@ -156,27 +183,27 @@
   {
     "product": "SS-31",
     "strength": "10mg",
-    "quantity": 1,
+    "quantity": 0,
     "id": "ss-31--10mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-10-06T17:58:19.769Z",
+    "updatedAt": "2026-10-23T21:45:17.077Z",
     "internalOnly": false
   },
   {
     "product": "TESAMORELIN",
     "strength": "10mg",
-    "quantity": 21,
+    "quantity": 20,
     "id": "tesamorelin--10mg",
     "sku": "",
     "category": "",
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
-    "updatedAt": "2026-10-06T17:58:23.634Z",
+    "updatedAt": "2026-10-23T21:45:15.051Z",
     "internalOnly": false
   },
   {
