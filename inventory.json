@@ -1,18 +1,5 @@
 [
   {
-    "id": "bpc-157-tb500--20mg",
-    "product": "BPC-157 + TB500",
-    "strength": "20mg",
-    "sku": "",
-    "category": "Recovery & Repair",
-    "quantity": 0,
-    "moreOnWay": false,
-    "incomingQuantity": 0,
-    "expectedArrival": "",
-    "updatedAt": "2026-10-06T17:54:04.175Z",
-    "internalOnly": false
-  },
-  {
     "product": "GHK-Cu",
     "strength": "50mg",
     "sku": "",
@@ -143,17 +130,17 @@
     "internalOnly": false
   },
   {
-    "product": "NAD+",
-    "strength": "1000mg",
-    "quantity": 0,
-    "id": "nad--1000mg",
+    "product": "PT-141",
+    "strength": "10mg",
     "sku": "",
-    "category": "",
-    "moreOnWay": false,
-    "incomingQuantity": 0,
-    "expectedArrival": "",
-    "updatedAt": "2026-10-06T17:58:08.392Z",
-    "internalOnly": false
+    "category": "Sexual & Hormone",
+    "quantity": 0,
+    "moreOnWay": true,
+    "incomingQuantity": 10,
+    "expectedArrival": "2026-11-06",
+    "internalOnly": false,
+    "id": "pt-141--10mg",
+    "updatedAt": "2026-10-26T18:35:01.549Z"
   },
   {
     "product": "SELANK",
@@ -178,19 +165,6 @@
     "incomingQuantity": 0,
     "expectedArrival": "",
     "updatedAt": "2026-10-06T17:58:15.899Z",
-    "internalOnly": false
-  },
-  {
-    "product": "SS-31",
-    "strength": "10mg",
-    "quantity": 0,
-    "id": "ss-31--10mg",
-    "sku": "",
-    "category": "",
-    "moreOnWay": false,
-    "incomingQuantity": 0,
-    "expectedArrival": "",
-    "updatedAt": "2026-10-23T21:45:17.077Z",
     "internalOnly": false
   },
   {
@@ -250,12 +224,12 @@
     "strength": "10mg",
     "sku": "",
     "category": "Recovery & Repair",
-    "quantity": 10,
+    "quantity": 8,
     "moreOnWay": false,
     "incomingQuantity": 0,
     "expectedArrival": "",
     "internalOnly": false,
     "id": "wolverine--10mg",
-    "updatedAt": "2026-10-06T19:11:11.510Z"
+    "updatedAt": "2026-10-26T17:30:15.854Z"
   }
 ]
